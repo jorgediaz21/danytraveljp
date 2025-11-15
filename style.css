@@ -1,76 +1,86 @@
-/* ====== ESTILO GENERAL ====== */
+/* ===== ESTILO BASE ===== */
+
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background-color: #050814;      /* Fondo general oscuro */
+  color: #f5f7ff;                 /* Texto claro */
+}
+
+/* Un poco de aire general */
 body {
-    margin: 0;
-    padding: 0;
-    font-family: "Inter", sans-serif;
-    background: #0d0f1a; /* negro azulado premium */
-    color: #e8e8e8; /* texto gris claro elegante */
-    line-height: 1.6;
+  padding: 40px 6vw 60px;
 }
 
-/* ====== ENCABEZADO ====== */
-header {
-    text-align: center;
-    padding: 45px 20px;
-    color: #ffffff;
+/* ===== TITULO PRINCIPAL ===== */
+
+h1 {
+  text-align: center;
+  font-size: clamp(2.4rem, 5vw, 3.2rem);
+  margin: 0 0 10px;
+  font-weight: 800;
+  letter-spacing: 0.03em;
 }
 
-header h1 {
-    font-size: 2.8rem;
-    margin: 0;
-    font-weight: 700;
+/* Subtítulo debajo del H1 */
+h1 + p {
+  text-align: center;
+  font-size: 1.05rem;
+  color: #b6bdd8;
+  margin: 0 0 40px;
 }
 
-header p {
-    font-size: 1.2rem;
-    color: #b8b8ff; /* violeta suave elegante */
-    margin-top: 8px;
-}
-
-/* ====== SECCIONES ====== */
-section {
-    max-width: 900px;
-    margin: auto;
-    margin-bottom: 45px;
-    padding: 0 20px;
-}
+/* ===== SECCIONES ===== */
 
 h2 {
-    font-size: 1.9rem;
-    color: #7ab8ff; /* celeste premium destacado */
-    margin-bottom: 12px;
+  font-size: 1.9rem;
+  margin: 40px 0 10px;
+  color: #32e0ff;                 /* Celeste neón bien llamativo */
 }
 
 p {
-    font-size: 1.1rem;
-    color: #dcdcdc;
+  font-size: 1.02rem;
+  line-height: 1.7;
+  color: #e1e4f5;
+  max-width: 900px;
 }
 
-/* ====== LISTAS ====== */
+/* ===== LISTAS Y BLOQUES ===== */
+
 ul {
-    padding-left: 20px;
+  list-style: none;
+  padding-left: 0;
+  margin: 10px 0 0;
 }
 
-ul li {
-    margin-bottom: 10px;
+li {
+  margin: 6px 0;
 }
+
+/* Bloque de “Rutas populares” y “Guías para ahorrar” */
+section,
+div {
+  max-width: 900px;
+}
+
+/* ===== LINKS ===== */
 
 a {
-    color: #8ac8ff; /* celeste moderno, NO es azul fuerte */
-    font-weight: 600;
-    text-decoration: none;
+  color: #32e0ff;                 /* Celeste neón */
+  text-decoration: none;
+  font-weight: 500;
 }
 
 a:hover {
-    color: #ffffff; /* blanco al pasar */
-    text-decoration: underline;
+  color: #4eff8b;                 /* Verde brillante en hover */
+  text-decoration: underline;
 }
 
-/* ====== FOOTER ====== */
+/* ===== FOOTER ===== */
+
 footer {
-    text-align: center;
-    padding: 25px 0;
-    margin-top: 50px;
-    color: #9f9f9f;
-    font-size: 0.9rem;
+  margin-top: 50px;
+  font-size: 0.9rem;
+  color: #8f95b3;
 }
