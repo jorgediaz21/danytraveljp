@@ -1,92 +1,76 @@
-/* ====== ESTILOS GENERALES ====== */
+/* ====== ESTILO GENERAL ====== */
 body {
     margin: 0;
     padding: 0;
     font-family: "Inter", sans-serif;
-    background: #0a0f1f;
-    color: #ffffff;
+    background: #0d0f1a; /* negro azulado premium */
+    color: #e8e8e8; /* texto gris claro elegante */
     line-height: 1.6;
 }
 
-/* ====== HEADER ====== */
+/* ====== ENCABEZADO ====== */
 header {
     text-align: center;
-    padding: 40px 20px;
+    padding: 45px 20px;
+    color: #ffffff;
 }
 
 header h1 {
-    font-size: 2.5rem;
-    font-weight: 700;
+    font-size: 2.8rem;
     margin: 0;
-}
-
-/* ====== BUSCADOR ====== */
-section.busqueda {
-    max-width: 800px;
-    margin: auto;
-    background: #141b34;
-    padding: 30px;
-    border-radius: 12px;
-    box-shadow: 0 0 25px rgba(0, 0, 0, 0.35);
-}
-
-label {
-    display: block;
-    margin-bottom: 8px;
-    font-weight: 600;
-}
-
-input, select {
-    width: 100%;
-    padding: 12px;
-    border-radius: 6px;
-    border: none;
-    margin-bottom: 18px;
-    font-size: 1rem;
-}
-
-button {
-    width: 100%;
-    padding: 15px;
-    font-size: 1.2rem;
-    border: none;
-    border-radius: 8px;
-    background: linear-gradient(90deg, #3b82f6, #9333ea);
-    color: white;
-    cursor: pointer;
-    font-weight: 600;
-}
-
-button:hover {
-    opacity: .85;
-}
-
-/* ===== RESULTADO ===== */
-section#resultado {
-    max-width: 800px;
-    margin: 30px auto;
-    background: #10162a;
-    padding: 25px;
-    border-radius: 12px;
-    display: none;
-}
-
-.badge {
-    background: #1e293b;
-    padding: 8px 12px;
-    border-radius: 6px;
-    margin-bottom: 10px;
-    display: inline-block;
-}
-
-a.boton-comprar {
-    display: block;
-    background: #22c55e;
-    padding: 15px;
-    text-align: center;
-    margin-top: 20px;
-    border-radius: 10px;
     font-weight: 700;
+}
+
+header p {
+    font-size: 1.2rem;
+    color: #b8b8ff; /* violeta suave elegante */
+    margin-top: 8px;
+}
+
+/* ====== SECCIONES ====== */
+section {
+    max-width: 900px;
+    margin: auto;
+    margin-bottom: 45px;
+    padding: 0 20px;
+}
+
+h2 {
+    font-size: 1.9rem;
+    color: #7ab8ff; /* celeste premium destacado */
+    margin-bottom: 12px;
+}
+
+p {
+    font-size: 1.1rem;
+    color: #dcdcdc;
+}
+
+/* ====== LISTAS ====== */
+ul {
+    padding-left: 20px;
+}
+
+ul li {
+    margin-bottom: 10px;
+}
+
+a {
+    color: #8ac8ff; /* celeste moderno, NO es azul fuerte */
+    font-weight: 600;
     text-decoration: none;
-    color: #fff;
+}
+
+a:hover {
+    color: #ffffff; /* blanco al pasar */
+    text-decoration: underline;
+}
+
+/* ====== FOOTER ====== */
+footer {
+    text-align: center;
+    padding: 25px 0;
+    margin-top: 50px;
+    color: #9f9f9f;
+    font-size: 0.9rem;
 }
