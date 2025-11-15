@@ -27,26 +27,39 @@ a:hover {
 /* ===== HEADER ===== */
 header {
     text-align: center;
-    padding: 50px 20px;
+    padding: 60px 20px 40px 20px;
+}
+
+header img.logo {
+    width: 110px;
+    margin-bottom: 15px;
 }
 
 header h1 {
     font-size: 3rem;
     font-weight: 700;
     margin: 0;
+    color: #ffffff;
 }
 
-header p {
+header p.sub {
     font-size: 1.2rem;
     margin-top: 10px;
     color: #7bdff2;
+}
+
+header p.jp {
+    font-size: 1rem;
+    margin-top: 8px;
+    color: #9fe7ff;
 }
 
 /* ===== SECCIONES ===== */
 h2 {
     font-size: 2rem;
     color: #18e2d5;
-    margin-top: 40px;
+    margin-top: 50px;
+    margin-bottom: 15px;
 }
 
 section p, section li {
@@ -56,13 +69,14 @@ section p, section li {
 
 ul {
     padding-left: 20px;
+    margin-top: 10px;
 }
 
 /* ===== FOOTER ===== */
 footer {
     text-align: center;
-    padding: 30px 0;
-    margin-top: 40px;
+    padding: 35px 0;
+    margin-top: 50px;
     color: #7bdff2;
     font-size: 0.9rem;
     border-top: 1px solid #18e2d5;
