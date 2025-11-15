@@ -1,86 +1,69 @@
-/* ===== ESTILO BASE ===== */
-
-html, body {
-  margin: 0;
-  padding: 0;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-  background-color: #050814;      /* Fondo general oscuro */
-  color: #f5f7ff;                 /* Texto claro */
-}
-
-/* Un poco de aire general */
+/* ===== ESTILOS GENERALES ===== */
 body {
-  padding: 40px 6vw 60px;
+    margin: 0;
+    padding: 0;
+    font-family: "Inter", sans-serif;
+    background: #0a0f1f;
+    color: #e8f6f3;
+    line-height: 1.7;
 }
-
-/* ===== TITULO PRINCIPAL ===== */
-
-h1 {
-  text-align: center;
-  font-size: clamp(2.4rem, 5vw, 3.2rem);
-  margin: 0 0 10px;
-  font-weight: 800;
-  letter-spacing: 0.03em;
-}
-
-/* Subtítulo debajo del H1 */
-h1 + p {
-  text-align: center;
-  font-size: 1.05rem;
-  color: #b6bdd8;
-  margin: 0 0 40px;
-}
-
-/* ===== SECCIONES ===== */
-
-h2 {
-  font-size: 1.9rem;
-  margin: 40px 0 10px;
-  color: #32e0ff;                 /* Celeste neón bien llamativo */
-}
-
-p {
-  font-size: 1.02rem;
-  line-height: 1.7;
-  color: #e1e4f5;
-  max-width: 900px;
-}
-
-/* ===== LISTAS Y BLOQUES ===== */
-
-ul {
-  list-style: none;
-  padding-left: 0;
-  margin: 10px 0 0;
-}
-
-li {
-  margin: 6px 0;
-}
-
-/* Bloque de “Rutas populares” y “Guías para ahorrar” */
-section,
-div {
-  max-width: 900px;
-}
-
-/* ===== LINKS ===== */
 
 a {
-  color: #32e0ff;                 /* Celeste neón */
-  text-decoration: none;
-  font-weight: 500;
+    color: #18e2d5;
+    text-decoration: none;
 }
 
 a:hover {
-  color: #4eff8b;                 /* Verde brillante en hover */
-  text-decoration: underline;
+    text-decoration: underline;
+}
+
+/* ===== CONTENEDOR ===== */
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* ===== HEADER ===== */
+header {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+header h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin: 0;
+}
+
+header p {
+    font-size: 1.2rem;
+    margin-top: 10px;
+    color: #7bdff2;
+}
+
+/* ===== SECCIONES ===== */
+h2 {
+    font-size: 2rem;
+    color: #18e2d5;
+    margin-top: 40px;
+}
+
+section p, section li {
+    font-size: 1.05rem;
+    color: #d9f3ef;
+}
+
+ul {
+    padding-left: 20px;
 }
 
 /* ===== FOOTER ===== */
-
 footer {
-  margin-top: 50px;
-  font-size: 0.9rem;
-  color: #8f95b3;
+    text-align: center;
+    padding: 30px 0;
+    margin-top: 40px;
+    color: #7bdff2;
+    font-size: 0.9rem;
+    border-top: 1px solid #18e2d5;
 }
