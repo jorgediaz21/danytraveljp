@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Vuelos Japón → Paraguay | Dany Travel JP ✈️</title>
+
+  <meta name="description" content="Compara y encuentra vuelos baratos desde Japón hacia Paraguay. Rutas destacadas, consejos y buscador oficial de Aviasales en Dany Travel JP.">
+  <meta name="keywords" content="vuelos Japón Paraguay, vuelos baratos Japón Asunción, viajar desde Japón a Paraguay, flights Japan Paraguay, ofertas de vuelos Paraguay">
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-8JDPVLYE38"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-8JDPVLYE38');
+  </script>
+
+  <style>
+    :root {
+      --bg: #050814;
+      --card-bg: #0f1629;
+      --accent: #32a8dd;
+      --accent-strong: #ff7a3c;
+      --text-main: #ffffff;
+      --text-soft: #cfd5ff;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: radial-gradient(circle at top, #101935 0, #050814 55%);
+      color: var(--text-main);
+      line-height: 1.6;
+    }
+
+    header {
+      padding: 20px 20px 10px 20px;
+      max-width: 1100px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo {
+      font-weight: 800;
+      letter-spacing: 2px;
+      font-size: 20px;
+    }
+
+    nav a {
+      color: var(--text-soft);
+      text-decoration: none;
+      margin-left: 18px;
+      font-size: 14px;
+    }
+
+    nav a:hover {
+      color: var(--accent);
+    }
+
+    .hero {
+      max-width: 1100px;
+      margin: 10px auto 30px auto;
+      padding: 20px;
+      text-align: left;
+      display: grid;
+      grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
+      gap: 30px;
+      align-items: center;
+    }
+
+    .hero-title {
+      font-size: 34px;
+      margin-bottom: 10px;
+    }
+
+    .hero-title span {
+      color: var(--accent);
+    }
+
+    .hero-tag {
+      display: inline-block;
+      background: rgba(50, 168, 221, 0.12);
+      border: 1px solid rgba(50, 168, 221, 0.5);
+      color: var(--accent);
+      border-radius: 999px;
+      padding: 4px 12px;
+      font-size: 12px;
+      margin-bottom: 10px;
+    }
+
+    .hero p {
+      color: var(--text-soft);
+      max-width: 520px;
+    }
+
+    .hero-highlight {
+      color: var(--accent-strong);
+      font-weight: 600;
+    }
+
+    .hero-card {
+      background: linear-gradient(135deg, #121b33, #101625);
+      border-radius: 18px;
+      padding: 18px 18px 22px 18px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.45);
+      font-size: 14px;
+    }
+
+    .hero-card h3 {
+      margin-top: 0;
+      margin-bottom: 8px;
+      font-size: 18px;
+    }
+
+    .hero-card ul {
+      padding-left: 18px;
+      margin: 0;
+      color: var(--text-soft);
+    }
+
+    .section {
+      max-width: 1100px;
+      margin: 0 auto 40px auto;
+      padding: 0 20px;
+    }
+
+    .section h2 {
+      font-size: 26px;
+      margin-bottom: 10px;
+      text-align: left;
+      color: var(--accent);
+    }
+
+    .section p {
+      text-align: left;
+      color: var(--text-soft);
+      max-width: 900px;
+    }
+
+    .routes-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 18px;
+      margin-top: 15px;
+    }
+
+    .route-card {
+      background: var(--card-bg);
+      border-radius: 14px;
+      padding: 14px 16px;
+      border: 1px solid rgba(255, 255, 255, 0.05);
+    }
+
+    .route-title {
+      font-weight: 600;
+      margin-bottom: 4px;
+    }
+
+    .route-tag {
+      font-size: 12px;
+      color: var(--accent-strong);
+    }
+
+    .widget-section {
+      max-width: 1100px;
+      margin: 0 auto 40px auto;
+      padding: 0 20px 40px 20px;
+    }
+
+    .widget-card {
+      background: #ffffff;
+      border-radius: 16px;
+      padding: 24px;
+      box-shadow: 0 14px 40px rgba(0,0,0,0.55);
+      max-width: 950px;
+      margin: 20px auto 0 auto;
+    }
+
+    .widget-title {
+      text-align: center;
+      color: #222;
+      margin-bottom: 5px;
+      font-weight: 700;
+    }
+
+    .widget-sub {
+      text-align: center;
+      color: #555;
+      font-size: 14px;
+      margin-bottom: 18px;
+    }
+
+    footer {
+      border-top: 1px solid rgba(255,255,255,0.06);
+      padding: 18px 20px 24px 20px;
+      text-align: center;
+      color: var(--text-soft);
+      font-size: 13px;
+    }
+
+    .chip {
+      display: inline-block;
+      font-size: 11px;
+      border-radius: 999px;
+      padding: 3px 9px;
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.12);
+      margin-right: 6px;
+      margin-bottom: 4px;
+    }
+
+    @media (max-width: 800px) {
+      .hero {
+        grid-template-columns: 1fr;
+        text-align: left;
+      }
+      nav {
+        display: none;
+      }
+      h1 {
+        font-size: 20px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <div class="logo">DANY TRAVEL JP</div>
+    <nav>
+      <a href="index.html">Inicio</a>
+      <a href="paraguay.html">Japón → Paraguay</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div>
+      <div class="hero-tag">Vuelos Japón → Paraguay · Especializado</div>
+      <h1 class="hero-title">
+        Vuela de <span>Japón</span> a <span>Paraguay</span> con las mejores opciones
+      </h1>
+      <p>
+        Compara en segundos las rutas más usadas por la comunidad japonesa y paraguaya.
+        Encuentra combinaciones inteligentes via <span class="hero-highlight">São Paulo, Doha, Estambul u otros hubs</span>,
+        siempre con los precios más competitivos disponibles en Aviasales.
+      </p>
+      <p>
+        Dany Travel JP está pensado para quienes viven en Japón, pero tienen el corazón en Paraguay. ❤️🇯🇵🇵🇾
+      </p>
+    </div>
+
+    <div class="hero-card">
+      <h3>¿Qué vas a encontrar aquí?</h3>
+      <ul>
+        <li>Rutas recomendadas Japón → Paraguay.</li>
+        <li>Conexiones habituales con buena relación precio/tiempo.</li>
+        <li>Un buscador completo para comparar aerolíneas y horarios.</li>
+        <li>Todo administrado desde Japón, por alguien que vive lo mismo que vos.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>Rutas frecuentes Japón → Paraguay</h2>
+    <p>
+      No existe un vuelo directo, pero sí varias rutas inteligentes. Estas son algunas combinaciones
+      que muchos viajeros suelen utilizar:
+    </p>
+
+    <div class="routes-grid">
+      <div class="route-card">
+        <div class="route-title">Tokio (NRT/HND) → São Paulo (GRU) → Asunción (ASU)</div>
+        <div class="route-tag">Ruta clásica · Ideal para visitas largas</div>
+        <p>Conexiones a través de grandes aerolíneas internacionales y buena disponibilidad de fechas.</p>
+      </div>
+      <div class="route-card">
+        <div class="route-title">Osaka (KIX) → Europa → São Paulo → Asunción</div>
+        <div class="route-tag">Flexible · Perfecta si vivís en Kansai</div>
+        <p>Permite jugar con combinaciones vía Estambul, Madrid, Frankfurt u otros hubs europeos.</p>
+      </div>
+      <div class="route-card">
+        <div class="route-title">Nagoya (NGO) → Doha/Estambul → São Paulo → Asunción</div>
+        <div class="route-tag">Conexiones modernas · Buen servicio a bordo</div>
+        <p>Rutas operadas por aerolíneas con servicios modernos y escalas bien conectadas.</p>
+      </div>
+      <div class="route-card">
+        <div class="route-title">Otras combinaciones Japón → América del Sur</div>
+        <div class="route-tag">Explora tu mejor opción</div>
+        <p>Usa el buscador para probar diferentes ciudades de salida y llegada, fechas y aerolíneas.</p>
+      </div>
+    </div>
+
+    <div style="margin-top:18px;">
+      <span class="chip">Japón</span>
+      <span class="chip">Paraguay</span>
+      <span class="chip">Familia</span>
+      <span class="chip">Vuelos largos</span>
+      <span class="chip">Mejores precios</span>
+    </div>
+  </section>
+
+  <section class="widget-section" id="buscar">
+    <h2>Buscar vuelos Japón → Paraguay</h2>
+    <p>
+      Ajustá origen, destino y fechas según tu ciudad en Japón y tus planes en Paraguay. 
+      El buscador compara docenas de aerolíneas y agencias para mostrarte las mejores opciones disponibles.
+    </p>
+
+    <div class="widget-card">
+      <div class="widget-title">Buscador oficial de Aviasales</div>
+      <div class="widget-sub">
+        Realizá tu búsqueda con total confianza. Cuando encuentres la opción ideal, podés reservar directamente con la aerolínea o agencia.
+      </div>
+
+      <!-- WIDGET AVIASALES -->
+      <script async src="https://tpemb.com/content?currency=usd&trs=474443&shmarker=684522&show_hotels=true&powered_by=true&locale=en&searchUrl=www.aviasales.com%2Fsearch&primary_override=%2332a8dd&color_button=%2332a8dd&color_icons=%2332a8dd&dark=%23262626&light=%23FFFFFF&secondary=%23FFFFFF&special=%23C4C4C4&color_focused=%2332a8dd&border_radius=0&plain=false&promo_id=7879&campaign_id=100" charset="utf-8"></script>
+    </div>
+  </section>
+
+  <footer>
+    © 2025 Dany Travel JP — Especialista en rutas Japón → Paraguay · Powered by Travelpayouts & Aviasales
+  </footer>
+
+</body>
+</html>
