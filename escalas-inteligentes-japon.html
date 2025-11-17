@@ -1,83 +1,193 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Escalas inteligentes desde Japón | Dany Travel JP</title>
-  <meta name="description" content="Guía sencilla para usar escalas inteligentes y ahorrar en vuelos desde Japón hacia Paraguay, Brasil, Argentina y otros destinos de Sudamérica.">
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Escalas inteligentes desde Japón | Dany Travel JP ✈️</title>
+
+  <meta name="description" content="Consejos para elegir escalas inteligentes al viajar desde Japón. Cómo optimizar tiempos, precios y comodidad en vuelos largos.">
+  <meta name="keywords" content="escalas inteligentes, vuelos largos Japón, conexiones Japón Paraguay, conexiones Japón Argentina, viajar desde Japón">
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-8JDPVLYE38"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){ dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-8JDPVLYE38');
+  </script>
+
+  <style>
+    :root {
+      --bg: #050814;
+      --card-bg: #0f1629;
+      --accent: #32a8dd;
+      --accent-strong: #ff7a3c;
+      --text-main: #ffffff;
+      --text-soft: #cfd5ff;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: radial-gradient(circle at top, #101935 0%, #050814 60%);
+      color: var(--text-main);
+      line-height: 1.6;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 999;
+      background: rgba(5, 8, 20, 0.92);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+      padding: 12px 0;
+    }
+
+    .nav-inner {
+      max-width: 1100px;
+      margin: auto;
+      padding: 0 18px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo { font-size: 18px; font-weight: 800; letter-spacing: 1px; }
+
+    nav a {
+      margin-left: 16px;
+      text-decoration: none;
+      color: var(--text-soft);
+      font-size: 14px;
+    }
+    nav a:hover { color: var(--accent); }
+
+    .section {
+      max-width: 1100px;
+      margin: 40px auto;
+      padding: 0 18px;
+    }
+
+    .section h1 {
+      font-size: 30px;
+      margin-bottom: 6px;
+    }
+
+    .section h2 {
+      font-size: 22px;
+      color: var(--accent);
+      margin-top: 26px;
+      margin-bottom: 6px;
+    }
+
+    .section p {
+      color: var(--text-soft);
+      max-width: 900px;
+    }
+
+    .tips-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 16px;
+      margin-top: 16px;
+    }
+
+    .tip-card {
+      background: var(--card-bg);
+      padding: 16px;
+      border-radius: 12px;
+      border: 1px solid rgba(255,255,255,0.06);
+      font-size: 14px;
+    }
+
+    .tip-title {
+      font-weight: bold;
+      margin-bottom: 4px;
+    }
+
+    footer {
+      padding: 25px;
+      text-align: center;
+      font-size: 13px;
+      color: var(--text-soft);
+      border-top: 1px solid rgba(255,255,255,0.06);
+    }
+
+    @media (max-width: 800px) {
+      nav { display: none; }
+    }
+  </style>
 </head>
 
 <body>
-  <header>
-    <img src="IMG/logo-dany-travel-jp.webp"
-         alt="Logo Dany Travel JP"
-         width="95" height="95"
-         style="margin-bottom: 15px;">
-    <h1>Escalas inteligentes desde Japón</h1>
-    <p>Cómo aprovechar las conexiones para bajar el precio del pasaje.</p>
-  </header>
 
-  <div class="contenedor">
-    <h2>¿Qué son las “escalas inteligentes”?</h2>
-    <p>
-      Son combinaciones de vuelos donde elegís rutas con 1 o 2 conexiones
-      que, aunque tarden un poco más, salen mucho más baratas que los vuelos
-      “más rápidos” o directos.
-    </p>
+<header>
+  <div class="nav-inner">
+    <div class="logo">DANY TRAVEL JP</div>
+    <nav>
+      <a href="index.html">Inicio</a>
+      <a href="paraguay.html">Japón → Paraguay</a>
+      <a href="japon-argentina.html">Japón → Argentina</a>
+      <a href="escalas-inteligentes-japon.html">Escalas inteligentes</a>
+      <a href="guia-epoca-japon-paraguay.html">Guía de época</a>
+    </nav>
+  </div>
+</header>
 
-    <h2>Conexiones típicas desde Japón</h2>
-    <ul>
-      <li>Japón → Medio Oriente (Doha, Dubái, Estambul) → Sudamérica.</li>
-      <li>Japón → Europa (Madrid, París, Frankfurt, Roma) → Sudamérica.</li>
-      <li>Japón → Estados Unidos → Sudamérica.</li>
-    </ul>
+<section class="section">
+  <h1>Escalas inteligentes en vuelos largos desde Japón</h1>
+  <p>
+    En rutas largas como Japón → Paraguay o Japón → Argentina, elegir bien la escala puede cambiar completamente
+    la experiencia: menos cansancio, mejor precio o incluso una mini-visita en otra ciudad.
+  </p>
 
-    <h2>Trucos con escalas</h2>
-    <ul>
-      <li>Probar salir desde Tokio y Osaka, a veces cambia mucho el precio.</li>
-      <li>Aceptar una escala un poco más larga, pero con mejor tarifa.</li>
-      <li>Evitar mezclar aeropuertos diferentes en la misma ciudad si no conocés el lugar.</li>
-    </ul>
+  <h2>¿Qué es una escala inteligente?</h2>
+  <p>
+    No siempre la opción más barata es la mejor. Una escala inteligente balancea:
+    tiempo total de viaje, duración de espera, horario de llegada y comodidad en el aeropuerto.
+  </p>
 
-    <h2>Ejemplos</h2>
-    <p>
-      Para ir a Paraguay, muchas veces conviene buscar primero hasta
-      <strong>São Paulo (GRU)</strong> o <strong>Buenos Aires (EZE)</strong> y
-      luego conectar a Asunción.
-    </p>
-
-    <!-- CTA monetizado -->
-    <section class="cta-vuelos" style="margin-top: 40px; text-align:center;">
-      <h2 style="font-size: 24px; margin-bottom:10px;">Probar escalas inteligentes ahora</h2>
-      <p style="max-width: 600px; margin: 0 auto 15px;">
-        Abrí el buscador y probá cambiar ciudades de escala, fechas y aeropuertos
-        para encontrar la combinación más barata desde Japón.
+  <div class="tips-grid">
+    <div class="tip-card">
+      <div class="tip-title">1. Evitar escalas demasiado cortas</div>
+      <p>
+        En vuelos intercontinentales, una escala menor a 1h 30m puede ser muy arriesgada. Retrasos pequeños pueden
+        hacerte perder la conexión.
       </p>
-      <a href="https://aviasales.tpm.lv/XFpIYjQj"
-         target="_blank"
-         rel="noopener noreferrer"
-         style="
-           display:inline-block;
-           background:#00AEEF;
-           color:white;
-           padding:14px 28px;
-           border-radius:8px;
-           font-size:18px;
-           font-weight:600;
-           text-decoration:none;
-         ">
-        ✈️ Buscar vuelos con escalas
-      </a>
-    </section>
-
-    <p style="margin-top: 30px; font-size: 0.9rem;">
-      ← <a href="index.html">Volver al inicio de Dany Travel JP</a>
-    </p>
+    </div>
+    <div class="tip-card">
+      <div class="tip-title">2. Aprovechar aeropuertos cómodos</div>
+      <p>
+        Hubs como Doha, Estambul o Frankfurt suelen tener buenas instalaciones, duchas, zonas de descanso y señalización clara.
+      </p>
+    </div>
+    <div class="tip-card">
+      <div class="tip-title">3. Revisar el horario de llegada</div>
+      <p>
+        Intentá llegar a Paraguay o Argentina en horario diurno si viajás con familia o mucho equipaje. Es más seguro y cómodo.
+      </p>
+    </div>
+    <div class="tip-card">
+      <div class="tip-title">4. Considerar una escala larga “turística”</div>
+      <p>
+        A veces conviene una escala de 8–12 horas para descansar bien o conocer un poco la ciudad, en lugar de esperar apurado.
+      </p>
+    </div>
   </div>
 
-  <footer>
-    Dany Travel JP – © 2025
-  </footer>
+  <h2>Cómo usar el buscador con criterio</h2>
+  <p>
+    Usá el buscador de la página principal de Dany Travel JP para probar distintas combinaciones de fecha y aeropuertos.
+    No mires solo el precio: mira también duración total y tiempo de escala.
+  </p>
+</section>
+
+<footer>
+  © 2025 Dany Travel JP — Consejos de escalas inteligentes · Powered by Travelpayouts & Aviasales
+</footer>
+
 </body>
 </html>
