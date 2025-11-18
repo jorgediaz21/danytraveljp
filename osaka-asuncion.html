@@ -1,42 +1,305 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Osaka → Asunción | Dany Travel JP</title>
-  <meta name="description" content="Compará precios y buscá vuelos desde Osaka hacia Asunción (Paraguay).">
+  <title>Dany Travel JP | Osaka ⇄ Asunción</title>
+  <meta name="description"
+    content="Busca vuelos entre Osaka y Asunción. Precios actualizados, rutas recomendadas y escalas ideales entre Japón y Paraguay.">
 
-  <link rel="stylesheet" href="style.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: system-ui;
+    }
+
+    body {
+      background: #0b1020;
+      color: #f5f5f5;
+      line-height: 1.6;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      background: rgba(5, 8, 20, 0.96);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      backdrop-filter: blur(10px);
+    }
+
+    .nav {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0.75rem 1rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-weight: 700;
+      font-size: 1rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+
+    .logo span {
+      color: #4ade80;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 0.7rem;
+      font-size: 0.85rem;
+      flex-wrap: wrap;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      padding: 0.35rem 0.7rem;
+      border-radius: 999px;
+      color: #d4d4d8;
+      border: 1px solid transparent;
+    }
+
+    .nav-links a:hover {
+      background: rgba(255, 255, 255, 0.08);
+    }
+
+    .nav-links a.active {
+      background: linear-gradient(135deg, #22c55e, #16a34a);
+      color: #02120a;
+      font-weight: 600;
+    }
+
+    main {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 2rem 1rem;
+    }
+
+    .hero {
+      background: #020617;
+      border: 1px solid rgba(148, 163, 184, 0.3);
+      border-radius: 1.5rem;
+      padding: 2rem;
+      display: grid;
+      grid-template-columns: 1.5fr 1fr;
+      gap: 2rem;
+      background:
+        radial-gradient(circle at top left, #22c55e22, transparent),
+        radial-gradient(circle at bottom right, #38bdf822, transparent);
+    }
+
+    .hero h1 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    .hero h1 span {
+      color: #4ade80;
+    }
+
+    .hero p {
+      font-size: 0.95rem;
+      color: #e4e4e7;
+      margin-bottom: 1rem;
+    }
+
+    .badge {
+      display: inline-flex;
+      gap: 0.4rem;
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      padding: 0.35rem 0.7rem;
+      border-radius: 999px;
+      font-size: 0.75rem;
+      margin-right: 0.4rem;
+    }
+
+    .btn-primary {
+      display: inline-flex;
+      gap: 0.5rem;
+      align-items: center;
+      margin-top: 1rem;
+      padding: 0.7rem 1.3rem;
+      border-radius: 999px;
+      text-decoration: none;
+      background: linear-gradient(135deg, #22c55e, #16a34a);
+      color: #02120a;
+      font-weight: 600;
+      box-shadow: 0 14px 35px rgba(22, 163, 74, 0.4);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-1px);
+    }
+
+    .hero-card {
+      padding: 1rem;
+      border-radius: 1rem;
+      background: #0b1225;
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      font-size: 0.85rem;
+    }
+
+    .mini-grid {
+      margin-top: 1rem;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.7rem;
+    }
+
+    .mini-item {
+      padding: 0.6rem;
+      background: #11182b;
+      border-radius: 0.7rem;
+      border: 1px solid rgba(255, 255, 255, 0.15);
+    }
+
+    .mini-label {
+      font-size: 0.7rem;
+      color: #9ca3af;
+    }
+
+    .mini-value {
+      font-size: 0.85rem;
+      font-weight: 500;
+    }
+
+    .tips-grid {
+      margin-top: 2rem;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 1rem;
+    }
+
+    .tip {
+      background: #020617;
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      padding: 1rem;
+      border-radius: 0.8rem;
+      font-size: 0.85rem;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem 0;
+      font-size: 0.75rem;
+      color: #9ca3af;
+    }
+
+    @media(max-width:850px) {
+      .hero {
+        grid-template-columns: 1fr;
+      }
+
+      .tips-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
 </head>
 
 <body>
+
   <header>
-    <h1>Osaka → Asunción</h1>
-    <p>Buscá vuelos desde Osaka (KIX/ITM) hacia Paraguay con un clic.</p>
+    <nav class="nav">
+      <div class="logo">DANY <span>TRAVEL JP</span></div>
+      <div class="nav-links">
+        <a href="index.html">Inicio</a>
+        <a href="japon-argentina.html">Japón ⇄ Argentina</a>
+        <a href="japon-brasil.html">Japón ⇄ Brasil</a>
+        <a href="japon-paraguay.html">Japón ⇄ Paraguay</a>
+        <a href="paraguay-japon.html">Paraguay ⇄ Japón</a>
+        <a href="tokio-asuncion.html">Tokio ⇄ Asunción</a>
+        <a href="osaka-asuncion.html" class="active">Osaka ⇄ Asunción</a>
+      </div>
+    </nav>
   </header>
 
-  <main class="container">
+  <main>
 
-    <section>
-      <h2>Buscar vuelos ahora</h2>
-      <a href="https://aviasales.tpm.lv/XFpIYjQj" target="_blank" class="btn-principal">
-        Buscar vuelos Osaka → Asunción
-      </a>
+    <section class="hero">
+      <div>
+        <h1>Vuelos <span>Osaka</span> ⇄ <span>Asunción</span></h1>
+        <p>
+          Para quienes viven en Kansai, esta es la ruta clave para llegar a Asunción.
+          Acá encontrás un buscador rápido y toda la info esencial para planificar tu viaje.
+        </p>
+
+        <div class="badge">Precios actualizados</div>
+        <div class="badge">Escalas recomendadas</div>
+        <div class="badge">Optimizado para móvil</div>
+
+        <a class="btn-primary" href="https://aviasales.tpm.lv/XFpIYjQj" target="_blank">
+          Buscar vuelos Osaka ⇄ Asunción ✈️
+        </a>
+      </div>
+
+      <div class="hero-card">
+        <strong>Ruta Recomendada</strong><br><br>
+
+        🇯🇵 Osaka ⇄ 🇵🇾 Asunción  
+        <br>
+        Vía Sao Paulo (GRU)
+
+        <div class="mini-grid">
+          <div class="mini-item">
+            <div class="mini-label">Escalas</div>
+            <div class="mini-value">GRU, Doha, Dubái</div>
+          </div>
+
+          <div class="mini-item">
+            <div class="mini-label">Duración</div>
+            <div class="mini-value">33h ~ 49h</div>
+          </div>
+
+          <div class="mini-item">
+            <div class="mini-label">Ideal para</div>
+            <div class="mini-value">Familiares y viajes largos</div>
+          </div>
+
+          <div class="mini-item">
+            <div class="mini-label">Consejo</div>
+            <div class="mini-value">Evitar escalas menores de 2h</div>
+          </div>
+        </div>
+      </div>
     </section>
 
     <section>
-      <h2>Rutas típicas</h2>
-      <ul>
-        <li>Osaka → Dubái → São Paulo → Asunción</li>
-        <li>Osaka → Doha → São Paulo → Asunción</li>
-        <li>Osaka → Madrid → São Paulo → Asunción</li>
-      </ul>
+      <h2 style="margin-top:2rem; font-size:1.2rem;">Tips para Osaka ⇄ Asunción</h2>
+      <div class="tips-grid">
+
+        <div class="tip">
+          <strong>Kansai → GRU</strong>
+          <p>Esta combinación es la más estable para viajeros de Kansai hacia Paraguay.</p>
+        </div>
+
+        <div class="tip">
+          <strong>Viaje largo</strong>
+          <p>Prepará snacks, agua y cargadores. El viaje es realmente extenso.</p>
+        </div>
+
+        <div class="tip">
+          <strong>Revisar requisitos</strong>
+          <p>Si pasás por USA o Europa, revisá los requisitos de tránsito.</p>
+        </div>
+
+      </div>
     </section>
 
   </main>
 
   <footer>
-    <p>Dany Travel JP — © 2025</p>
+    Dany Travel JP — Conectando Osaka y Asunción con rutas eficientes.
   </footer>
+
 </body>
+
 </html>
