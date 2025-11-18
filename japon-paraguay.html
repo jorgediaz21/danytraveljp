@@ -45,4 +45,112 @@
     .mini-grid { margin-top:1rem; display:grid; grid-template-columns:1fr 1fr; gap:0.7rem; }
     .mini-item { padding:0.6rem; background:#11182b; border-radius:0.7rem;
                  border:1px solid rgba(255,255,255,0.15); }
-    .mini-label { font-size:0.7rem
+    .mini-label { font-size:0.7rem; color:#9ca3af; }
+    .mini-value { font-size:0.85rem; font-weight:500; }
+
+    .tips-grid { margin-top:2rem; display:grid; grid-template-columns:1fr 1fr 1fr; gap:1rem; }
+    .tip { background:#020617; border:1px solid rgba(255,255,255,0.12);
+           padding:1rem; border-radius:0.8rem; font-size:0.85rem; }
+
+    footer { text-align:center; padding:2rem 0; font-size:0.75rem; color:#9ca3af; }
+
+    @media(max-width:850px){ .hero { grid-template-columns:1fr; } .tips-grid { grid-template-columns:1fr; } }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <nav class="nav">
+    <div class="logo">DANY <span>TRAVEL JP</span></div>
+    <div class="nav-links">
+      <a href="index.html">Inicio</a>
+      <a href="japon-argentina.html">Japón ⇄ Argentina</a>
+      <a href="japon-brasil.html">Japón ⇄ Brasil</a>
+      <a href="japon-paraguay.html" class="active">Japón ⇄ Paraguay</a>
+      <a href="paraguay-japon.html">Paraguay ⇄ Japón</a>
+    </div>
+  </nav>
+</header>
+
+<main>
+
+<section class="hero">
+  <div>
+    <h1>Vuelos <span>Japón</span> ⇄ <span>Paraguay</span></h1>
+    <p>
+      La ruta Japón ⇄ Paraguay es una de las más importantes para la comunidad paraguaya 
+      residente en Japón. Acá tenés un buscador rápido, rutas comunes, escalas recomendadas 
+      y consejos prácticos para tu viaje.
+    </p>
+
+    <div class="badge">Precios en tiempo real</div>
+    <div class="badge">Rutas optimizadas</div>
+    <div class="badge">Compatible con móvil</div>
+
+    <a class="btn-primary" href="https://aviasales.tpm.lv/XFpIYjQj" target="_blank">
+      Buscar vuelos Japón ⇄ Paraguay ✈️
+    </a>
+  </div>
+
+  <div class="hero-card">
+    <strong>Ruta Destacada</strong><br><br>
+
+    🇯🇵 Japón ⇄ 🇵🇾 Paraguay  
+    <br>
+    Aeropuerto recomendado: Asunción (ASU)
+
+    <div class="mini-grid">
+      <div class="mini-item">
+        <div class="mini-label">Escalas típicas</div>
+        <div class="mini-value">Sao Paulo, Doha, Europa</div>
+      </div>
+
+      <div class="mini-item">
+        <div class="mini-label">Duración</div>
+        <div class="mini-value">28h ~ 45h</div>
+      </div>
+
+      <div class="mini-item">
+        <div class="mini-label">Ideal para</div>
+        <div class="mini-value">Visitar familia</div>
+      </div>
+
+      <div class="mini-item">
+        <div class="mini-label">Consejo</div>
+        <div class="mini-value">Evitar escalas muy cortas</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2 style="margin-top:2rem; font-size:1.2rem;">Tips para viajar Japón ⇄ Paraguay</h2>
+  <div class="tips-grid">
+
+    <div class="tip">
+      <strong>El viaje es largo</strong>
+      <p>Asegurá buena conexión entre escalas para evitar perder vuelos.</p>
+    </div>
+
+    <div class="tip">
+      <strong>Opción por Brasil</strong>
+      <p>Muchos viajeros pasan por Sao Paulo (GRU). Es una de las rutas más estables.</p>
+    </div>
+
+    <div class="tip">
+      <strong>Equipaje y comida</strong>
+      <p>Si viajás con familia, revisá bien la política de equipaje para evitar sorpresas.</p>
+    </div>
+
+  </div>
+</section>
+
+</main>
+
+<footer>
+  Dany Travel JP — Conectando Japón y Paraguay con las mejores rutas disponibles.
+</footer>
+
+</body>
+</html>
