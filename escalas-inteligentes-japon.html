@@ -1,123 +1,92 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <title>Escalas inteligentes desde Japón | Dany Travel JP ✈️</title>
-
-  <meta name="description" content="Consejos para elegir escalas inteligentes al viajar desde Japón. Cómo optimizar tiempos, precios y comodidad en vuelos largos.">
-  <meta name="keywords" content="escalas inteligentes, vuelos largos Japón, conexiones Japón Paraguay, conexiones Japón Argentina, viajar desde Japón">
-
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-8JDPVLYE38"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){ dataLayer.push(arguments); }
-    gtag('js', new Date());
-    gtag('config', 'G-8JDPVLYE38');
-  </script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dany Travel JP | Escalas Inteligentes desde Japón</title>
+  <meta name="description"
+    content="Guía definitiva para elegir las mejores escalas al viajar desde Japón. Rutas inteligentes, aerolíneas recomendadas y tips para ahorrar tiempo y dinero.">
 
   <style>
-    :root {
-      --bg: #050814;
-      --card-bg: #0f1629;
-      --accent: #32a8dd;
-      --accent-strong: #ff7a3c;
-      --text-main: #ffffff;
-      --text-soft: #cfd5ff;
-    }
-
-    body {
-      margin: 0;
-      font-family: Arial, Helvetica, sans-serif;
-      background: radial-gradient(circle at top, #101935 0%, #050814 60%);
-      color: var(--text-main);
-      line-height: 1.6;
-    }
+    * { margin:0; padding:0; box-sizing:border-box; font-family:system-ui; }
+    body { background:#0b1020; color:#f5f5f5; line-height:1.6; }
 
     header {
-      position: sticky;
-      top: 0;
-      z-index: 999;
-      background: rgba(5, 8, 20, 0.92);
-      backdrop-filter: blur(12px);
-      border-bottom: 1px solid rgba(255,255,255,0.08);
-      padding: 12px 0;
+      position:sticky;
+      top:0;
+      z-index:50;
+      background:rgba(5,8,20,0.96);
+      border-bottom:1px solid rgba(255,255,255,0.08);
+      backdrop-filter:blur(10px);
     }
 
-    .nav-inner {
-      max-width: 1100px;
-      margin: auto;
-      padding: 0 18px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
+    .nav {
+      max-width:1100px;
+      margin:0 auto;
+      padding:0.75rem 1rem;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
     }
 
-    .logo { font-size: 18px; font-weight: 800; letter-spacing: 1px; }
+    .logo { font-weight:700; font-size:1rem; text-transform:uppercase; letter-spacing:0.08em; }
+    .logo span { color:#4ade80; }
 
-    nav a {
-      margin-left: 16px;
-      text-decoration: none;
-      color: var(--text-soft);
-      font-size: 14px;
+    .nav-links { display:flex; gap:0.7rem; font-size:0.85rem; flex-wrap:wrap; }
+    .nav-links a {
+      text-decoration:none; padding:0.35rem 0.7rem; border-radius:999px;
+      color:#d4d4d8; border:1px solid transparent;
     }
-    nav a:hover { color: var(--accent); }
+    .nav-links a:hover { background:rgba(255,255,255,0.08); }
+    .nav-links a.active { background:linear-gradient(135deg,#22c55e,#16a34a); color:#02120a; font-weight:600; }
 
-    .section {
-      max-width: 1100px;
-      margin: 40px auto;
-      padding: 0 18px;
-    }
+    main { max-width:1100px; margin:0 auto; padding:2rem 1rem; }
 
-    .section h1 {
-      font-size: 30px;
-      margin-bottom: 6px;
-    }
-
-    .section h2 {
-      font-size: 22px;
-      color: var(--accent);
-      margin-top: 26px;
-      margin-bottom: 6px;
+    .hero {
+      background:#020617;
+      border:1px solid rgba(148,163,184,0.3);
+      border-radius:1.5rem;
+      padding:2rem;
+      background:
+        radial-gradient(circle at top left,#22c55e22,transparent),
+        radial-gradient(circle at bottom right,#38bdf822,transparent);
+      margin-bottom:2rem;
     }
 
-    .section p {
-      color: var(--text-soft);
-      max-width: 900px;
-    }
+    .hero h1 { font-size:2.2rem; margin-bottom:1rem; }
+    .hero h1 span { color:#4ade80; }
+    .hero p { font-size:1rem; color:#e4e4e7; margin-bottom:1rem; }
 
     .tips-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-      gap: 16px;
-      margin-top: 16px;
+      margin-top:1rem;
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:1rem;
     }
 
-    .tip-card {
-      background: var(--card-bg);
-      padding: 16px;
-      border-radius: 12px;
-      border: 1px solid rgba(255,255,255,0.06);
-      font-size: 14px;
+    .tip {
+      background:#020617;
+      border:1px solid rgba(255,255,255,0.12);
+      padding:1.2rem;
+      border-radius:0.8rem;
+      font-size:0.9rem;
     }
 
-    .tip-title {
-      font-weight: bold;
-      margin-bottom: 4px;
+    .tip strong {
+      color:#4ade80;
+      font-size:1rem;
     }
 
     footer {
-      padding: 25px;
-      text-align: center;
-      font-size: 13px;
-      color: var(--text-soft);
-      border-top: 1px solid rgba(255,255,255,0.06);
+      text-align:center;
+      padding:2rem 0;
+      font-size:0.75rem;
+      color:#9ca3af;
     }
 
-    @media (max-width: 800px) {
-      nav { display: none; }
+    @media(max-width:850px){
+      .tips-grid { grid-template-columns:1fr; }
     }
   </style>
 </head>
@@ -125,69 +94,102 @@
 <body>
 
 <header>
-  <div class="nav-inner">
-    <div class="logo">DANY TRAVEL JP</div>
-    <nav>
+  <nav class="nav">
+    <div class="logo">DANY <span>TRAVEL JP</span></div>
+    <div class="nav-links">
       <a href="index.html">Inicio</a>
-      <a href="paraguay.html">Japón → Paraguay</a>
-      <a href="japon-argentina.html">Japón → Argentina</a>
-      <a href="escalas-inteligentes-japon.html">Escalas inteligentes</a>
-      <a href="guia-epoca-japon-paraguay.html">Guía de época</a>
-    </nav>
-  </div>
+      <a href="japon-argentina.html">Japón ⇄ Argentina</a>
+      <a href="japon-brasil.html">Japón ⇄ Brasil</a>
+      <a href="japon-paraguay.html">Japón ⇄ Paraguay</a>
+      <a href="paraguay-japon.html">Paraguay ⇄ Japón</a>
+      <a href="paraguay.html">Paraguay</a>
+      <a href="trucos-vuelos-baratos-japon.html">Trucos vuelos baratos</a>
+      <a href="escalas-inteligentes-japon.html" class="active">Escalas inteligentes</a>
+    </div>
+  </nav>
 </header>
 
-<section class="section">
-  <h1>Escalas inteligentes en vuelos largos desde Japón</h1>
-  <p>
-    En rutas largas como Japón → Paraguay o Japón → Argentina, elegir bien la escala puede cambiar completamente
-    la experiencia: menos cansancio, mejor precio o incluso una mini-visita en otra ciudad.
-  </p>
+<main>
 
-  <h2>¿Qué es una escala inteligente?</h2>
+<section class="hero">
+  <h1>Cómo elegir <span>escalas inteligentes</span> al viajar desde Japón</h1>
   <p>
-    No siempre la opción más barata es la mejor. Una escala inteligente balancea:
-    tiempo total de viaje, duración de espera, horario de llegada y comodidad en el aeropuerto.
-  </p>
-
-  <div class="tips-grid">
-    <div class="tip-card">
-      <div class="tip-title">1. Evitar escalas demasiado cortas</div>
-      <p>
-        En vuelos intercontinentales, una escala menor a 1h 30m puede ser muy arriesgada. Retrasos pequeños pueden
-        hacerte perder la conexión.
-      </p>
-    </div>
-    <div class="tip-card">
-      <div class="tip-title">2. Aprovechar aeropuertos cómodos</div>
-      <p>
-        Hubs como Doha, Estambul o Frankfurt suelen tener buenas instalaciones, duchas, zonas de descanso y señalización clara.
-      </p>
-    </div>
-    <div class="tip-card">
-      <div class="tip-title">3. Revisar el horario de llegada</div>
-      <p>
-        Intentá llegar a Paraguay o Argentina en horario diurno si viajás con familia o mucho equipaje. Es más seguro y cómodo.
-      </p>
-    </div>
-    <div class="tip-card">
-      <div class="tip-title">4. Considerar una escala larga “turística”</div>
-      <p>
-        A veces conviene una escala de 8–12 horas para descansar bien o conocer un poco la ciudad, en lugar de esperar apurado.
-      </p>
-    </div>
-  </div>
-
-  <h2>Cómo usar el buscador con criterio</h2>
-  <p>
-    Usá el buscador de la página principal de Dany Travel JP para probar distintas combinaciones de fecha y aeropuertos.
-    No mires solo el precio: mira también duración total y tiempo de escala.
+    Las escalas pueden jugar a tu favor o convertir tu viaje en un infierno.  
+    Esta guía te muestra las mejores opciones, combinaciones estables y aeropuertos que realmente funcionan.
   </p>
 </section>
 
+<section class="tips-grid">
+
+  <div class="tip">
+    <strong>1. Medio Oriente es el rey</strong>
+    <p>
+      Qatar (DOH), Emirates (DXB) y Etihad (AUH) ofrecen escalas limpias, 
+      conexiones rápidas y un servicio muy superior al promedio.
+    </p>
+  </div>
+
+  <div class="tip">
+    <strong>2. Evitá USA si no tenés visa</strong>
+    <p>
+      Todos los vuelos con escala en Estados Unidos exigen visa, incluso solo para tránsito.
+    </p>
+  </div>
+
+  <div class="tip">
+    <strong>3. Escalas de 2 a 4 horas son ideales</strong>
+    <p>
+      Menos de 2h es riesgoso. Más de 6h se vuelve agotador, especialmente con familia.
+    </p>
+  </div>
+
+  <div class="tip">
+    <strong>4. Europa es cómoda pero más lenta</strong>
+    <p>
+      Madrid, París, Estambul o Ámsterdam funcionan bien,  
+      pero suelen agregar más horas totales al viaje.
+    </p>
+  </div>
+
+  <div class="tip">
+    <strong>5. No compres rutas con 3 escalas</strong>
+    <p>
+      Siempre aparece un retraso, pérdida de equipaje o reprogramación.  
+      Dos escalas máximo para rutas largas.
+    </p>
+  </div>
+
+  <div class="tip">
+    <strong>6. Mirá conexión avión → avión</strong>
+    <p>
+      No todas las aerolíneas manejan bien las transferencias.  
+      Qatar, Emirates y Turkish son de las más confiables.
+    </p>
+  </div>
+
+  <div class="tip">
+    <strong>7. Evitá aeropuertos saturados</strong>
+    <p>
+      Ejemplo: Heathrow (Londres) suele tener retrasos y colas largas.  
+      En cambio, Doha o Dubái son más eficientes.
+    </p>
+  </div>
+
+  <div class="tip">
+    <strong>8. Si volás con niños, dormí en Doha o Dubái</strong>
+    <p>
+      Son aeropuertos muy cómodos, silenciosos y seguros para familias.
+    </p>
+  </div>
+
+</section>
+
+</main>
+
 <footer>
-  © 2025 Dany Travel JP — Consejos de escalas inteligentes · Powered by Travelpayouts & Aviasales
+  Dany Travel JP — Conexiones inteligentes para viajes largos desde Japón.
 </footer>
 
 </body>
+
 </html>
