@@ -173,4 +173,259 @@
 
     .mini-grid {
       display:grid; grid-template-columns:1fr 1fr;
-      gap:0.7rem; margin-top:0.8rem
+      gap:0.7rem; margin-top:0.8rem;
+    }
+
+    .mini-item {
+      padding:0.6rem; border-radius:0.7rem;
+      background:rgba(15,23,42,0.9);
+      border:1px solid rgba(51,65,85,0.9);
+      font-size:0.8rem;
+    }
+
+    .mini-label { font-size:0.72rem; color:#9ca3af; }
+    .mini-value { font-size:0.83rem; font-weight:500; }
+
+    .section-title { margin-top:2.3rem; margin-bottom:0.2rem; font-size:1.1rem; }
+    .section-sub { font-size:0.82rem; color:#9ca3af; margin-bottom:1.2rem; }
+
+    .cards-grid {
+      display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:1rem;
+    }
+
+    .card {
+      background:#020617; border-radius:1rem;
+      border:1px solid rgba(51,65,85,0.9);
+      padding:1rem; font-size:0.85rem;
+    }
+
+    .card h3 {
+      font-size:0.95rem; margin-bottom:0.4rem; color:#e5e7eb;
+    }
+    .card p { font-size:0.82rem; color:#d1d5db; }
+
+    footer {
+      border-top:1px solid rgba(31,41,55,0.9);
+      margin-top:2.5rem; padding:1.8rem 1rem 2.4rem;
+      font-size:0.78rem; color:#9ca3af; text-align:center;
+    }
+
+    @media(max-width:900px){
+      .hero { grid-template-columns:1fr; padding:1.8rem 1.4rem; }
+      .cards-grid { grid-template-columns:1fr; }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <nav class="nav">
+    <div class="logo">DANY <span>TRAVEL JP</span></div>
+
+    <div class="nav-right">
+      <a href="index.html" class="nav-link">Inicio</a>
+
+      <!-- MEGA MENÚ INTERNACIONAL -->
+      <div class="mega-wrapper">
+        <button class="mega-toggle">Rutas internacionales ✈️ <span class="mega-icon">▾</span></button>
+        <div class="mega-menu">
+          <div class="mega-grid">
+
+            <!-- AMÉRICA -->
+            <div>
+              <div class="mega-column-title">América</div>
+
+              <a href="japon-argentina.html" class="mega-link">Japón ⇄ Argentina<br><span>Tokio ⇄ Buenos Aires</span></a>
+              <a href="japon-brasil.html" class="mega-link">Japón ⇄ Brasil<br><span>Tokio ⇄ São Paulo</span></a>
+              <a href="japon-peru.html" class="mega-link">Japón ⇄ Perú<br><span>Tokio ⇄ Lima</span></a>
+              <a href="japon-usa.html" class="mega-link">Japón ⇄ USA<br><span>Tokio ⇄ LAX/JFK</span></a>
+              <a href="japon-mexico.html" class="mega-link">Japón ⇄ México<br><span>Tokio ⇄ CDMX</span></a>
+              <a href="japon-colombia.html" class="mega-link">Japón ⇄ Colombia<br><span>Tokio ⇄ Bogotá</span></a>
+              <a href="japon-paraguay.html" class="mega-link">Japón ⇄ Paraguay<br><span>vía São Paulo</span></a>
+              <a href="paraguay-japon.html" class="mega-link">Paraguay ⇄ Japón<br><span>ASU ⇄ Japón</span></a>
+              <a href="paraguay.html" class="mega-link">Vuelos desde Paraguay</a>
+              <a href="tokio-asuncion.html" class="mega-link">Tokio ⇄ Asunción</a>
+              <a href="osaka-asuncion.html" class="mega-link">Osaka ⇄ Asunción</a>
+              <a href="osaka-sao-paulo.html" class="mega-link">Osaka ⇄ São Paulo</a>
+            </div>
+
+            <!-- EUROPA -->
+            <div>
+              <div class="mega-column-title">Europa</div>
+              <a href="japon-espana.html" class="mega-link">Japón ⇄ España<br><span>Tokio ⇄ Madrid</span></a>
+            </div>
+
+            <!-- ASIA -->
+            <div>
+              <div class="mega-column-title">Asia</div>
+              <a href="japon-corea.html" class="mega-link">Japón ⇄ Corea</a>
+              <a href="japon-filipinas.html" class="mega-link">Japón ⇄ Filipinas</a>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <!-- GUIAS -->
+      <div class="nav-guides">
+        <button class="guides-toggle">Guías & Trucos <span class="mega-icon">▾</span></button>
+
+        <div class="guides-menu">
+          <a href="trucos-vuelos-baratos-japon.html" class="guide-link">
+            Trucos para vuelos baratos
+          </a>
+          <a href="escalas-inteligentes-japon.html" class="guide-link">
+            Escalas inteligentes
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </nav>
+</header>
+
+<main>
+
+<section class="hero">
+  <div>
+    <h1 class="hero-title">
+      Ruta <span>Osaka ⇄ Asunción</span>
+    </h1>
+
+    <p class="hero-sub">
+      Esta ruta es la alternativa lógica para quienes viven en Kansai  
+      (Osaka, Kobe, Kyoto, Nara).  
+      No existe vuelo directo, pero sí combinaciones estables y soportables,
+      usando principalmente São Paulo como puente hacia Paraguay.
+    </p>
+
+    <div class="hero-badges">
+      <div class="badge"><span class="badge-dot"></span> Ideal para paraguayos en Kansai</div>
+      <div class="badge"><span class="badge-dot"></span> Conexiones cómodas</div>
+      <div class="badge"><span class="badge-dot"></span> Evita rutas con 4 escalas</div>
+    </div>
+
+    <a href="https://aviasales.tpm.lv/XFpIYjQj" target="_blank" class="btn-main">
+      Buscar vuelos Osaka ⇄ Asunción ✈️
+    </a>
+  </div>
+
+  <div class="hero-right">
+    <div class="hero-right-title">Estructura típica</div>
+
+    <div class="mini-grid">
+
+      <div class="mini-item">
+        <div class="mini-label">Tramo 1</div>
+        <div class="mini-value">
+          Osaka (KIX) → Doha / Dubái / Estambul  
+          <span style="color:#9ca3af; font-size:0.72rem;">10h ~ 12h</span>
+        </div>
+      </div>
+
+      <div class="mini-item">
+        <div class="mini-label">Tramo 2</div>
+        <div class="mini-value">
+          Doha / Dubái / Estambul → São Paulo (GRU)  
+          <span style="color:#9ca3af; font-size:0.72rem;">13h ~ 15h</span>
+        </div>
+      </div>
+
+      <div class="mini-item">
+        <div class="mini-label">Tramo 3</div>
+        <div class="mini-value">
+          São Paulo (GRU) → Asunción (ASU)  
+          <span style="color:#9ca3af; font-size:0.72rem;">2h ~ 3h</span>
+        </div>
+      </div>
+
+      <div class="mini-item">
+        <div class="mini-label">Duración total</div>
+        <div class="mini-value">31h ~ 41h</div>
+      </div>
+
+      <div class="mini-item">
+        <div class="mini-label">Escalas recomendadas</div>
+        <div class="mini-value">2h ~ 4h (seguro)</div>
+      </div>
+
+      <div class="mini-item">
+        <div class="mini-label">Ruta ideal cuando</div>
+        <div class="mini-value">Vivís en Kansai</div>
+      </div>
+
+    </div>
+  </div>
+
+</section>
+
+<section>
+  <h2 class="section-title">Por qué esta ruta conviene</h2>
+  <p class="section-sub">No es corta, pero es confiable y sin complicaciones raras.</p>
+
+  <div class="cards-grid">
+
+    <div class="card">
+      <h3>1. Kansai tiene buenas conexiones</h3>
+      <p>
+        Desde Osaka (KIX) salen vuelos muy estables hacia Doha, Dubái y Estambul.  
+        Eso te permite llegar a São Paulo sin rutas inesperadas o rebuscadas.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>2. GRU es la puerta de Sudamérica</h3>
+      <p>
+        Para entrar a Paraguay, Brasil sigue siendo la opción más lógica.
+        GRU tiene vuelos diarios a Asunción.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>3. Ahorra tiempo si vivís en Kansai</h3>
+      <p>
+        Evitás viajar hasta Tokio solo para volar.  
+        Desde Osaka salís directo a un hub grande.
+      </p>
+    </div>
+
+  </div>
+</section>
+
+<section>
+  <h2 class="section-title">Otras rutas relacionadas</h2>
+  <p class="section-sub">Información complementaria para planificar mejor.</p>
+
+  <div class="cards-grid">
+
+    <div class="card">
+      <h3>Tokio ⇄ Asunción</h3>
+      <p>Si vivís en Tokio, esta es tu versión.</p>
+      <a href="tokio-asuncion.html" style="color:#4ade80;">Ver Tokio ⇄ Asunción →</a>
+    </div>
+
+    <div class="card">
+      <h3>Japón ⇄ Paraguay</h3>
+      <p>Versión global explicada para toda Japón.</p>
+      <a href="japon-paraguay.html" style="color:#4ade80;">Ver Japón ⇄ Paraguay →</a>
+    </div>
+
+    <div class="card">
+      <h3>Osaka ⇄ São Paulo</h3>
+      <p>El tramo principal antes de llegar a Paraguay.</p>
+      <a href="osaka-sao-paulo.html" style="color:#4ade80;">Ver Osaka ⇄ São Paulo →</a>
+    </div>
+
+  </div>
+</section>
+
+</main>
+
+<footer>
+  Dany Travel JP — Osaka ⇄ Asunción explicado para la comunidad latina en Kansai.
+</footer>
+
+</body>
+
+</html>
