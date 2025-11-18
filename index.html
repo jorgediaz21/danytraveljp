@@ -1,200 +1,109 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>Dany Travel JP ✈️ | Buscador de vuelos desde Japón</title>
-
-  <meta name="description" content="Dany Travel JP: buscador de vuelos desde Japón. Compara vuelos a Paraguay, Argentina y otros destinos. Rutas inteligentes, guías y buscador oficial de Aviasales.">
-  <meta name="keywords" content="vuelos desde Japón, vuelos Japón Paraguay, vuelos Japón Argentina, vuelos baratos Japón, Aviasales Japón">
-
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-8JDPVLYE38"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){ dataLayer.push(arguments); }
-    gtag('js', new Date());
-    gtag('config', 'G-8JDPVLYE38');
-  </script>
+  <title>DANY TRAVEL JP ✈️ | Buscador de vuelos Japón</title>
 
   <style>
     :root {
       --bg: #050814;
       --card-bg: #0f1629;
       --accent: #32a8dd;
-      --accent-strong: #ff7a3c;
       --text-main: #ffffff;
       --text-soft: #cfd5ff;
     }
 
     body {
       margin: 0;
-      font-family: Arial, Helvetica, sans-serif;
       background: radial-gradient(circle at top, #101935 0%, #050814 60%);
       color: var(--text-main);
-      line-height: 1.6;
+      font-family: Arial, Helvetica, sans-serif;
+      text-align: center;
     }
 
-    /* NAV FIJO */
+    /* HEADER FIJO */
     header {
+      width: 100%;
       position: sticky;
       top: 0;
       z-index: 999;
-      background: rgba(5, 8, 20, 0.92);
-      backdrop-filter: blur(12px);
+      background: rgba(5, 8, 20, 0.95);
       border-bottom: 1px solid rgba(255,255,255,0.08);
-      padding: 12px 0;
+      padding: 14px 0;
     }
 
-    .nav-inner {
-      max-width: 1100px;
-      margin: auto;
-      padding: 0 18px;
+    nav {
       display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
-
-    .logo {
-      font-size: 18px;
-      font-weight: 800;
-      letter-spacing: 1px;
+      justify-content: center;
+      gap: 30px;
     }
 
     nav a {
-      margin-left: 16px;
-      text-decoration: none;
       color: var(--text-soft);
-      font-size: 14px;
+      text-decoration: none;
+      font-size: 15px;
+      transition: 0.3s;
     }
 
     nav a:hover {
       color: var(--accent);
     }
 
-    /* HERO */
-    .hero {
-      max-width: 1100px;
-      margin: 40px auto 30px auto;
-      padding: 0 18px;
-      text-align: center;
+    /* TITULO PRINCIPAL */
+    h1 {
+      font-size: 46px;
+      margin-top: 60px;
+      letter-spacing: 1px;
+      font-weight: 800;
     }
 
-    .hero h1 {
-      font-size: 40px;
-      margin-bottom: 8px;
-      letter-spacing: 2px;
-    }
-
-    .hero p {
-      max-width: 720px;
-      margin: 0 auto;
+    p {
       color: var(--text-soft);
+      max-width: 650px;
+      margin: auto;
+      line-height: 1.7;
+      font-size: 17px;
     }
 
-    .chips {
-      margin-top: 14px;
+    /* BOTONES */
+    .tag-buttons {
+      margin-top: 25px;
+      display: inline-flex;
+      gap: 12px;
+      flex-wrap: wrap;
     }
 
-    .chip {
-      display: inline-block;
-      background: rgba(255,255,255,0.04);
-      border-radius: 999px;
-      padding: 4px 10px;
+    .tag-buttons a {
+      padding: 8px 18px;
+      border-radius: 20px;
+      background: rgba(255,255,255,0.05);
       border: 1px solid rgba(255,255,255,0.12);
-      font-size: 12px;
-      margin: 2px;
-      color: var(--text-soft);
+      text-decoration: none;
+      color: var(--text-main);
+      font-size: 14px;
+      transition: 0.3s;
     }
 
+    .tag-buttons a:hover {
+      background: var(--accent);
+      color: #000;
+    }
+
+    /* TITULO SECCIÓN */
     h2 {
-      font-size: 26px;
+      margin-top: 40px;
       color: var(--accent);
-      text-align: center;
-      margin-top: 30px;
-      margin-bottom: 6px;
-    }
-
-    .text-center {
-      text-align: center;
-      color: var(--text-soft);
-      max-width: 900px;
-      margin: 0 auto 18px auto;
-      padding: 0 18px;
-    }
-
-    .widget-card {
-      background: #fff;
-      padding: 24px;
-      border-radius: 16px;
-      max-width: 950px;
-      margin: 20px auto 0 auto;
-      box-shadow: 0 12px 35px rgba(0,0,0,0.55);
-    }
-
-    .widget-title {
-      font-size: 20px;
-      font-weight: bold;
-      color: #222;
-      text-align: center;
-    }
-
-    .widget-sub {
-      text-align: center;
-      font-size: 14px;
-      color: #555;
-      margin-bottom: 16px;
-    }
-
-    .grid {
-      max-width: 1100px;
-      margin: 30px auto 40px auto;
-      padding: 0 18px;
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-      gap: 18px;
-    }
-
-    .card {
-      background: var(--card-bg);
-      border-radius: 14px;
-      padding: 16px;
-      border: 1px solid rgba(255,255,255,0.06);
-    }
-
-    .card h3 {
-      margin-top: 0;
-      margin-bottom: 6px;
-      font-size: 18px;
-    }
-
-    .card p {
-      color: var(--text-soft);
-      font-size: 14px;
-      margin: 0;
-    }
-
-    footer {
-      padding: 25px;
-      text-align: center;
-      font-size: 13px;
-      color: var(--text-soft);
-      border-top: 1px solid rgba(255,255,255,0.06);
-    }
-
-    @media (max-width: 800px) {
-      nav { display: none; }
-      .hero h1 { font-size: 30px; }
+      font-size: 30px;
     }
   </style>
 </head>
 
 <body>
 
-<header>
-  <div class="nav-inner">
-    <div class="logo">DANY TRAVEL JP</div>
+  <!-- 🔵 MENÚ SUPERIOR INTEGRADO -->
+  <header>
     <nav>
       <a href="index.html">Inicio</a>
       <a href="paraguay.html">Japón → Paraguay</a>
@@ -202,26 +111,31 @@
       <a href="escalas-inteligentes-japon.html">Escalas inteligentes</a>
       <a href="guia-epoca-japon-paraguay.html">Guía de época</a>
     </nav>
-  </div>
-</header>
+  </header>
 
-<section class="hero">
+  <!-- 🔵 TÍTULO PRINCIPAL -->
   <h1>DANY TRAVEL JP</h1>
+
   <p>
     Buscador de vuelos pensado para quienes viven en Japón y viajan a Paraguay, Argentina y otros destinos.
     Compará precios en segundos usando el motor oficial de Aviasales.
   </p>
-  <div class="chips">
-    <span class="chip">Japón</span>
-    <span class="chip">Paraguay</span>
-    <span class="chip">Argentina</span>
-    <span class="chip">Escalas inteligentes</span>
+
+  <!-- 🔵 BOTONES TAG -->
+  <div class="tag-buttons">
+    <a href="paraguay.html">Japón</a>
+    <a href="paraguay.html">Paraguay</a>
+    <a href="japon-argentina.html">Argentina</a>
+    <a href="escalas-inteligentes-japon.html">Escalas inteligentes</a>
   </div>
-</section>
 
-<h2>Busca tu próximo vuelo</h2>
-<p class="text-center">
-  Usá el buscador oficial de Aviasales. Cada búsqueda ayuda a mantener Dany Travel JP en el aire. ✈️
-</p>
+  <!-- 🔵 SECCIÓN BUSCADOR -->
+  <h2>Busca tu próximo vuelo</h2>
 
-<div class="widget-c
+  <p>Usá el buscador oficial de Aviasales. Cada búsqueda ayuda a mantener Dany Travel JP en el aire. ✈️</p>
+
+  <!-- WIDGET -->
+  <script async src="https://tpemb.com/content?currency=usd&trs=474443&shmarker=684522&show_hotels=true&powered_by=true&locale=es&searchUrl=www.aviasales.com%2Fsearch&primary_override=%2332a8dd&color_button=%2332a8dd&color_icons=%2332a8dd&dark=%23262626&light=%23FFFFFF&secondary=%23FFFFFF&special=%23C4C4C4&color_focused=%2332a8dd&border_radius=0&plain=false&promo_id=7879&campaign_id=100" charset="utf-8"></script>
+
+</body>
+</html>
