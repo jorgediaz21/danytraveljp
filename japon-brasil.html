@@ -1,156 +1,399 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Dany Travel JP | Vuelos Japón ⇄ Brasil</title>
-  <meta name="description" content="Busca vuelos entre Japón y Brasil. Precios en tiempo real, rutas optimizadas y buscador oficial de Dany Travel JP." />
+
+  <!-- Google Tag Manager -->
+  <script>
+    (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-T7XV8RQQ');
+  </script>
+
+  <!-- Google Analytics (GA4) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-8JDPVLYE38"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-8JDPVLYE38');
+  </script>
+
+  <!-- SEO -->
+  <title>Dany Travel JP | Japón ⇄ Brasil (Tokio / Osaka ⇄ São Paulo)</title>
+  <meta name="description"
+    content="Guía completa de la ruta Japón ⇄ Brasil para la comunidad latina en Japón. Rutas reales, escalas lógicas y acceso directo a buscador de vuelos.">
+  <meta name="keywords"
+    content="japon brasil, japon sao paulo, tokio sao paulo, vuelos japon brasil, dany travel jp">
+  <meta name="author" content="Dany Travel JP">
+  <meta name="robots" content="index, follow">
+
+  <!-- IMPORTANTE: cambia 'tunombre' por tu usuario REAL de GitHub -->
+  <link rel="canonical" href="https://tunombre.github.io/danytraveljp/japon-brasil.html">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Japón ⇄ Brasil | Dany Travel JP">
+  <meta property="og:description"
+    content="La guía definitiva Japón ⇄ Brasil usada por la comunidad latina. São Paulo como puerta a Sudamérica.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://tunombre.github.io/danytraveljp/japon-brasil.html">
+  <meta property="og:image" content="https://tunombre.github.io/danytraveljp/favicon.png">
+
+  <link rel="icon" type="image/png" href="favicon.png">
 
   <style>
-    * { margin:0; padding:0; box-sizing:border-box; font-family:system-ui; }
-    body { background:#0b1020; color:#f5f5f5; line-height:1.6; }
-    header { position:sticky; top:0; z-index:50; background:rgba(5,8,20,0.96); border-bottom:1px solid rgba(255,255,255,0.08); backdrop-filter:blur(10px); }
-    .nav { max-width:1100px; margin:0 auto; padding:0.75rem 1rem; display:flex; justify-content:space-between; align-items:center; }
-    .logo { font-weight:700; font-size:1rem; text-transform:uppercase; letter-spacing:0.08em; }
-    .logo span { color:#4ade80; }
-    .nav-links { display:flex; gap:0.7rem; font-size:0.85rem; flex-wrap:wrap; }
-    .nav-links a { text-decoration:none; padding:0.35rem 0.7rem; border-radius:999px; color:#d4d4d8; border:1px solid transparent; }
-    .nav-links a:hover { background:rgba(255,255,255,0.08); }
-    .nav-links a.active { background:linear-gradient(135deg,#22c55e,#16a34a); color:#02120a; font-weight:600; }
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: system-ui, sans-serif; }
+    body { background: #020617; color: #f9fafb; line-height: 1.6; }
 
-    main { max-width:1100px; margin:0 auto; padding:2rem 1rem; }
+    /* ————————— NAV ————————— */
 
-    .hero { background:#020617; border:1px solid rgba(148,163,184,0.3); border-radius:1.5rem;
-            padding:2rem; display:grid; grid-template-columns:1.5fr 1fr; gap:2rem;
-            background: radial-gradient(circle at top left,#22c55e22,transparent),
-                        radial-gradient(circle at bottom right,#38bdf822,transparent); }
+    header {
+      position: sticky; top: 0; z-index: 50;
+      background: rgba(2, 6, 23, 0.95);
+      border-bottom: 1px solid rgba(148,163,184,0.35);
+      backdrop-filter: blur(16px);
+    }
+    .nav {
+      max-width: 1100px; margin: 0 auto; padding: 0.75rem 1rem;
+      display: flex; justify-content: space-between; align-items: center; gap: 1rem;
+    }
+    .logo {
+      font-weight: 800; font-size: 1rem;
+      text-transform: uppercase; letter-spacing: 0.18em;
+    }
+    .logo span { color: #4ade80; }
+    .nav-right {
+      display: flex; align-items: center; gap: 0.75rem; flex-wrap: wrap;
+    }
+    .nav-link {
+      text-decoration: none; padding: 0.35rem 0.8rem; border-radius: 999px;
+      color: #e5e7eb; font-size: 0.85rem; white-space: nowrap;
+    }
+    .nav-link:hover { background: rgba(148,163,184,0.18); }
 
-    .hero h1 { font-size:2rem; margin-bottom:1rem; }
-    .hero h1 span { color:#4ade80; }
-    .hero p { font-size:0.95rem; color:#e4e4e7; margin-bottom:1rem; }
+    /* Mega menú */
+    .mega-wrapper { position: relative; }
+    .mega-toggle {
+      border: 1px solid rgba(148,163,184,0.6);
+      background: rgba(15,23,42,0.9);
+      color: #e5e7eb;
+      border-radius: 999px;
+      padding: 0.35rem 0.9rem;
+      cursor: pointer; font-size: 0.85rem;
+      display: inline-flex; align-items: center; gap: 0.35rem;
+    }
+    .mega-toggle:hover {
+      background: rgba(30,64,175,0.9); border-color: rgba(129,140,248,0.9);
+    }
+    .mega-menu {
+      position: absolute; right: 0; margin-top: 0.6rem;
+      background: #020617; padding: 1.2rem 1.4rem;
+      border-radius: 1rem; border: 1px solid rgba(148,163,184,0.6);
+      display: none; max-width: 520px;
+      box-shadow: 0 22px 55px rgba(15,23,42,0.9);
+    }
+    .mega-wrapper:hover .mega-menu { display: grid; }
+    .mega-grid {
+      display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.2rem;
+    }
+    .mega-column-title {
+      font-size: 0.8rem; color: #9ca3af;
+      text-transform: uppercase; letter-spacing: 0.12em; margin-bottom: 0.45rem;
+    }
+    .mega-link {
+      display: block; padding: 0.22rem 0.3rem; font-size: 0.82rem;
+      color: #e5e7eb; text-decoration: none; border-radius: 0.4rem;
+    }
+    .mega-link:hover { background: rgba(148,163,184,0.16); }
+    .mega-link span { color: #9ca3af; font-size: 0.72rem; }
 
-    .badge { display:inline-flex; gap:0.4rem; background:rgba(255,255,255,0.08);
-             border:1px solid rgba(255,255,255,0.2); padding:0.35rem 0.7rem; border-radius:999px;
-             font-size:0.75rem; margin-right:0.4rem; }
+    /* ——————— MAIN ——————— */
 
-    .btn-primary { display:inline-flex; gap:0.5rem; align-items:center; margin-top:1rem;
-                   padding:0.7rem 1.3rem; border-radius:999px; text-decoration:none;
-                   background:linear-gradient(135deg,#22c55e,#16a34a); color:#02120a;
-                   font-weight:600; box-shadow:0 14px 35px rgba(22,163,74,0.4); }
-    .btn-primary:hover { transform:translateY(-1px); }
+    main { max-width: 1100px; margin: 0 auto; padding: 2rem 1rem 3rem; }
 
-    .hero-card { padding:1rem; border-radius:1rem; background:#0b1225;
-                 border:1px solid rgba(255,255,255,0.18); font-size:0.85rem; }
+    .hero {
+      background: radial-gradient(circle at top left,#22c55e22,transparent),
+                  radial-gradient(circle at bottom right,#38bdf822,transparent),
+                  #020617;
+      border-radius: 1.6rem; padding: 2rem;
+      border: 1px solid rgba(148,163,184,0.5);
+      display: grid; grid-template-columns: 1.6fr 1fr; gap: 2rem;
+    }
+    .hero-title { font-size: 2rem; margin-bottom: 1rem; }
+    .hero-title span { color: #4ade80; }
+    .hero-sub { color: #d1d5db; margin-bottom: 1rem; max-width: 32rem; }
 
-    .mini-grid { margin-top:1rem; display:grid; grid-template-columns:1fr 1fr; gap:0.7rem; }
-    .mini-item { padding:0.6rem; background:#11182b; border-radius:0.7rem;
-                 border:1px solid rgba(255,255,255,0.15); }
-    .mini-label { font-size:0.7rem; color:#9ca3af; }
-    .mini-value { font-size:0.85rem; font-weight:500; }
+    .badge {
+      display: inline-flex; align-items: center; gap: 0.35rem;
+      background: rgba(15,23,42,0.95); border: 1px solid rgba(148,163,184,0.7);
+      padding: 0.3rem 0.7rem; border-radius: 999px; font-size: 0.78rem;
+      margin-right: 0.4rem; margin-bottom: 0.4rem;
+    }
+    .badge-dot {
+      width: 6px; height: 6px; border-radius: 999px; background: #22c55e;
+    }
 
-    .tips-grid { margin-top:2rem; display:grid; grid-template-columns:1fr 1fr 1fr; gap:1rem; }
-    .tip { background:#020617; border:1px solid rgba(255,255,255,0.12);
-           padding:1rem; border-radius:0.8rem; font-size:0.85rem; }
+    .btn-main {
+      background: linear-gradient(135deg,#22c55e,#16a34a);
+      color: #02120a; border-radius: 999px; padding: 0.75rem 1.4rem;
+      text-decoration: none; display: inline-flex; align-items: center; gap: 0.4rem;
+      font-weight: 600; font-size: 0.95rem;
+    }
+    .btn-ghost {
+      border: 1px solid rgba(148,163,184,0.7);
+      padding: 0.7rem 1.1rem; border-radius: 999px;
+      text-decoration: none; color: #e5e7eb;
+      font-size: 0.85rem;
+      display: inline-flex; align-items: center;
+    }
 
-    footer { text-align:center; padding:2rem 0; font-size:0.75rem; color:#9ca3af; }
+    .hero-right {
+      background: rgba(15,23,42,0.96);
+      padding: 1.2rem; border-radius: 1.2rem;
+      border: 1px solid rgba(148,163,184,0.6); font-size: 0.85rem;
+    }
+    .mini-grid {
+      display: grid; grid-template-columns: 1fr 1fr;
+      gap: 0.7rem; margin-top: 0.9rem;
+    }
+    .mini-item {
+      padding: 0.6rem; background: rgba(15,23,42,0.9);
+      border-radius: 0.7rem; border: 1px solid rgba(51,65,85,0.9);
+      font-size: 0.8rem;
+    }
 
-    @media(max-width:850px){ .hero { grid-template-columns:1fr; } .tips-grid { grid-template-columns:1fr; } }
+    .section-title { margin-top: 2.5rem; margin-bottom: 0.4rem; font-size: 1.1rem; }
+    .section-sub { color: #9ca3af; font-size: 0.82rem; margin-bottom: 1.2rem; }
+
+    .cards-grid {
+      display: grid; grid-template-columns: repeat(3,1fr); gap: 1rem;
+    }
+    .card {
+      border: 1px solid rgba(51,65,85,0.9);
+      padding: 1rem; border-radius: 1rem;
+      background: #020617; font-size: 0.85rem;
+    }
+    .card h3 { margin-bottom: 0.4rem; }
+    .card a {
+      margin-top: 0.5rem; color: #4ade80;
+      text-decoration: none; border-bottom: 1px solid #4ade80;
+    }
+
+    footer {
+      text-align: center; color: #9ca3af;
+      margin-top: 2.5rem; padding: 2rem 1rem;
+      border-top: 1px solid rgba(31,41,55,0.8);
+    }
+
+    @media(max-width:900px){
+      .hero { grid-template-columns: 1fr; }
+      .cards-grid { grid-template-columns: 1fr; }
+    }
   </style>
 </head>
 
 <body>
 
-<header>
-  <nav class="nav">
-    <div class="logo">DANY <span>TRAVEL JP</span></div>
-    <div class="nav-links">
-      <a href="index.html">Inicio</a>
-      <a href="japon-argentina.html">Japón ⇄ Argentina</a>
-      <a href="japon-brasil.html" class="active">Japón ⇄ Brasil</a>
-      <a href="japon-paraguay.html">Japón ⇄ Paraguay</a>
-      <a href="paraguay-japon.html">Paraguay ⇄ Japón</a>
-    </div>
-  </nav>
-</header>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript>
+    <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T7XV8RQQ"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe>
+  </noscript>
 
-<main>
+  <header>
+    <nav class="nav">
+      <div class="logo">DANY <span>TRAVEL JP</span></div>
 
-<section class="hero">
-  <div>
-    <h1>Conectando <span>Japón</span> con <span>Brasil</span></h1>
-    <p>
-      La ruta Japón ⇄ Brasil es una de las más viajadas por la comunidad latina en Japón.
-      Acá encontrás precios actualizados, rutas eficientes y el buscador oficial de vuelos
-      para planificar tu viaje sin estrés.
-    </p>
+      <div class="nav-right">
+        <a class="nav-link" href="index.html">Inicio</a>
 
-    <div class="badge">Precios en tiempo real</div>
-    <div class="badge">Escalas optimizadas</div>
-    <div class="badge">Compatible con móvil</div>
+        <!-- Mega menú -->
+        <div class="mega-wrapper">
+          <button class="mega-toggle">Rutas internacionales ✈️ ▾</button>
+          <div class="mega-menu">
+            <div class="mega-grid">
 
-    <a class="btn-primary" href="https://aviasales.tpm.lv/XFpIYjQj" target="_blank">
-      Buscar vuelos Japón ⇄ Brasil ✈️
-    </a>
-  </div>
+              <!-- AMÉRICA -->
+              <div>
+                <div class="mega-column-title">América</div>
+                <a class="mega-link" href="japon-argentina.html">
+                  Japón ⇄ Argentina <br><span>Tokio / Osaka ⇄ Buenos Aires</span>
+                </a>
+                <a class="mega-link" href="japon-brasil.html">
+                  Japón ⇄ Brasil <br><span>Japón ⇄ São Paulo</span>
+                </a>
+                <a class="mega-link" href="japon-peru.html">
+                  Japón ⇄ Perú <br><span>Lima</span>
+                </a>
+                <a class="mega-link" href="japon-usa.html">
+                  Japón ⇄ USA <br><span>LAX / JFK</span>
+                </a>
+                <a class="mega-link" href="japon-mexico.html">
+                  Japón ⇄ México <br><span>CDMX / Cancún</span>
+                </a>
+                <a class="mega-link" href="japon-colombia.html">
+                  Japón ⇄ Colombia <br><span>Bogotá</span>
+                </a>
+                <a class="mega-link" href="japon-paraguay.html">
+                  Japón ⇄ Paraguay <br><span>vía São Paulo</span>
+                </a>
+                <a class="mega-link" href="paraguay-japon.html">
+                  Paraguay ⇄ Japón
+                </a>
+                <a class="mega-link" href="tokio-buenos-aires.html">
+                  Tokio ⇄ Buenos Aires
+                </a>
+                <a class="mega-link" href="osaka-sao-paulo.html">
+                  Osaka ⇄ São Paulo
+                </a>
+              </div>
 
-  <div class="hero-card">
-    <strong>Ruta Destacada</strong><br><br>
+              <!-- EUROPA -->
+              <div>
+                <div class="mega-column-title">Europa</div>
+                <a class="mega-link" href="japon-espana.html">
+                  Japón ⇄ España <br><span>Madrid / Barcelona</span>
+                </a>
+              </div>
 
-    🇯🇵 Japón ⇄ 🇧🇷 Brasil  
-    <br>
-    Aeropuertos: Sao Paulo (GRU) / Río de Janeiro (GIG)
+              <!-- ASIA -->
+              <div>
+                <div class="mega-column-title">Asia</div>
+                <a class="mega-link" href="japon-corea.html">Japón ⇄ Corea del Sur</a>
+                <a class="mega-link" href="japon-filipinas.html">Japón ⇄ Filipinas</a>
+              </div>
 
-    <div class="mini-grid">
-      <div class="mini-item">
-        <div class="mini-label">Escalas típicas</div>
-        <div class="mini-value">Doha, Dubái, Europa</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- HERO -->
+    <section class="hero">
+      <div>
+        <h1 class="hero-title">
+          Ruta <span>Japón ⇄ Brasil</span><br>(Tokio / Osaka ⇄ São Paulo)
+        </h1>
+        <p class="hero-sub">
+          São Paulo es la conexión natural entre Japón y Sudamérica.
+          Esta guía está pensada para quienes viajan a Brasil o van camino a Paraguay/Argentina.
+        </p>
+
+        <div>
+          <div class="badge"><span class="badge-dot"></span> Escala principal: GRU</div>
+          <div class="badge"><span class="badge-dot"></span> Rutas usadas en la vida real</div>
+          <div class="badge"><span class="badge-dot"></span> Ideal para visitar familia</div>
+        </div>
+
+        <div style="margin-top:1rem;">
+          <a class="btn-main" href="https://aviasales.tpm.lv/XFpIYjQj" target="_blank">Buscar vuelos Japón ⇄ Brasil</a>
+          <a class="btn-ghost" href="osaka-sao-paulo.html">Ver Osaka ⇄ São Paulo</a>
+        </div>
       </div>
 
-      <div class="mini-item">
-        <div class="mini-label">Duración</div>
-        <div class="mini-value">24h ~ 38h</div>
+      <div class="hero-right">
+        <div class="hero-right-title">Estructura típica</div>
+
+        <div class="mini-grid">
+          <div class="mini-item">
+            <div>Japón → Medio Oriente → São Paulo</div>
+            <div style="font-size:0.75rem;color:#9ca3af;">Qatar, Emirates, Turkish</div>
+          </div>
+
+          <div class="mini-item">
+            <div>Japón → USA → São Paulo</div>
+            <div style="font-size:0.75rem;color:#9ca3af;">Requiere visa</div>
+          </div>
+
+          <div class="mini-item">
+            <div>Duración total</div>
+            <div style="font-weight:500;">27h ~ 36h</div>
+          </div>
+
+          <div class="mini-item">
+            <div>Escalas sanas</div>
+            <div style="font-size:0.8rem;">2h a 4h por conexión</div>
+          </div>
+        </div>
       </div>
+    </section>
 
-      <div class="mini-item">
-        <div class="mini-label">Ideal para</div>
-        <div class="mini-value">Familia, turismo, negocios</div>
+    <!-- OPCIONES -->
+    <section>
+      <h2 class="section-title">Tres rutas lógicas Japón ⇄ Brasil</h2>
+      <p class="section-sub">Las conexiones recomendadas para este viaje largo.</p>
+
+      <div class="cards-grid">
+
+        <div class="card">
+          <h3>1. Medio Oriente → São Paulo</h3>
+          <p>
+            Qatar, Emirates o Turkish son rutas fuertes:  
+            Japón → Doha/Dubái/Estambul → São Paulo.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>2. Estados Unidos → São Paulo</h3>
+          <p>
+            Tokio → Dallas / Miami → GRU.  
+            Solo si tenés visa americana o hacés tránsito permitido.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>3. Europa → São Paulo</h3>
+          <p>
+            Tokio/Osaka → Madrid / Frankfurt → São Paulo.  
+            Suele tener buenos precios y conexiones razonables.
+          </p>
+        </div>
+
       </div>
+    </section>
 
-      <div class="mini-item">
-        <div class="mini-label">Recomendación</div>
-        <div class="mini-value">Comprar anticipado</div>
+    <!-- RELACIONADOS -->
+    <section>
+      <h2 class="section-title">Otras rutas relacionadas</h2>
+      <p class="section-sub">Para conectar Japón con toda Sudamérica.</p>
+
+      <div class="cards-grid">
+
+        <div class="card">
+          <h3>Japón ⇄ Paraguay</h3>
+          <p>Siempre pasa por São Paulo o USA. Ruta clave para latinos en Japón.</p>
+          <a href="japon-paraguay.html">Ver guía Japón ⇄ Paraguay →</a>
+        </div>
+
+        <div class="card">
+          <h3>Japón ⇄ Argentina</h3>
+          <p>Ideal para entender cómo conectar GRU con Buenos Aires.</p>
+          <a href="japon-argentina.html">Ver Japón ⇄ Argentina →</a>
+        </div>
+
+        <div class="card">
+          <h3>Osaka ⇄ São Paulo</h3>
+          <p>Ruta directa vía Emiratos/Turquía como base.</p>
+          <a href="osaka-sao-paulo.html">Ver Osaka ⇄ São Paulo →</a>
+        </div>
+
       </div>
-    </div>
-  </div>
-</section>
+    </section>
 
-<section>
-  <h2 style="margin-top:2rem; font-size:1.2rem;">Tips para volar Japón ⇄ Brasil</h2>
-  <div class="tips-grid">
+  </main>
 
-    <div class="tip">
-      <strong>Rutas largas ➝ Planificación</strong>
-      <p>Brasil está lejos, pero buscar con tiempo permite encontrar escalas más cómodas.</p>
-    </div>
-
-    <div class="tip">
-      <strong>Escalas por Medio Oriente</strong>
-      <p>Las rutas vía Qatar y Emirates suelen ser más estables y con mejor equipaje.</p>
-    </div>
-
-    <div class="tip">
-      <strong>Visa de tránsito</strong>
-      <p>Si la escala es en USA, recordá que exige visa incluso solo para transitar.</p>
-    </div>
-
-  </div>
-</section>
-
-</main>
-
-<footer>
-  Dany Travel JP — Ayudando a la comunidad latina en Japón a encontrar vuelos baratos.
-</footer>
+  <footer>
+    Dany Travel JP — Japón ⇄ Brasil explicado sin vueltas para la comunidad latina.
+  </footer>
 
 </body>
 </html>
