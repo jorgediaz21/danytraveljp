@@ -1,218 +1,570 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <title>Vuelos Japón → Argentina | Dany Travel JP ✈️</title>
-
-  <meta name="description" content="Compara vuelos desde Japón hacia Argentina. Rutas habituales, escalas recomendadas y buscador oficial de Aviasales en Dany Travel JP.">
-  <meta name="keywords" content="vuelos Japón Argentina, vuelos baratos Japón Buenos Aires, viajar desde Japón a Argentina, vuelos Argentina, Aviasales Japón">
-
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-8JDPVLYE38"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){ dataLayer.push(arguments); }
-    gtag('js', new Date());
-    gtag('config', 'G-8JDPVLYE38');
-  </script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dany Travel JP | Vuelos Japón ⇄ Argentina</title>
+  <meta name="description" content="Busca y compara vuelos entre Japón y Argentina con Dany Travel JP. Ofertas, tips y rutas optimizadas para viajeros latinos en Japón." />
 
   <style>
-    :root {
-      --bg: #050814;
-      --card-bg: #0f1629;
-      --accent: #32a8dd;
-      --accent-strong: #ff7a3c;
-      --text-main: #ffffff;
-      --text-soft: #cfd5ff;
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
     }
 
     body {
-      margin: 0;
-      font-family: Arial, Helvetica, sans-serif;
-      background: radial-gradient(circle at top, #101935 0%, #050814 60%);
-      color: var(--text-main);
+      background: #0b1020;
+      color: #f5f5f5;
       line-height: 1.6;
     }
 
     header {
       position: sticky;
       top: 0;
-      z-index: 999;
-      background: rgba(5, 8, 20, 0.92);
+      z-index: 50;
+      background: rgba(5, 8, 20, 0.96);
       backdrop-filter: blur(12px);
-      border-bottom: 1px solid rgba(255,255,255,0.08);
-      padding: 12px 0;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
     }
 
-    .nav-inner {
+    .nav {
       max-width: 1100px;
-      margin: auto;
-      padding: 0 18px;
+      margin: 0 auto;
+      padding: 0.75rem 1rem;
       display: flex;
       align-items: center;
       justify-content: space-between;
+      gap: 1rem;
     }
 
-    .logo { font-size: 18px; font-weight: 800; letter-spacing: 1px; }
+    .logo {
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      font-size: 0.95rem;
+      text-transform: uppercase;
+    }
 
-    nav a {
-      margin-left: 16px;
+    .logo span {
+      color: #4ade80;
+    }
+
+    .nav-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      font-size: 0.85rem;
+    }
+
+    .nav-links a {
       text-decoration: none;
-      color: var(--text-soft);
-      font-size: 14px;
+      color: #d4d4d8;
+      padding: 0.3rem 0.6rem;
+      border-radius: 999px;
+      border: 1px solid transparent;
+      transition: 0.18s ease;
+      white-space: nowrap;
     }
-    nav a:hover { color: var(--accent); }
+
+    .nav-links a:hover {
+      border-color: rgba(255, 255, 255, 0.18);
+      background: rgba(148, 163, 184, 0.16);
+    }
+
+    .nav-links a.active {
+      background: linear-gradient(135deg, #22c55e, #16a34a);
+      color: #02120a;
+      border-color: transparent;
+      font-weight: 600;
+    }
+
+    main {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 1.5rem 1rem 3rem;
+    }
 
     .hero {
-      max-width: 1100px;
-      margin: 40px auto;
-      padding: 0 18px;
-    }
-
-    .hero h1 { font-size: 32px; margin-bottom: 6px; }
-    .hero span { color: var(--accent); }
-    .hero p { color: var(--text-soft); max-width: 720px; }
-
-    .section {
-      max-width: 1100px;
-      margin: 30px auto;
-      padding: 0 18px;
-    }
-
-    .section h2 {
-      font-size: 24px;
-      color: var(--accent);
-      margin-bottom: 8px;
-    }
-
-    .routes-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-      gap: 16px;
-      margin-top: 15px;
+      grid-template-columns: minmax(0, 1.5fr) minmax(0, 1.2fr);
+      gap: 2rem;
+      align-items: center;
+      padding: 1.5rem;
+      border-radius: 1.5rem;
+      background: radial-gradient(circle at top left, #22c55e22, transparent 55%),
+                  radial-gradient(circle at bottom right, #38bdf822, transparent 60%),
+                  #020617;
+      border: 1px solid rgba(148, 163, 184, 0.28);
+      box-shadow: 0 24px 60px rgba(15, 23, 42, 0.85);
+      margin-bottom: 2rem;
     }
 
-    .route-card {
-      background: var(--card-bg);
-      padding: 16px;
-      border-radius: 12px;
-      border: 1px solid rgba(255,255,255,0.06);
+    .hero-kicker {
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.2em;
+      color: #a1a1aa;
+      margin-bottom: 0.6rem;
     }
 
-    .route-card .title {
-      font-weight: bold;
-      margin-bottom: 4px;
+    .hero-title {
+      font-size: 2rem;
+      line-height: 1.2;
+      margin-bottom: 0.75rem;
     }
 
-    .widget-section {
-      max-width: 1100px;
-      margin: 20px auto 60px auto;
-      padding: 0 18px;
+    .hero-title span {
+      color: #4ade80;
     }
 
-    .widget-card {
-      background: #fff;
-      padding: 24px;
-      border-radius: 16px;
-      max-width: 950px;
-      margin: auto;
-      box-shadow: 0 12px 35px rgba(0,0,0,0.55);
+    .hero-subtitle {
+      font-size: 0.95rem;
+      color: #e4e4e7;
+      margin-bottom: 1.2rem;
     }
 
-    .widget-title {
-      font-size: 20px;
-      font-weight: bold;
-      color: #222;
-      text-align: center;
+    .hero-badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-bottom: 1.3rem;
     }
 
-    .widget-sub {
-      text-align: center;
-      font-size: 14px;
-      color: #555;
-      margin-bottom: 18px;
+    .badge {
+      font-size: 0.75rem;
+      padding: 0.35rem 0.7rem;
+      border-radius: 999px;
+      border: 1px solid rgba(148, 163, 184, 0.6);
+      background: rgba(15, 23, 42, 0.7);
+      color: #e5e7eb;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      white-space: nowrap;
+    }
+
+    .badge-dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 999px;
+      background: #22c55e;
+    }
+
+    .cta-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      align-items: center;
+    }
+
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.45rem;
+      padding: 0.65rem 1.3rem;
+      border-radius: 999px;
+      border: none;
+      cursor: pointer;
+      font-size: 0.9rem;
+      font-weight: 600;
+      background: linear-gradient(135deg, #22c55e, #16a34a);
+      color: #02120a;
+      text-decoration: none;
+      box-shadow: 0 14px 35px rgba(22, 163, 74, 0.5);
+      transition: transform 0.16s ease, box-shadow 0.16s ease, filter 0.16s ease;
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-1px);
+      filter: brightness(1.04);
+      box-shadow: 0 18px 40px rgba(22, 163, 74, 0.7);
+    }
+
+    .btn-secondary {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.4rem;
+      padding: 0.6rem 1.1rem;
+      border-radius: 999px;
+      border: 1px solid rgba(148, 163, 184, 0.7);
+      background: rgba(15, 23, 42, 0.85);
+      color: #e5e7eb;
+      font-size: 0.85rem;
+      text-decoration: none;
+      cursor: pointer;
+      transition: 0.16s ease;
+    }
+
+    .btn-secondary:hover {
+      background: rgba(30, 64, 175, 0.7);
+      border-color: rgba(191, 219, 254, 0.9);
+    }
+
+    .hero-note {
+      font-size: 0.75rem;
+      color: #a1a1aa;
+    }
+
+    .hero-side {
+      position: relative;
+      height: 100%;
+    }
+
+    .hero-card {
+      border-radius: 1.2rem;
+      padding: 1rem;
+      background: radial-gradient(circle at top, #1e293b, #020617);
+      border: 1px solid rgba(148, 163, 184, 0.6);
+      box-shadow: 0 18px 40px rgba(15, 23, 42, 0.9);
+      font-size: 0.8rem;
+    }
+
+    .hero-card-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 0.6rem;
+    }
+
+    .pill {
+      font-size: 0.7rem;
+      padding: 0.25rem 0.6rem;
+      border-radius: 999px;
+      border: 1px solid rgba(148, 163, 184, 0.7);
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+    }
+
+    .route {
+      font-size: 0.95rem;
+      font-weight: 600;
+      margin-bottom: 0.1rem;
+    }
+
+    .route-sub {
+      font-size: 0.7rem;
+      color: #a1a1aa;
+      margin-bottom: 0.75rem;
+    }
+
+    .mini-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 0.6rem;
+      margin-bottom: 0.85rem;
+    }
+
+    .mini-item {
+      background: rgba(15, 23, 42, 0.9);
+      padding: 0.5rem 0.6rem;
+      border-radius: 0.7rem;
+      border: 1px solid rgba(75, 85, 99, 0.9);
+    }
+
+    .mini-label {
+      font-size: 0.65rem;
+      color: #9ca3af;
+      margin-bottom: 0.2rem;
+    }
+
+    .mini-value {
+      font-size: 0.8rem;
+      font-weight: 500;
+    }
+
+    .pill-flag {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      font-size: 0.7rem;
+      margin-bottom: 0.25rem;
+      color: #e5e7eb;
+    }
+
+    .flag-text {
+      font-size: 0.8rem;
+    }
+
+    .section-title {
+      font-size: 1.1rem;
+      margin-bottom: 0.3rem;
+    }
+
+    .section-sub {
+      font-size: 0.85rem;
+      color: #a1a1aa;
+      margin-bottom: 1rem;
+    }
+
+    .tips-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 1rem;
+      margin-bottom: 2rem;
+    }
+
+    .tip-card {
+      background: #020617;
+      border-radius: 1rem;
+      border: 1px solid rgba(55, 65, 81, 0.9);
+      padding: 0.9rem 0.9rem 1rem;
+      font-size: 0.8rem;
+    }
+
+    .tip-title {
+      font-weight: 600;
+      margin-bottom: 0.3rem;
+    }
+
+    .tip-badge {
+      display: inline-block;
+      font-size: 0.65rem;
+      padding: 0.2rem 0.45rem;
+      border-radius: 999px;
+      background: rgba(37, 99, 235, 0.2);
+      border: 1px solid rgba(96, 165, 250, 0.7);
+      color: #bfdbfe;
+      margin-bottom: 0.3rem;
+    }
+
+    .faq {
+      border-radius: 1.2rem;
+      border: 1px solid rgba(55, 65, 81, 0.9);
+      padding: 1rem 1rem 1.2rem;
+      background: radial-gradient(circle at top left, #1e293b, #020617);
+      font-size: 0.85rem;
+    }
+
+    .faq-item + .faq-item {
+      margin-top: 0.75rem;
+      padding-top: 0.75rem;
+      border-top: 1px solid rgba(51, 65, 85, 0.9);
+    }
+
+    .faq-q {
+      font-weight: 600;
+      margin-bottom: 0.25rem;
     }
 
     footer {
-      padding: 25px;
+      border-top: 1px solid rgba(31, 41, 55, 0.9);
+      padding: 1.5rem 1rem 2rem;
+      font-size: 0.75rem;
+      color: #9ca3af;
       text-align: center;
-      font-size: 13px;
-      color: var(--text-soft);
-      border-top: 1px solid rgba(255,255,255,0.06);
     }
 
-    @media (max-width: 800px) {
-      nav { display: none; }
+    @media (max-width: 880px) {
+      .hero {
+        grid-template-columns: minmax(0, 1fr);
+      }
+    }
+
+    @media (max-width: 720px) {
+      .nav {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .tips-grid {
+        grid-template-columns: minmax(0, 1fr);
+      }
     }
   </style>
+
+  <!-- Si ya tenés tu script de Google Analytics en la página principal,
+       podés pegarlo aquí debajo de este comentario para seguir midiendo. -->
 </head>
-
 <body>
+  <header>
+    <nav class="nav">
+      <div class="logo">
+        DANY <span>TRAVEL JP</span>
+      </div>
 
-<header>
-  <div class="nav-inner">
-    <div class="logo">DANY TRAVEL JP</div>
-    <nav>
-      <a href="index.html">Inicio</a>
-      <a href="paraguay.html">Japón → Paraguay</a>
-      <a href="japon-argentina.html">Japón → Argentina</a>
-      <a href="escalas-inteligentes-japon.html">Escalas inteligentes</a>
-      <a href="guia-epoca-japon-paraguay.html">Guía de época</a>
+      <div class="nav-links">
+        <a href="index.html">Inicio</a>
+        <a href="#" class="active">Japón ⇄ Argentina</a>
+        <a href="#">Japón ⇄ Brasil</a>
+        <a href="#">Japón ⇄ Perú</a>
+        <a href="#">Japón ⇄ USA</a>
+        <a href="#">Más rutas</a>
+      </div>
     </nav>
-  </div>
-</header>
+  </header>
 
-<section class="hero">
-  <h1>Vuelos de <span>Japón</span> a <span>Argentina</span></h1>
-  <p>
-    Planeá tu viaje desde Japón a Buenos Aires y otras ciudades argentinas. Aquí encontrarás rutas habituales,
-    recomendaciones de escalas y un buscador para comparar precios.
-  </p>
-</section>
+  <main>
+    <!-- HERO PRINCIPAL -->
+    <section class="hero">
+      <div>
+        <div class="hero-kicker">Rutas Japón ⇄ Argentina</div>
+        <h1 class="hero-title">
+          Conectando <span>Japón</span> y <span>Argentina</span><br />
+          en un solo clic.
+        </h1>
+        <p class="hero-subtitle">
+          Dany Travel JP nació para los latinos que viven en Japón y sueñan con volver
+          a casa o traer a la familia. Buscamos los mejores vuelos entre Japón y Argentina,
+          con foco en precio, escalas inteligentes y tiempos reales de viaje.
+        </p>
 
-<section class="section">
-  <h2>Rutas comunes Japón → Argentina</h2>
-  <p>No hay vuelos directos, pero sí varias combinaciones populares:</p>
+        <div class="hero-badges">
+          <div class="badge">
+            <span class="badge-dot"></span>
+            Precios en tiempo real
+          </div>
+          <div class="badge">Pensado para residentes en Japón</div>
+          <div class="badge">Compatible con móvil y PC</div>
+        </div>
 
-  <div class="routes-grid">
-    <div class="route-card">
-      <div class="title">Tokio (NRT/HND) → Europa → Buenos Aires (EZE)</div>
-      <p>Conexiones frecuentes vía Madrid, París, Frankfurt o Roma.</p>
-    </div>
-    <div class="route-card">
-      <div class="title">Osaka (KIX) → Oriente Medio → Buenos Aires</div>
-      <p>Vuelos vía Doha o Estambul, con buenas conexiones a Sudamérica.</p>
-    </div>
-    <div class="route-card">
-      <div class="title">Nagoya (NGO) → São Paulo (GRU) → Buenos Aires</div>
-      <p>Opción útil si combinás viaje a Brasil y Argentina.</p>
-    </div>
-    <div class="route-card">
-      <div class="title">Otras combinaciones</div>
-      <p>Probá distintos aeropuertos de salida en Japón y compará tarifas.</p>
-    </div>
-  </div>
-</section>
+        <div class="cta-row">
+          <a
+            class="btn-primary"
+            href="https://aviasales.tpm.lv/XFpIYjQj"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Buscar vuelos Japón ⇄ Argentina
+            <span>✈️</span>
+          </a>
 
-<section class="widget-section">
-  <h2>Buscar vuelos Japón → Argentina</h2>
-  <p>Usa el buscador para encontrar la mejor combinación de precio y horarios.</p>
+          <a class="btn-secondary" href="#tips">
+            Ver tips de viaje
+          </a>
 
-  <div class="widget-card">
-    <div class="widget-title">Buscador oficial de Aviasales</div>
-    <div class="widget-sub">Reservás directamente con la aerolínea o agencia elegida.</div>
+          <p class="hero-note">
+            Al reservar desde este botón, apoyás directamente el proyecto Dany Travel JP.
+          </p>
+        </div>
+      </div>
 
-    <!-- Widget Aviasales -->
-    <script async src="https://tpemb.com/content?currency=usd&trs=474443&shmarker=684522&show_hotels=true&powered_by=true&locale=en&searchUrl=www.aviasales.com%2Fsearch&primary_override=%2332a8dd&color_button=%2332a8dd&color_icons=%2332a8dd&dark=%23262626&light=%23FFFFFF&secondary=%23FFFFFF&special=%23C4C4C4&color_focused=%2332a8dd&border_radius=0&plain=false&promo_id=7879&campaign_id=100" charset="utf-8"></script>
+      <!-- TARJETA LATERAL -->
+      <div class="hero-side">
+        <div class="hero-card">
+          <div class="hero-card-header">
+            <div>
+              <div class="pill">Ruta destacada</div>
+            </div>
+            <div class="pill">Dany Travel JP</div>
+          </div>
 
-  </div>
-</section>
+          <div class="pill-flag">
+            <span>🇯🇵</span>
+            <span class="flag-text">Kansai / Narita / Haneda</span>
+            <span>⇄</span>
+            <span>🇦🇷</span>
+            <span class="flag-text">Buenos Aires (EZE/AEP)</span>
+          </div>
 
-<footer>
-  © 2025 Dany Travel JP — Rutas Japón → Argentina · Powered by Travelpayouts & Aviasales
-</footer>
+          <div class="route">Japón ⇄ Argentina</div>
+          <div class="route-sub">
+            Rutas con 1 o 2 escalas, buscando equilibrio entre precio y horas de vuelo.
+          </div>
 
+          <div class="mini-grid">
+            <div class="mini-item">
+              <div class="mini-label">Escalas comunes</div>
+              <div class="mini-value">Doha, Dubái, Europa, USA</div>
+            </div>
+            <div class="mini-item">
+              <div class="mini-label">Duración aproximada</div>
+              <div class="mini-value">25h ~ 40h total</div>
+            </div>
+            <div class="mini-item">
+              <div class="mini-label">Ideal para</div>
+              <div class="mini-value">Visitas a familia, vacaciones largas</div>
+            </div>
+            <div class="mini-item">
+              <div class="mini-label">Recomendación</div>
+              <div class="mini-value">Comprar con anticipación</div>
+            </div>
+          </div>
+
+          <p style="font-size: 0.72rem; color: #9ca3af;">
+            Usá este buscador como tu “hub” de vuelos Japón ⇄ Argentina.
+            Podés entrar las veces que quieras, comparar y reservar cuando encuentres
+            el precio que mejor se alinea a tu bolsillo.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- TIPS DE VIAJE -->
+    <section id="tips">
+      <h2 class="section-title">Tips para volar entre Japón y Argentina</h2>
+      <p class="section-sub">
+        No es una ruta corta, pero con la estrategia correcta evitás dolores de cabeza,
+        escalas eternas y sorpresas en migración.
+      </p>
+
+      <div class="tips-grid">
+        <article class="tip-card">
+          <div class="tip-badge">Planificación</div>
+          <div class="tip-title">Comprá con tiempo (cuando puedas)</div>
+          <p>
+            Para rutas largas como Japón ⇄ Argentina, empezar a buscar con varios meses
+            de anticipación suele dar más opciones de combinación y tarifa. Aun así,
+            siempre vale la pena revisar de vez en cuando: a veces aparecen promos puntuales.
+          </p>
+        </article>
+
+        <article class="tip-card">
+          <div class="tip-badge">Escalas</div>
+          <div class="tip-title">Elegí bien dónde hacer conexión</div>
+          <p>
+            Es común pasar por <strong>Europa</strong>, <strong>Medio Oriente</strong> o
+            <strong>Estados Unidos</strong>. Antes de comprar verificá si necesitás visa
+            de tránsito o requisitos especiales para cada país por el que vas a pasar.
+          </p>
+        </article>
+
+        <article class="tip-card">
+          <div class="tip-badge">Familia</div>
+          <div class="tip-title">Viajar con chicos y familia</div>
+          <p>
+            Si viajás con niños o personas mayores, priorizá escalas no tan largas,
+            buena franja horaria y aerolíneas con atención clara. A veces pagar un poco más
+            se compensa con menos desgaste físico y emocional.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <!-- FAQ SIMPLE -->
+    <section class="faq">
+      <div class="faq-item">
+        <div class="faq-q">¿Este sitio vende directamente los pasajes?</div>
+        <div class="faq-a">
+          No. Dany Travel JP funciona como un puente: te ayuda a encontrar vuelos y cuando
+          elegís una opción, la compra se realiza a través del socio que opera el buscador.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q">¿Por qué es importante usar el botón de búsqueda de esta página?</div>
+        <div class="faq-a">
+          Porque ese botón está vinculado a nuestro enlace de afiliado. Cuando reservás desde ahí,
+          apoyás el proyecto, sin aumentar el precio para vos. Es la forma de mantener vivo el sitio
+          y seguir creando rutas especiales para la comunidad latina en Japón.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q">¿Funciona desde el celular?</div>
+        <div class="faq-a">
+          Sí. Esta página está pensada para usarse tanto desde la notebook como desde el smartphone.
+          Podés buscar rápido en un break del trabajo o tranquilo desde tu casa.
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    Dany Travel JP — Proyecto independiente para conectar Japón con Latinoamérica.<br />
+    Esta página está enfocada en la ruta Japón ⇄ Argentina.
+  </footer>
 </body>
 </html>
