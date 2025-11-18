@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dany Travel JP | Japón ⇄ Perú</title>
+  <meta name="description"
+    content="Busca vuelos entre Japón y Perú. Rutas optimizadas, precios actualizados y consejos para viajar entre Japón y Lima.">
+
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: system-ui; }
+    body { background: #0b1020; color: #f5f5f5; line-height: 1.6; }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      background: rgba(5, 8, 20, 0.96);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      backdrop-filter: blur(10px);
+    }
+
+    .nav {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0.75rem 1rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-weight: 700;
+      font-size: 1rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+
+    .logo span {
+      color: #4ade80;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 0.7rem;
+      font-size: 0.85rem;
+      flex-wrap: wrap;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      padding: 0.35rem 0.7rem;
+      border-radius: 999px;
+      color: #d4d4d8;
+      border: 1px solid transparent;
+    }
+
+    .nav-links a:hover {
+      background: rgba(255, 255, 255, 0.08);
+    }
+
+    .nav-links a.active {
+      background: linear-gradient(135deg, #22c55e, #16a34a);
+      color: #02120a;
+      font-weight: 600;
+    }
+
+    main {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 2rem 1rem;
+    }
+
+    .hero {
+      background: #020617;
+      border: 1px solid rgba(148, 163, 184, 0.3);
+      border-radius: 1.5rem;
+      padding: 2rem;
+      display: grid;
+      grid-template-columns: 1.5fr 1fr;
+      gap: 2rem;
+      background:
+        radial-gradient(circle at top left, #22c55e22, transparent),
+        radial-gradient(circle at bottom right, #38bdf822, transparent);
+    }
+
+    .hero h1 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    .hero h1 span {
+      color: #4ade80;
+    }
+
+    .hero p {
+      font-size: 0.95rem;
+      color: #e4e4e7;
+      margin-bottom: 1rem;
+    }
+
+    .badge {
+      display: inline-flex;
+      gap: 0.4rem;
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      padding: 0.35rem 0.7rem;
+      border-radius: 999px;
+      font-size: 0.75rem;
+      margin-right: 0.4rem;
+    }
+
+    .btn-primary {
+      display: inline-flex;
+      gap: 0.5rem;
+      align-items: center;
+      margin-top: 1rem;
+      padding: 0.7rem 1.3rem;
+      border-radius: 999px;
+      text-decoration: none;
+      background: linear-gradient(135deg, #22c55e, #16a34a);
+      color: #02120a;
+      font-weight: 600;
+      box-shadow: 0 14px 35px rgba(22, 163, 74, 0.4);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-1px);
+    }
+
+    .hero-card {
+      padding: 1rem;
+      border-radius: 1rem;
+      background: #0b1225;
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      font-size: 0.85rem;
+    }
+
+    .mini-grid {
+      margin-top: 1rem;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.7rem;
+    }
+
+    .mini-item {
+      padding: 0.6rem;
+      background: #11182b;
+      border-radius: 0.7rem;
+      border: 1px solid rgba(255, 255, 255, 0.15);
+    }
+
+    .mini-label {
+      font-size: 0.7rem;
+      color: #9ca3af;
+    }
+
+    .mini-value {
+      font-size: 0.85rem;
+      font-weight: 500;
+    }
+
+    .tips-grid {
+      margin-top: 2rem;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 1rem;
+    }
+
+    .tip {
+      background: #020617;
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      padding: 1rem;
+      border-radius: 0.8rem;
+      font-size: 0.85rem;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem 0;
+      font-size: 0.75rem;
+      color: #9ca3af;
+    }
+
+    @media(max-width:850px) {
+      .hero {
+        grid-template-columns: 1fr;
+      }
+
+      .tips-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <nav class="nav">
+      <div class="logo">DANY <span>TRAVEL JP</span></div>
+      <div class="nav-links">
+        <a href="index.html">Inicio</a>
+        <a href="japon-argentina.html">Japón ⇄ Argentina</a>
+        <a href="japon-brasil.html">Japón ⇄ Brasil</a>
+        <a href="japon-paraguay.html">Japón ⇄ Paraguay</a>
+        <a href="paraguay-japon.html">Paraguay ⇄ Japón</a>
+        <a href="paraguay.html">Paraguay</a>
+        <a href="japon-peru.html" class="active">Japón ⇄ Perú</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+
+    <section class="hero">
+      <div>
+        <h1>Vuelos <span>Japón</span> ⇄ <span>Perú</span></h1>
+        <p>
+          La ruta Japón ⇄ Perú es clave para la comunidad peruana que vive en Japón.
+          Acá tenés un buscador rápido, rutas típicas y consejos para que el viaje sea
+          más llevadero y sin sorpresas.
+        </p>
+
+        <div class="badge">Precios actualizados</div>
+        <div class="badge">Escalas recomendadas</div>
+        <div class="badge">Optimizado para móvil</div>
+
+        <a class="btn-primary" href="https://aviasales.tpm.lv/XFpIYjQj" target="_blank">
+          Buscar vuelos Japón ⇄ Perú ✈️
+        </a>
+      </div>
+
+      <div class="hero-card">
+        <strong>Ruta Recomendada</strong><br><br>
+
+        🇯🇵 Japón ⇄ 🇵🇪 Perú  
+        <br>
+        Aeropuerto principal: Lima (LIM)
+
+        <div class="mini-grid">
+          <div class="mini-item">
+            <div class="mini-label">Escalas típicas</div>
+            <div class="mini-value">USA, Europa, México</div>
+          </div>
+
+          <div class="mini-item">
+            <div class="mini-label">Duración total</div>
+            <div class="mini-value">26h ~ 40h</div>
+          </div>
+
+          <div class="mini-item">
+            <div class="mini-label">Ideal para</div>
+            <div class="mini-value">Visitar familia, vacaciones largas</div>
+          </div>
+
+          <div class="mini-item">
+            <div class="mini-label">Consejo</div>
+            <div class="mini-value">Verificar si la escala exige visa</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2 style="margin-top:2rem; font-size:1.2rem;">Tips para viajar Japón ⇄ Perú</h2>
+      <div class="tips-grid">
+
+        <div class="tip">
+          <strong>1. Cuidado con escala en USA</strong>
+          <p>Si pasás por Estados Unidos, necesitás visa aunque sea solo tránsito.</p>
+        </div>
+
+        <div class="tip">
+          <strong>2. Mirar rutas vía México o Europa</strong>
+          <p>A veces vía CDMX o Madrid salen combinaciones más baratas y con menos trabas de visa.</p>
+        </div>
+
+        <div class="tip">
+          <strong>3. Fechas flexibles</strong>
+          <p>Si podés mover un poco la fecha, los precios bajan bastante en días de semana.</p>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    Dany Travel JP — Conectando Japón y Perú con rutas claras y simples.
+  </footer>
+
+</body>
+
+</html>
