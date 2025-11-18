@@ -1,82 +1,164 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Trucos para vuelos baratos desde Japón | Dany Travel JP</title>
-  <meta name="description" content="Consejos prácticos para encontrar pasajes baratos desde Japón hacia Paraguay, Brasil, Argentina y otros destinos. Fechas, aeropuertos y escalas.">
-  <link rel="stylesheet" href="style.css" />
+  <title>Dany Travel JP | Trucos para encontrar vuelos baratos en Japón</title>
+  <meta name="description"
+    content="Los mejores trucos para encontrar vuelos baratos viviendo en Japón. Consejos reales, rutas inteligentes y hacks para ahorrar dinero.">
+
+  <style>
+    * { margin:0; padding:0; box-sizing:border-box; font-family:system-ui; }
+    body { background:#0b1020; color:#f5f5f5; line-height:1.6; }
+    header { position:sticky; top:0; z-index:50; background:rgba(5,8,20,0.96); border-bottom:1px solid rgba(255,255,255,0.08); backdrop-filter:blur(10px); }
+
+    .nav { max-width:1100px; margin:0 auto; padding:0.75rem 1rem; display:flex; justify-content:space-between; align-items:center; }
+    .logo { font-weight:700; font-size:1rem; text-transform:uppercase; letter-spacing:0.08em; }
+    .logo span { color:#4ade80; }
+    .nav-links { display:flex; gap:0.7rem; font-size:0.85rem; flex-wrap:wrap; }
+    .nav-links a { text-decoration:none; padding:0.35rem 0.7rem; border-radius:999px; color:#d4d4d8; border:1px solid transparent; }
+    .nav-links a:hover { background:rgba(255,255,255,0.08); }
+    .nav-links a.active { background:linear-gradient(135deg,#22c55e,#16a34a); color:#02120a; font-weight:600; }
+
+    main { max-width:1100px; margin:0 auto; padding:2rem 1rem; }
+
+    .hero {
+      background:#020617;
+      border:1px solid rgba(148,163,184,0.3);
+      border-radius:1.5rem;
+      padding:2rem;
+      background:
+        radial-gradient(circle at top left,#22c55e22,transparent),
+        radial-gradient(circle at bottom right,#38bdf822,transparent);
+      margin-bottom:2rem;
+    }
+
+    .hero h1 { font-size:2.2rem; margin-bottom:1rem; }
+    .hero h1 span { color:#4ade80; }
+    .hero p { font-size:1rem; color:#e4e4e7; margin-bottom:1rem; }
+
+    .tips-grid {
+      margin-top:1rem;
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:1rem;
+    }
+
+    .tip {
+      background:#020617;
+      border:1px solid rgba(255,255,255,0.12);
+      padding:1.2rem;
+      border-radius:0.8rem;
+      font-size:0.9rem;
+    }
+
+    .tip strong { color:#4ade80; font-size:1rem; }
+
+    footer { text-align:center; padding:2rem 0; font-size:0.75rem; color:#9ca3af; }
+
+    @media(max-width:850px){
+      .tips-grid { grid-template-columns:1fr; }
+    }
+  </style>
 </head>
 
 <body>
-  <header>
-    <img src="IMG/logo-dany-travel-jp.webp"
-         alt="Logo Dany Travel JP"
-         width="95" height="95"
-         style="margin-bottom: 15px;">
-    <h1>Trucos para vuelos baratos desde Japón</h1>
-    <p>Tips simples para pagar menos desde Japón a Sudamérica.</p>
-  </header>
 
-  <div class="contenedor">
-    <h2>1. Ser flexible con las fechas</h2>
+<header>
+  <nav class="nav">
+    <div class="logo">DANY <span>TRAVEL JP</span></div>
+    <div class="nav-links">
+      <a href="index.html">Inicio</a>
+      <a href="japon-argentina.html">Japón ⇄ Argentina</a>
+      <a href="japon-brasil.html">Japón ⇄ Brasil</a>
+      <a href="japon-paraguay.html">Japón ⇄ Paraguay</a>
+      <a href="paraguay-japon.html">Paraguay ⇄ Japón</a>
+      <a href="paraguay.html">Paraguay</a>
+      <a href="trucos-vuelos-baratos-japon.html" class="active">Trucos vuelos baratos</a>
+    </div>
+  </nav>
+</header>
+
+<main>
+
+<section class="hero">
+  <h1>Trucos para encontrar <span>vuelos baratos</span> viviendo en Japón</h1>
+  <p>
+    Viajar desde Japón puede salir caro si no sabés cuándo y cómo buscar.  
+    Estos hacks te van a ayudar a pagar menos, evitar precios inflados y agarrar oportunidades reales.
+  </p>
+</section>
+
+<section class="tips-grid">
+
+  <div class="tip">
+    <strong>1. Buscá a medianoche en Japón</strong>
     <p>
-      Cambiar la fecha 1 o 2 días antes o después puede bajar mucho el precio.
-      En el buscador, usá siempre varias combinaciones de ida y vuelta.
-    </p>
-
-    <h2>2. Probar aeropuertos diferentes</h2>
-    <ul>
-      <li>Tokio: Narita (NRT) y Haneda (HND).</li>
-      <li>Osaka: Kansai (KIX) y Itami (ITM).</li>
-    </ul>
-    <p>
-      A veces salir desde otro aeropuerto cercano ya hace la diferencia.
-    </p>
-
-    <h2>3. Evitar las fechas más caras</h2>
-    <ul>
-      <li>Año Nuevo, Golden Week, Obon.</li>
-      <li>Navidad y Año Nuevo en Sudamérica.</li>
-    </ul>
-
-    <h2>4. Usar escalas a tu favor</h2>
-    <p>
-      No le tengas miedo a las escalas. Dos conexiones bien elegidas pueden
-      salir mucho más baratas que una sola escala “cómoda”.
-    </p>
-
-    <!-- CTA monetizado -->
-    <section class="cta-vuelos" style="margin-top: 40px; text-align:center;">
-      <h2 style="font-size: 24px; margin-bottom:10px;">Aplicar estos trucos ahora</h2>
-      <p style="max-width: 600px; margin: 0 auto 15px;">
-        Abrí el buscador y probá distintas fechas, aeropuertos y rutas para encontrar
-        el pasaje más barato posible saliendo desde Japón.
-      </p>
-      <a href="https://aviasales.tpm.lv/XFpIYjQj"
-         target="_blank"
-         rel="noopener noreferrer"
-         style="
-           display:inline-block;
-           background:#00AEEF;
-           color:white;
-           padding:14px 28px;
-           border-radius:8px;
-           font-size:18px;
-           font-weight:600;
-           text-decoration:none;
-         ">
-        💸 Buscar vuelos baratos desde Japón
-      </a>
-    </section>
-
-    <p style="margin-top: 30px; font-size: 0.9rem;">
-      ← <a href="index.html">Volver al inicio de Dany Travel JP</a>
+      Entre 00:00 y 02:00 muchos sistemas actualizan tarifas.  
+      Es una ventana donde aparecen precios más bajos.
     </p>
   </div>
 
-  <footer>
-    Dany Travel JP – © 2025
-  </footer>
+  <div class="tip">
+    <strong>2. Usá aeropuertos secundarios</strong>
+    <p>
+      No siempre volar desde Haneda o Kansai es lo más barato.  
+      A veces Fukuoka o Nagoya tienen mejores tarifas.
+    </p>
+  </div>
+
+  <div class="tip">
+    <strong>3. Evitá fines de semana</strong>
+    <p>
+      De viernes a domingo los precios suben por demanda.  
+      Ideal comprar martes o miércoles.
+    </p>
+  </div>
+
+  <div class="tip">
+    <strong>4. Aprovechá rutas vía Medio Oriente</strong>
+    <p>
+      Qatar, Emirates y Etihad suelen ofrecer mejores precios y escalas cómodas.
+    </p>
+  </div>
+
+  <div class="tip">
+    <strong>5. Buscá con 2 a 4 meses de anticipación</strong>
+    <p>
+      Es el punto ideal para vuelos largos desde Japón a Sudamérica.
+    </p>
+  </div>
+
+  <div class="tip">
+    <strong>6. Activá alertas de precios</strong>
+    <p>
+      Travelpayouts envía notificaciones cuando baja el precio de una ruta específica.
+    </p>
+  </div>
+
+  <div class="tip">
+    <strong>7. Revisá vuelos desde Corea o Taiwán</strong>
+    <p>
+      A veces es más barato volar primero a Corea/Taiwán y luego a tu destino final.
+    </p>
+  </div>
+
+  <div class="tip">
+    <strong>8. Nunca compres vuelos los lunes</strong>
+    <p>
+      Es el día más caro de la semana en promedio.
+    </p>
+  </div>
+
+</section>
+
+</main>
+
+<footer>
+  Dany Travel JP — Hacks reales para ahorrar volando desde Japón.
+</footer>
+
 </body>
+
 </html>
