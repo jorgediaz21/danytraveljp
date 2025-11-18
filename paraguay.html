@@ -6,133 +6,734 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Dany Travel JP | Vuelos desde Paraguay</title>
   <meta name="description"
-    content="Encuentra las mejores opciones de vuelos desde Paraguay hacia Japón, Brasil, Argentina y más. Precios actualizados y rutas recomendadas.">
+    content="Vuelos desde Paraguay hacia Japón, Brasil, Argentina, Europa y USA. Explicado simple para tu familia: rutas, escalas y acceso al buscador de pasajes.">
 
   <style>
-    * { margin:0; padding:0; box-sizing:border-box; font-family:system-ui; }
-    body { background:#0b1020; color:#f5f5f5; line-height:1.6; }
-    header { position:sticky; top:0; z-index:50; background:rgba(5,8,20,0.96); border-bottom:1px solid rgba(255,255,255,0.08); backdrop-filter:blur(10px); }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
 
-    .nav { max-width:1100px; margin:0 auto; padding:0.75rem 1rem; display:flex; justify-content:space-between; align-items:center; }
-    .logo { font-weight:700; font-size:1rem; text-transform:uppercase; letter-spacing:0.08em; }
-    .logo span { color:#4ade80; }
-    .nav-links { display:flex; gap:0.7rem; font-size:0.85rem; flex-wrap:wrap; }
-    .nav-links a { text-decoration:none; padding:0.35rem 0.7rem; border-radius:999px; color:#d4d4d8; border:1px solid transparent; }
-    .nav-links a:hover { background:rgba(255,255,255,0.08); }
-    .nav-links a.active { background:linear-gradient(135deg,#22c55e,#16a34a); color:#02120a; font-weight:600; }
+    body {
+      background: #020617;
+      color: #f9fafb;
+      line-height: 1.6;
+    }
 
-    main { max-width:1100px; margin:0 auto; padding:2rem 1rem; }
+    /* HEADER GLOBAL */
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      background: rgba(2, 6, 23, 0.96);
+      border-bottom: 1px solid rgba(148, 163, 184, 0.35);
+      backdrop-filter: blur(14px);
+    }
+
+    .nav {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0.75rem 1rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .logo {
+      font-weight: 800;
+      font-size: 1rem;
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+    }
+
+    .logo span {
+      color: #4ade80;
+    }
+
+    .nav-right {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+    }
+
+    .nav-link {
+      text-decoration: none;
+      padding: 0.35rem 0.8rem;
+      border-radius: 999px;
+      color: #e5e7eb;
+      font-size: 0.85rem;
+      border: 1px solid transparent;
+      white-space: nowrap;
+    }
+
+    .nav-link:hover {
+      background: rgba(148, 163, 184, 0.18);
+    }
+
+    .mega-wrapper {
+      position: relative;
+    }
+
+    .mega-toggle {
+      border: 1px solid rgba(148, 163, 184, 0.6);
+      background: rgba(15, 23, 42, 0.9);
+      color: #e5e7eb;
+      border-radius: 999px;
+      font-size: 0.85rem;
+      padding: 0.35rem 0.9rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      cursor: pointer;
+      white-space: nowrap;
+    }
+
+    .mega-toggle:hover {
+      background: rgba(30, 64, 175, 0.9);
+      border-color: rgba(129, 140, 248, 0.9);
+    }
+
+    .mega-icon {
+      font-size: 0.8rem;
+      opacity: 0.8;
+    }
+
+    .mega-menu {
+      position: absolute;
+      right: 0;
+      margin-top: 0.6rem;
+      background: #020617;
+      border-radius: 1rem;
+      border: 1px solid rgba(148, 163, 184, 0.6);
+      box-shadow: 0 22px 55px rgba(15, 23, 42, 0.9);
+      padding: 1.2rem 1.4rem;
+      display: none;
+      min-width: 280px;
+      max-width: 480px;
+    }
+
+    .mega-wrapper:hover .mega-menu {
+      display: grid;
+    }
+
+    .mega-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 1.2rem;
+    }
+
+    .mega-column-title {
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: #9ca3af;
+      margin-bottom: 0.45rem;
+    }
+
+    .mega-link {
+      display: block;
+      text-decoration: none;
+      font-size: 0.82rem;
+      color: #e5e7eb;
+      padding: 0.22rem 0;
+      border-radius: 0.4rem;
+    }
+
+    .mega-link span {
+      font-size: 0.7rem;
+      color: #9ca3af;
+    }
+
+    .mega-link:hover {
+      background: rgba(148, 163, 184, 0.16);
+    }
+
+    .nav-guides {
+      position: relative;
+    }
+
+    .guides-toggle {
+      border-radius: 999px;
+      border: 1px solid rgba(148, 163, 184, 0.5);
+      padding: 0.35rem 0.8rem;
+      background: rgba(15, 23, 42, 0.9);
+      color: #e5e7eb;
+      font-size: 0.85rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.3rem;
+      cursor: pointer;
+      white-space: nowrap;
+    }
+
+    .guides-toggle:hover {
+      background: rgba(30, 64, 175, 0.9);
+      border-color: rgba(129, 140, 248, 0.9);
+    }
+
+    .guides-menu {
+      position: absolute;
+      right: 0;
+      margin-top: 0.5rem;
+      background: #020617;
+      border-radius: 0.9rem;
+      border: 1px solid rgba(148, 163, 184, 0.6);
+      padding: 0.65rem 0.8rem;
+      display: none;
+      min-width: 220px;
+      box-shadow: 0 18px 45px rgba(15, 23, 42, 0.9);
+    }
+
+    .nav-guides:hover .guides-menu {
+      display: block;
+    }
+
+    .guide-link {
+      display: block;
+      text-decoration: none;
+      font-size: 0.82rem;
+      color: #e5e7eb;
+      padding: 0.25rem 0.4rem;
+      border-radius: 0.4rem;
+    }
+
+    .guide-link span {
+      font-size: 0.7rem;
+      color: #9ca3af;
+    }
+
+    .guide-link:hover {
+      background: rgba(148, 163, 184, 0.18);
+    }
+
+    /* LAYOUT GENERAL */
+
+    main {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 2.2rem 1rem 3rem;
+    }
 
     .hero {
-      background:#020617;
-      border:1px solid rgba(148,163,184,0.3);
-      border-radius:1.5rem;
-      padding:2rem;
-      background:
-        radial-gradient(circle at top left,#22c55e22,transparent),
-        radial-gradient(circle at bottom right,#38bdf822,transparent);
+      background: radial-gradient(circle at top left, #22c55e22, transparent),
+        radial-gradient(circle at bottom right, #38bdf822, transparent),
+        #020617;
+      border-radius: 1.6rem;
+      border: 1px solid rgba(148, 163, 184, 0.5);
+      padding: 2.3rem 2rem;
+      display: grid;
+      grid-template-columns: minmax(0, 1.6fr) minmax(0, 1.1fr);
+      gap: 2.3rem;
     }
 
-    .hero h1 { font-size:2.2rem; margin-bottom:1rem; }
-    .hero h1 span { color:#4ade80; }
-    .hero p { font-size:1rem; color:#e4e4e7; margin-bottom:1rem; }
-
-    .badge { display:inline-flex; gap:0.4rem; background:rgba(255,255,255,0.08); border:1px solid rgba(255,255,255,0.2); padding:0.35rem 0.7rem; border-radius:999px; font-size:0.75rem; margin-right:0.4rem; }
-
-    .btn-primary {
-      display:inline-flex; gap:0.5rem; align-items:center; margin-top:1rem;
-      padding:0.7rem 1.3rem; border-radius:999px; text-decoration:none;
-      background:linear-gradient(135deg,#22c55e,#16a34a); color:#02120a;
-      font-weight:600; box-shadow:0 14px 35px rgba(22,163,74,0.4);
+    .hero-title {
+      font-size: 2rem;
+      line-height: 1.15;
+      margin-bottom: 0.9rem;
     }
 
-    .btn-primary:hover { transform:translateY(-1px); }
-
-    .routes-grid {
-      margin-top:2rem;
-      display:grid;
-      grid-template-columns:1fr 1fr;
-      gap:1rem;
+    .hero-title span {
+      color: #4ade80;
     }
 
-    .route-card {
-      background:#020617;
-      border-radius:1rem;
-      border:1px solid rgba(255,255,255,0.12);
-      padding:1.2rem;
+    .hero-sub {
+      font-size: 0.95rem;
+      color: #e5e7eb;
+      max-width: 32rem;
+      margin-bottom: 1.2rem;
     }
 
-    .route-card h3 {
-      margin-bottom:0.5rem;
-      font-size:1.1rem;
-      color:#4ade80;
+    .hero-badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.45rem;
+      margin-bottom: 1.2rem;
     }
 
-    .route-card p {
-      font-size:0.85rem;
-      color:#d1d5db;
-      margin-bottom:0.8rem;
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      font-size: 0.78rem;
+      padding: 0.3rem 0.7rem;
+      border-radius: 999px;
+      background: rgba(15, 23, 42, 0.95);
+      border: 1px solid rgba(148, 163, 184, 0.7);
+      color: #e5e7eb;
     }
 
-    .route-card a {
-      text-decoration:none;
-      font-size:0.85rem;
-      display:inline-flex;
-      gap:0.4rem;
-      color:#22c55e;
-      border-bottom:1px solid #22c55e;
-      padding-bottom:2px;
+    .badge-dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 999px;
+      background: #22c55e;
     }
 
-    footer { text-align:center; padding:2rem 0; font-size:0.75rem; color:#9ca3af; }
+    .hero-cta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.6rem;
+      align-items: center;
+      margin-top: 0.5rem;
+    }
 
-    @media(max-width:850px){
-      .routes-grid { grid-template-columns:1fr; }
+    .btn-main {
+      text-decoration: none;
+      padding: 0.75rem 1.4rem;
+      border-radius: 999px;
+      background: linear-gradient(135deg, #22c55e, #16a34a);
+      color: #02120a;
+      font-weight: 600;
+      font-size: 0.95rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.45rem;
+      box-shadow: 0 18px 45px rgba(22, 163, 74, 0.6);
+    }
+
+    .btn-main:hover {
+      transform: translateY(-1px);
+    }
+
+    .btn-ghost {
+      text-decoration: none;
+      padding: 0.7rem 1.1rem;
+      border-radius: 999px;
+      border: 1px solid rgba(148, 163, 184, 0.7);
+      font-size: 0.85rem;
+      color: #e5e7eb;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+    }
+
+    .btn-ghost:hover {
+      background: rgba(15, 23, 42, 0.9);
+    }
+
+    .hero-right {
+      background: rgba(15, 23, 42, 0.96);
+      border-radius: 1.2rem;
+      border: 1px solid rgba(148, 163, 184, 0.6);
+      padding: 1.1rem 1.2rem;
+      font-size: 0.85rem;
+    }
+
+    .hero-right-title {
+      font-size: 0.9rem;
+      font-weight: 600;
+      margin-bottom: 0.7rem;
+    }
+
+    .mini-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.7rem;
+      margin-top: 0.8rem;
+    }
+
+    .mini-item {
+      padding: 0.6rem;
+      border-radius: 0.7rem;
+      background: rgba(15, 23, 42, 0.9);
+      border: 1px solid rgba(51, 65, 85, 0.9);
+      font-size: 0.8rem;
+    }
+
+    .mini-label {
+      font-size: 0.72rem;
+      color: #9ca3af;
+      margin-bottom: 0.12rem;
+    }
+
+    .mini-value {
+      font-size: 0.83rem;
+      font-weight: 500;
+    }
+
+    .section-title {
+      margin-top: 2.3rem;
+      margin-bottom: 0.2rem;
+      font-size: 1.1rem;
+    }
+
+    .section-sub {
+      font-size: 0.82rem;
+      color: #9ca3af;
+      margin-bottom: 1.2rem;
+    }
+
+    .cards-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 1rem;
+    }
+
+    .card {
+      background: #020617;
+      border-radius: 1rem;
+      border: 1px solid rgba(51, 65, 85, 0.9);
+      padding: 1rem;
+      font-size: 0.85rem;
+    }
+
+    .card h3 {
+      font-size: 0.95rem;
+      margin-bottom: 0.4rem;
+      color: #e5e7eb;
+    }
+
+    .card p {
+      font-size: 0.82rem;
+      color: #d1d5db;
+    }
+
+    .card a {
+      display: inline-flex;
+      margin-top: 0.5rem;
+      font-size: 0.8rem;
+      color: #4ade80;
+      text-decoration: none;
+      border-bottom: 1px solid #4ade80;
+      padding-bottom: 1px;
+    }
+
+    footer {
+      border-top: 1px solid rgba(31, 41, 55, 0.9);
+      margin-top: 2.5rem;
+      padding: 1.8rem 1rem 2.4rem;
+      font-size: 0.78rem;
+      color: #9ca3af;
+      text-align: center;
+    }
+
+    @media (max-width: 900px) {
+      .hero {
+        grid-template-columns: 1fr;
+        padding: 1.8rem 1.4rem;
+      }
+
+      .cards-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .nav {
+        flex-wrap: wrap;
+        justify-content: space-between;
+      }
+
+      .nav-right {
+        width: 100%;
+        justify-content: flex-end;
+      }
+
+      .mega-menu {
+        right: 0;
+        left: auto;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .hero {
+        padding: 1.5rem 1.2rem;
+      }
+
+      .hero-title {
+        font-size: 1.7rem;
+      }
+
+      .nav-right {
+        justify-content: flex-start;
+      }
+
+      .mega-menu {
+        max-width: 100vw;
+        right: 0;
+      }
     }
   </style>
 </head>
 
 <body>
 
-<header>
-  <nav class="nav">
-    <div class="logo">DANY <span>TRAVEL JP</span></div>
-    <div class="nav-links">
-      <a href="index.html">Inicio</a>
-      <a href="japon-argentina.html">Japón ⇄ Argentina</a>
-      <a href="japon-brasil.html">Japón ⇄ Brasil</a>
-      <a href="japon-paraguay.html">Japón ⇄ Paraguay</a>
-      <a href="paraguay-japon.html">Paraguay ⇄ Japón</a>
-      <a href="osaka-sao-paulo.html">Osaka ⇄ São Paulo</a>
-      <a href="paraguay.html" class="active">Paraguay</a>
-    </div>
-  </nav>
-</header>
+  <header>
+    <nav class="nav">
+      <div class="logo">DANY <span>TRAVEL JP</span></div>
 
-<main>
+      <div class="nav-right">
+        <a href="index.html" class="nav-link">Inicio</a>
 
-<section class="hero">
-  <h1>Vuelos desde <span>Paraguay</span></h1>
-  <p>
-    Salir desde Paraguay abre rutas hacia Japón, Brasil, Argentina, Europa y Estados Unidos.  
-    Elegí tu destino y accedé al buscador con precios actualizados en tiempo real.
-  </p>
+        <!-- MEGA MENÚ INTERNACIONAL -->
+        <div class="mega-wrapper">
+          <button class="mega-toggle">
+            Rutas internacionales ✈️
+            <span class="mega-icon">▾</span>
+          </button>
 
-  <div class="badge">Precios actualizados</div>
-  <div class="badge">Rutas populares</div>
-  <div class="badge">Optimizado para móvil</div>
-</section>
+          <div class="mega-menu">
+            <div class="mega-grid">
 
-<section class="routes-grid">
+              <!-- AMÉRICA -->
+              <div>
+                <div class="mega-column-title">América</div>
+                <a href="japon-argentina.html" class="mega-link">
+                  Japón ⇄ Argentina<br><span>Tokio / Osaka ⇄ Buenos Aires</span>
+                </a>
+                <a href="japon-brasil.html" class="mega-link">
+                  Japón ⇄ Brasil<br><span>Japón ⇄ São Paulo</span>
+                </a>
+                <a href="japon-peru.html" class="mega-link">
+                  Japón ⇄ Perú<br><span>Japón ⇄ Lima</span>
+                </a>
+                <a href="japon-usa.html" class="mega-link">
+                  Japón ⇄ USA<br><span>Tokio / Osaka ⇄ LAX / JFK</span>
+                </a>
+                <a href="japon-mexico.html" class="mega-link">
+                  Japón ⇄ México<br><span>Japón ⇄ CDMX / Cancún</span>
+                </a>
+                <a href="japon-colombia.html" class="mega-link">
+                  Japón ⇄ Colombia<br><span>Tokio / Osaka ⇄ Bogotá</span>
+                </a>
+                <a href="japon-paraguay.html" class="mega-link">
+                  Japón ⇄ Paraguay<br><span>Conexiones vía Brasil</span>
+                </a>
+                <a href="paraguay-japon.html" class="mega-link">
+                  Paraguay ⇄ Japón<br><span>ASU ⇄ Japón</span>
+                </a>
+                <a href="paraguay.html" class="mega-link">
+                  Vuelos desde Paraguay<br><span>Salidas ASU al mundo</span>
+                </a>
+                <a href="tokio-asuncion.html" class="mega-link">
+                  Tokio ⇄ Asunción<br><span>Ruta detallada</span>
+                </a>
+                <a href="osaka-asuncion.html" class="mega-link">
+                  Osaka ⇄ Asunción<br><span>Kansai ⇄ Paraguay</span>
+                </a>
+                <a href="osaka-sao-paulo.html" class="mega-link">
+                  Osaka ⇄ São Paulo<br><span>Escala clave hacia Paraguay</span>
+                </a>
+              </div>
 
-  <div class="route-card">
-    <h3>Paraguay ⇄ Japón 🇵🇾⇄🇯🇵</h3>
-    <p>Rutas vía Brasil, Doha o Dubái. Ideal para visitar familia en Japón.</p>
-    <a href="paraguay-japon.html">Ver ruta Paraguay ⇄ Japón →</a>
-  </div>
+              <!-- EUROPA -->
+              <div>
+                <div class="mega-column-title">Europa</div>
+                <a href="japon-espana.html" class="mega-link">
+                  Japón ⇄ España<br><span>Tokio / Osaka ⇄ Madrid / Barcelona</span>
+                </a>
+              </div>
 
-  <div class="route-card">
-    <h3>Paraguay ⇄ Argentina 🇵🇾⇄🇦🇷</h3>
-    <p>Conexiones frecuentes y estables entre ASU y Buenos Aires.</p>
-    <a href="https://aviasales.tpm.lv/XFpIYjQj" target="_blank">Buscar vuelos →</a>
-  </div>
+              <!-- ASIA -->
+              <div>
+                <div class="mega-column-title">Asia</div>
+                <a href="japon-corea.html" class="mega-link">
+                  Japón ⇄ Corea del Sur<br><span>Tokio / Osaka ⇄ Seúl / Busan</span>
+                </a>
+                <a href="japon-filipinas.html" class="mega-link">
+                  Japón ⇄ Filipinas<br><span>Tokio / Osaka ⇄ Manila / Cebú</span>
+                </a>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+        <!-- GUÍAS -->
+        <div class="nav-guides">
+          <button class="guides-toggle">
+            Guías & Trucos
+            <span class="mega-icon">▾</span>
+          </button>
+          <div class="guides-menu">
+            <a href="trucos-vuelos-baratos-japon.html" class="guide-link">
+              Trucos para vuelos baratos<br>
+              <span>Hacks para ahorrar viviendo en Japón</span>
+            </a>
+            <a href="escalas-inteligentes-japon.html" class="guide-link">
+              Escalas inteligentes<br>
+              <span>Cómo elegir conexiones sin sufrir</span>
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </nav>
+  </header>
+
+  <main>
+
+    <section class="hero">
+      <div>
+        <h1 class="hero-title">
+          Vuelos desde <span>Paraguay</span> al mundo
+        </h1>
+        <p class="hero-sub">
+          Esta página está pensada para tu familia en Paraguay.  
+          Muestra, en lenguaje sencillo, a qué lugares se puede viajar desde Asunción
+          y cómo encaja Japón dentro de ese mapa.
+        </p>
+
+        <div class="hero-badges">
+          <div class="badge">
+            <span class="badge-dot"></span> Explicado simple para mamá y la familia
+          </div>
+          <div class="badge">
+            <span class="badge-dot"></span> Rutas reales, sin fantasía
+          </div>
+          <div class="badge">
+            <span class="badge-dot"></span> Enlace directo al buscador de vuelos
+          </div>
+        </div>
+
+        <div class="hero-cta">
+          <a href="https://aviasales.tpm.lv/XFpIYjQj" target="_blank" class="btn-main">
+            Buscar vuelos desde Asunción ✈️
+          </a>
+          <a href="paraguay-japon.html" class="btn-ghost">
+            Ver ruta Paraguay ⇄ Japón
+          </a>
+        </div>
+      </div>
+
+      <div class="hero-right">
+        <div class="hero-right-title">Desde Asunción (ASU) hacia…</div>
+
+        <div class="mini-grid">
+          <div class="mini-item">
+            <div class="mini-label">Brasil</div>
+            <div class="mini-value">
+              Asunción ⇄ São Paulo / Río  
+              <span style="font-size:0.72rem; color:#9ca3af;">Puerta de entrada a Sudamérica y Japón</span>
+            </div>
+          </div>
+
+          <div class="mini-item">
+            <div class="mini-label">Argentina</div>
+            <div class="mini-value">
+              Asunción ⇄ Buenos Aires  
+              <span style="font-size:0.72rem; color:#9ca3af;">Conexión a Europa y USA</span>
+            </div>
+          </div>
+
+          <div class="mini-item">
+            <div class="mini-label">Europa</div>
+            <div class="mini-value">
+              Asunción → São Paulo / Buenos Aires → Madrid / París  
+              <span style="font-size:0.72rem; color:#9ca3af;">Rutas largas, pero normales</span>
+            </div>
+          </div>
+
+          <div class="mini-item">
+            <div class="mini-label">USA</div>
+            <div class="mini-value">
+              Asunción → São Paulo / Panamá → USA  
+              <span style="font-size:0.72rem; color:#9ca3af;">Varios caminos posibles</span>
+            </div>
+          </div>
+
+          <div class="mini-item">
+            <div class="mini-label">Japón</div>
+            <div class="mini-value">
+              Asunción → São Paulo → Doha / Dubái → Japón  
+              <span style="font-size:0.72rem; color:#9ca3af;">Ruta típica hacia Tokio / Osaka</span>
+            </div>
+          </div>
+
+          <div class="mini-item">
+            <div class="mini-label">Escalas sanas</div>
+            <div class="mini-value">
+              2h–4h por conexión  
+              <span style="font-size:0.72rem; color:#9ca3af;">Menos de 1h 30m es muy justo</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2 class="section-title">Rutas principales desde Paraguay</h2>
+      <p class="section-sub">
+        Acá están las rutas más importantes explicadas de forma simple, para que cualquiera
+        en Paraguay entienda cómo moverse.
+      </p>
+
+      <div class="cards-grid">
+
+        <div class="card">
+          <h3>Paraguay ⇄ Japón</h3>
+          <p>
+            Explica paso a paso cómo ir desde Asunción hasta Japón, incluyendo las escalas
+            en Brasil y en Medio Oriente o Europa.
+          </p>
+          <a href="paraguay-japon.html">Ver Paraguay ⇄ Japón →</a>
+        </div>
+
+        <div class="card">
+          <h3>Paraguay ⇄ Brasil</h3>
+          <p>
+            São Paulo es la gran puerta de entrada y salida.  
+            Desde ahí se conecta hacia Japón, USA, Europa y otros países de Sudamérica.
+          </p>
+          <!-- Podrías crear paraguay-brasil.html más adelante -->
+        </div>
+
+        <div class="card">
+          <h3>Paraguay ⇄ Argentina</h3>
+          <p>
+            Buenos Aires sirve como puente fuerte hacia Europa y también para conectar con otros destinos.
+          </p>
+          <!-- Podrías crear paraguay-argentina.html más adelante -->
+        </div>
+
+      </div>
+    </section>
+
+    <section>
+      <h2 class="section-title">Viajes de la familia hacia Japón</h2>
+      <p class="section-sub">
+        Si tu familia está en Paraguay y quiere ir a visitarte a Japón, estas páginas les ayudan
+        a entender el camino sin confundirse.
+      </p>
+
+      <div class="cards-grid">
+        <div class="card">
+          <h3>Paraguay ⇄ Japón</h3>
+          <p>
+            Explicación completa, pensada justamente para familiares que viajan desde Asunción.
+          </p>
+          <a href="paraguay-japon.html">Ver guía completa →</a>
+        </div>
+
+        <div class="card">
+          <h3>Tokio ⇄ Asunción</h3>
+          <p>
+            Version vista desde el lado de Tokio.  
+            Sirve para que vos entiendas el mapa general del viaje.
+          </p>
+          <a href="tokio-asuncion.html">Ver Tokio ⇄ Asunción →</a>
+        </div>
+
+        <div class="card">
+          <h3>Osaka ⇄ Asunción</h3>
+          <p>
+            Especialmente útil si vivís en Kansai: Osaka, Kobe, Kyoto, Nara.
+          </p>
+          <a href="osaka-asuncion.html">Ver Osaka ⇄ Asunción →</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    Dany Travel JP — Página pensada para que la familia en Paraguay entienda cómo moverse por el mundo.
+  </footer>
+
+</body>
+
+</html>
