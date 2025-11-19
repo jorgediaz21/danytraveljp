@@ -4,296 +4,269 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Dany Travel JP | Japón ⇄ España</title>
+
+  <!-- Google Tag Manager -->
+  <script>
+    (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-T7XV8RQQ');
+  </script>
+
+  <!-- Google Analytics (GA4) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-8JDPVLYE38"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-8JDPVLYE38');
+  </script>
+
+  <!-- SEO -->
+  <title>Dany Travel JP | Japón ⇄ España (Tokio / Osaka ⇄ Madrid / Barcelona)</title>
   <meta name="description"
-    content="Busca vuelos entre Japón y España. Precios actualizados, rutas recomendadas y tips para viajar entre Tokio, Osaka y Madrid o Barcelona.">
+    content="Guía clara de la ruta Japón ⇄ España. Cómo viajar desde Tokio u Osaka hasta Madrid o Barcelona con escalas lógicas y tiempos reales.">
+  <meta name="keywords"
+    content="japon espana, tokio madrid, tokio barcelona, osaka madrid, vuelos japon espana, ruta japon espana, dany travel jp">
+  <meta name="author" content="Dany Travel JP">
+  <meta name="robots" content="index, follow">
+
+  <!-- CAMBIAR 'tunombre' por tu usuario real -->
+  <link rel="canonical" href="https://tunombre.github.io/danytraveljp/japon-espana.html">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Japón ⇄ España | Dany Travel JP">
+  <meta property="og:description"
+    content="Ruta Japón ⇄ España explicada para la comunidad latina en Japón. Escalas razonables y rutas claras.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://tunombre.github.io/danytraveljp/japon-espana.html">
+  <meta property="og:image" content="https://tunombre.github.io/danytraveljp/favicon.png">
+
+  <link rel="icon" type="image/png" href="favicon.png">
 
   <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; font-family: system-ui; }
-    body { background: #0b1020; color: #f5f5f5; line-height: 1.6; }
+    *{margin:0;padding:0;box-sizing:border-box;font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;}
+    body{background:#020617;color:#f9fafb;line-height:1.6;}
 
-    header {
-      position: sticky;
-      top: 0;
-      z-index: 50;
-      background: rgba(5, 8, 20, 0.96);
-      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-      backdrop-filter: blur(10px);
+    header{position:sticky;top:0;z-index:50;background:rgba(2,6,23,0.96);border-bottom:1px solid rgba(148,163,184,0.35);backdrop-filter:blur(14px);}
+    .nav{max-width:1100px;margin:0 auto;padding:0.75rem 1rem;display:flex;justify-content:space-between;align-items:center;}
+    .logo{font-weight:800;text-transform:uppercase;letter-spacing:0.18em;font-size:1rem;}
+    .logo span{color:#4ade80;}
+    .nav-right{display:flex;align-items:center;gap:0.75rem;flex-wrap:wrap;}
+    .nav-link{text-decoration:none;padding:0.35rem 0.8rem;border-radius:20px;color:#e5e7eb;font-size:0.85rem;}
+    .nav-link:hover{background:rgba(148,163,184,0.18);}
+
+    .mega-wrapper{position:relative;}
+    .mega-toggle{border:1px solid rgba(148,163,184,0.6);background:rgba(15,23,42,0.9);color:#e5e7eb;border-radius:20px;padding:0.35rem 0.9rem;cursor:pointer;font-size:0.85rem;}
+    .mega-toggle:hover{background:rgba(30,64,175,0.9);border-color:rgba(129,140,248,0.9);}
+    .mega-menu{position:absolute;right:0;margin-top:0.6rem;background:#020617;padding:1.2rem 1.4rem;border-radius:1rem;border:1px solid rgba(148,163,184,0.6);display:none;box-shadow:0 22px 55px rgba(15,23,42,0.9);}
+    .mega-wrapper:hover .mega-menu{display:grid;}
+    .mega-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem;}
+    .mega-column-title{font-size:0.8rem;color:#9ca3af;text-transform:uppercase;margin-bottom:0.45rem;}
+    .mega-link{text-decoration:none;color:#e5e7eb;font-size:0.82rem;padding:0.22rem 0.3rem;border-radius:0.4rem;}
+    .mega-link:hover{background:rgba(148,163,184,0.16);}
+    .mega-link span{color:#9ca3af;font-size:0.72rem;}
+
+    main{max-width:1100px;margin:0 auto;padding:2.2rem 1rem 3rem;}
+
+    .hero{
+      background:radial-gradient(circle at top left,#22c55e22,transparent),
+                 radial-gradient(circle at bottom right,#38bdf822,transparent),
+                 #020617;
+      border-radius:1.6rem;
+      border:1px solid rgba(148,163,184,0.5);
+      padding:2.3rem 2rem;
+      display:grid;
+      grid-template-columns:1.6fr 1fr;
+      gap:2.3rem;
     }
 
-    .nav {
-      max-width: 1100px;
-      margin: 0 auto;
-      padding: 0.75rem 1rem;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
+    .hero-title{font-size:2rem;margin-bottom:0.9rem;}
+    .hero-title span{color:#4ade80;}
+    .hero-sub{font-size:0.95rem;color:#e5e7eb;margin-bottom:1.2rem;}
+    
+    .badge{display:inline-flex;align-items:center;background:rgba(15,23,42,0.95);border:1px solid rgba(148,163,184,0.7);padding:0.3rem 0.7rem;border-radius:999px;font-size:0.78rem;margin:0.2rem;gap:0.35rem;}
+    .badge-dot{width:6px;height:6px;background:#22c55e;border-radius:50%;}
 
-    .logo {
-      font-weight: 700;
-      font-size: 1rem;
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-    }
+    .btn-main{background:linear-gradient(135deg,#22c55e,#16a34a);padding:0.75rem 1.4rem;border-radius:999px;text-decoration:none;color:#02120a;font-size:0.95rem;font-weight:600;}
+    .btn-ghost{border:1px solid rgba(148,163,184,0.7);padding:0.7rem 1.1rem;border-radius:999px;text-decoration:none;color:#e5e7eb;font-size:0.85rem;}
 
-    .logo span { color: #4ade80; }
+    .mini-grid{display:grid;grid-template-columns:1fr 1fr;gap:0.7rem;margin-top:1rem;}
+    .mini-item{background:rgba(15,23,42,0.9);border:1px solid rgba(51,65,85,0.9);padding:0.6rem;border-radius:0.7rem;font-size:0.8rem;}
 
-    .nav-links {
-      display: flex;
-      gap: 0.7rem;
-      font-size: 0.85rem;
-      flex-wrap: wrap;
-    }
+    .section-title{margin-top:2rem;font-size:1.1rem;}
+    .section-sub{color:#9ca3af;font-size:0.82rem;margin-bottom:1.2rem;}
 
-    .nav-links a {
-      text-decoration: none;
-      padding: 0.35rem 0.7rem;
-      border-radius: 999px;
-      color: #d4d4d8;
-      border: 1px solid transparent;
-    }
+    .cards-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;}
+    .card{background:#020617;border:1px solid rgba(51,65,85,0.9);padding:1rem;border-radius:1rem;}
+    .card a{color:#4ade80;text-decoration:none;border-bottom:1px solid #4ade80;}
 
-    .nav-links a:hover { background: rgba(255, 255, 255, 0.08); }
+    footer{text-align:center;color:#9ca3af;border-top:1px solid rgba(31,41,55,0.8);padding:2rem;margin-top:2rem;}
+    
+    @media(max-width:900px){.hero{grid-template-columns:1fr;}.cards-grid{grid-template-columns:1fr;}}
 
-    .nav-links a.active {
-      background: linear-gradient(135deg, #22c55e, #16a34a);
-      color: #02120a;
-      font-weight: 600;
-    }
-
-    main {
-      max-width: 1100px;
-      margin: 0 auto;
-      padding: 2rem 1rem;
-    }
-
-    .hero {
-      background: #020617;
-      border: 1px solid rgba(148, 163, 184, 0.3);
-      border-radius: 1.5rem;
-      padding: 2rem;
-      display: grid;
-      grid-template-columns: 1.5fr 1fr;
-      gap: 2rem;
-      background:
-        radial-gradient(circle at top left, #22c55e22, transparent),
-        radial-gradient(circle at bottom right, #38bdf822, transparent);
-    }
-
-    .hero h1 { font-size: 2rem; margin-bottom: 1rem; }
-
-    .hero h1 span { color: #4ade80; }
-
-    .hero p {
-      font-size: 0.95rem;
-      color: #e4e4e7;
-      margin-bottom: 1rem;
-    }
-
-    .badge {
-      display: inline-flex;
-      gap: 0.4rem;
-      background: rgba(255, 255, 255, 0.08);
-      border: 1px solid rgba(255, 255, 255, 0.2);
-      padding: 0.35rem 0.7rem;
-      border-radius: 999px;
-      font-size: 0.75rem;
-      margin-right: 0.4rem;
-    }
-
-    .btn-primary {
-      display: inline-flex;
-      gap: 0.5rem;
-      align-items: center;
-      margin-top: 1rem;
-      padding: 0.7rem 1.3rem;
-      border-radius: 999px;
-      text-decoration: none;
-      background: linear-gradient(135deg, #22c55e, #16a34a);
-      color: #02120a;
-      font-weight: 600;
-      box-shadow: 0 14px 35px rgba(22,163,74,0.4);
-    }
-
-    .btn-primary:hover { transform: translateY(-1px); }
-
-    .hero-card {
-      padding: 1rem;
-      border-radius: 1rem;
-      background: #0b1225;
-      border: 1px solid rgba(255,255,255,0.18);
-      font-size: 0.85rem;
-    }
-
-    .mini-grid {
-      margin-top: 1rem;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 0.7rem;
-    }
-
-    .mini-item {
-      padding: 0.6rem;
-      background: #11182b;
-      border-radius: 0.7rem;
-      border: 1px solid rgba(255,255,255,0.15);
-    }
-
-    .mini-label {
-      font-size: 0.7rem;
-      color: #9ca3af;
-    }
-
-    .mini-value {
-      font-size: 0.85rem;
-      font-weight: 500;
-    }
-
-    .tips-grid {
-      margin-top: 2rem;
-      display: grid;
-      grid-template-columns: 1fr 1fr 1fr;
-      gap: 1rem;
-    }
-
-    .tip {
-      background: #020617;
-      border: 1px solid rgba(255,255,255,0.12);
-      padding: 1rem;
-      border-radius: 0.8rem;
-      font-size: 0.85rem;
-    }
-
-    footer {
-      text-align: center;
-      padding: 2rem 0;
-      font-size: 0.75rem;
-      color: #9ca3af;
-    }
-
-    @media(max-width:850px) {
-      .hero { grid-template-columns: 1fr; }
-      .tips-grid { grid-template-columns: 1fr; }
-    }
   </style>
 </head>
 
 <body>
 
+  <!-- GTM noscript -->
+  <noscript>
+    <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T7XV8RQQ"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe>
+  </noscript>
+
   <header>
     <nav class="nav">
       <div class="logo">DANY <span>TRAVEL JP</span></div>
-      <div class="nav-links">
-        <a href="index.html">Inicio</a>
-        <a href="japon-argentina.html">Japón ⇄ Argentina</a>
-        <a href="japon-brasil.html">Japón ⇄ Brasil</a>
-        <a href="japon-peru.html">Japón ⇄ Perú</a>
-        <a href="japon-usa.html">Japón ⇄ USA</a>
-        <a href="japon-mexico.html">Japón ⇄ México</a>
-        <a href="japon-espana.html" class="active">Japón ⇄ España</a>
+
+      <div class="nav-right">
+        <a href="index.html" class="nav-link">Inicio</a>
+
+        <div class="mega-wrapper">
+          <button class="mega-toggle">Rutas internacionales ✈️ ▾</button>
+          <div class="mega-menu">
+            <div class="mega-grid">
+
+              <!-- AMERICA -->
+              <div>
+                <div class="mega-column-title">América</div>
+                <a class="mega-link" href="japon-argentina.html">Japón ⇄ Argentina<br><span>Buenos Aires</span></a>
+                <a class="mega-link" href="japon-brasil.html">Japón ⇄ Brasil<br><span>São Paulo</span></a>
+                <a class="mega-link" href="japon-peru.html">Japón ⇄ Perú<br><span>Lima</span></a>
+                <a class="mega-link" href="japon-usa.html">Japón ⇄ USA<br><span>LAX / JFK</span></a>
+                <a class="mega-link" href="japon-mexico.html">Japón ⇄ México<br><span>CDMX / Cancún</span></a>
+                <a class="mega-link" href="japon-colombia.html">Japón ⇄ Colombia<br><span>Bogotá</span></a>
+                <a class="mega-link" href="japon-paraguay.html">Japón ⇄ Paraguay<br><span>vía São Paulo</span></a>
+              </div>
+
+              <!-- EUROPA -->
+              <div>
+                <div class="mega-column-title">Europa</div>
+                <a class="mega-link" href="japon-espana.html">Japón ⇄ España<br><span>Madrid / Barcelona</span></a>
+              </div>
+
+              <!-- ASIA -->
+              <div>
+                <div class="mega-column-title">Asia</div>
+                <a class="mega-link" href="japon-corea.html">Japón ⇄ Corea del Sur</a>
+                <a class="mega-link" href="japon-filipinas.html">Japón ⇄ Filipinas</a>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
       </div>
     </nav>
   </header>
 
   <main>
 
+    <!-- HERO -->
     <section class="hero">
       <div>
-        <h1>Vuelos <span>Japón</span> ⇄ <span>España</span></h1>
-        <p>
-          La ruta Japón ⇄ España conecta Tokio/Osaka con Madrid y Barcelona.  
-          Es muy usada para turismo, estudios y conexión con países europeos.
+        <h1 class="hero-title">
+          Ruta <span>Japón ⇄ España</span><br>
+          (Tokio / Osaka ⇄ Madrid / Barcelona)
+        </h1>
+
+        <p class="hero-sub">
+          España es una de las rutas europeas más usadas por latinos que viven en Japón.
+          Buena para turismo, para visitar familia y para hacer conexiones más económicas
+          hacia Sudamérica.
         </p>
 
-        <div class="badge">Precios actualizados</div>
-        <div class="badge">Rutas largas pero cómodas</div>
-        <div class="badge">Optimizado para móvil</div>
+        <div>
+          <div class="badge"><span class="badge-dot"></span> Madrid (MAD)</div>
+          <div class="badge"><span class="badge-dot"></span> Barcelona (BCN)</div>
+          <div class="badge"><span class="badge-dot"></span> Vía Doha, París o Dubái</div>
+          <div class="badge"><span class="badge-dot"></span> Escalas razonables 2h ~ 4h</div>
+        </div>
 
-        <a class="btn-primary" href="https://aviasales.tpm.lv/XFpIYjQj" target="_blank">
-          Buscar vuelos Japón ⇄ España ✈️
-        </a>
+        <div style="margin-top:1.2rem;">
+          <a class="btn-main" target="_blank" href="https://aviasales.tpm.lv/XFpIYjQj">Buscar vuelos Japón ⇄ España</a>
+        </div>
       </div>
 
-      <div class="hero-card">
-        <strong>Rutas frecuentes</strong><br><br>
-
-        🇯🇵 Tokio / Osaka ⇄ 🇪🇸 Madrid (MAD) / Barcelona (BCN)
+      <div class="hero-right">
+        <div class="hero-right-title">Cómo es esta ruta</div>
 
         <div class="mini-grid">
+
           <div class="mini-item">
-            <div class="mini-label">Escalas típicas</div>
-            <div class="mini-value">Doha, Dubái, Estambul, París</div>
+            Japón → Madrid  
+            <div style="font-size:0.72rem;color:#9ca3af;">Muy usada por conexión</div>
           </div>
 
           <div class="mini-item">
-            <div class="mini-label">Duración total</div>
-            <div class="mini-value">17h ~ 30h</div>
+            Japón → Barcelona  
+            <div style="font-size:0.72rem;color:#9ca3af;">Aumento de rutas recientes</div>
           </div>
 
           <div class="mini-item">
-            <div class="mini-label">Ideal para</div>
-            <div class="mini-value">Turismo y conexión a Europa</div>
+            Japón → Doha → España  
+            <div style="font-size:0.72rem;color:#9ca3af;">Ruta estable de Qatar Airways</div>
           </div>
 
           <div class="mini-item">
-            <div class="mini-label">Consejo</div>
-            <div class="mini-value">Evitar escalas menores a 2h en Europa</div>
+            Duración total:  
+            <strong>17h ~ 25h</strong>
           </div>
+
+          <div class="mini-item">
+            Mejor precio:  
+            <strong>enero - mayo</strong>
+          </div>
+
+          <div class="mini-item">
+            Más caro:  
+            <strong>julio y diciembre</strong>
+          </div>
+
         </div>
       </div>
+
     </section>
 
+    <!-- RUTAS -->
     <section>
-      <h2 style="margin-top:2rem; font-size:1.2rem;">Tips para viajar Japón ⇄ España</h2>
-      <div class="tips-grid">
+      <h2 class="section-title">Rutas lógicas Japón ⇄ España</h2>
+      <p class="section-sub">
+        Estas son las opciones más usadas por quienes viven en Japón.
+      </p>
 
-        <div class="tip">
-          <strong>1. Escalas en Medio Oriente</strong>
+      <div class="cards-grid">
+
+        <div class="card">
+          <h3>1. Tokio ⇄ Madrid</h3>
           <p>
-            Qatar, Emirates y Turkish suelen tener precios más bajos y servicio excelente.
+            Una de las rutas más fuertes.  
+            Ideal si pensás conectar con América Latina desde Madrid.
           </p>
         </div>
 
-        <div class="tip">
-          <strong>2. Cuidado con escalas en USA</strong>
+        <div class="card">
+          <h3>2. Tokio / Osaka ⇄ Dubái ⇄ España</h3>
           <p>
-            No conviene elegir rutas vía Estados Unidos si no tenés visa.  
-            Europa o Medio Oriente funcionan mejor.
+            Emirates ofrece buenas conexiones hacia Madrid y Barcelona.
           </p>
         </div>
 
-        <div class="tip">
-          <strong>3. Considerá BCN además de MAD</strong>
+        <div class="card">
+          <h3>3. Tokio / Osaka ⇄ Doha ⇄ España</h3>
           <p>
-            A veces Barcelona tiene precios más bajos o rutas más cómodas.
-          </p>
-        </div>
-
-        <div class="tip">
-          <strong>4. Conexión a toda Europa</strong>
-          <p>
-            Desde España tenés vuelos baratos a casi cualquier país europeo.
-          </p>
-        </div>
-
-        <div class="tip">
-          <strong>5. Temporada alta</strong>
-          <p>
-            Verano europeo sube muchísimo los precios.  
-            Primavera u otoño suelen dar mejores tarifas.
+            Qatar Airways tiene horarios cómodos y escalas razonables.
           </p>
         </div>
 
       </div>
     </section>
 
-  </main>
+    <!-- RELACIONADOS -->
+    <section>
+      <h2 class="section-title">Rutas relacionadas</h2>
+      <p class="section-sub">Si tu familia está en varios países, estas guías ayudan.</p>
 
-  <footer>
-    Dany Travel JP — Conectando Japón y España con rutas eficientes.
-  </footer>
-
-</body>
-
-</html>
+      <div class="cards-grid">
