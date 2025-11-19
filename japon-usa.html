@@ -4,42 +4,271 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Dany Travel JP | Japón ⇄ USA</title>
+
+  <!-- Google Tag Manager -->
+  <script>
+    (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-T7XV8RQQ');
+  </script>
+
+  <!-- Google Analytics (GA4) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-8JDPVLYE38"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-8JDPVLYE38');
+  </script>
+
+  <!-- SEO -->
+  <title>Dany Travel JP | Japón ⇄ USA (Tokio / Osaka ⇄ Los Ángeles / Nueva York)</title>
   <meta name="description"
-    content="Busca vuelos entre Japón y Estados Unidos. Rutas optimizadas, precios actualizados y consejos para viajar entre Japón y USA.">
+    content="Guía clara de la ruta Japón ⇄ Estados Unidos. Tokio y Osaka hacia LAX, JFK, Dallas, Miami y otras ciudades importantes.">
+  <meta name="keywords"
+    content="japon usa, tokio los angeles, tokio nueva york, vuelos japon usa, osaka lax, japon jfk, dany travel jp">
+  <meta name="author" content="Dany Travel JP">
+
+  <!-- CAMBIAR tunombre por tu usuario real -->
+  <link rel="canonical" href="https://tunombre.github.io/danytraveljp/japon-usa.html">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Japón ⇄ USA | Dany Travel JP">
+  <meta property="og:description"
+    content="Rutas claras desde Japón hacia USA para la comunidad latina. LAX, JFK, Dallas, Miami y más.">
+  <meta property="og:type" content="article">
+  <meta property="og:image" content="https://tunombre.github.io/danytraveljp/favicon.png">
+
+  <link rel="icon" type="image/png" href="favicon.png">
 
   <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; font-family: system-ui; }
-    body { background: #0b1020; color: #f5f5f5; line-height: 1.6; }
+    *{margin:0;padding:0;box-sizing:border-box;font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;}
+    body{background:#020617;color:#f9fafb;line-height:1.6;}
 
-    header {
-      position: sticky;
-      top: 0;
-      z-index: 50;
-      background: rgba(5, 8, 20, 0.96);
-      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-      backdrop-filter: blur(10px);
+    header{position:sticky;top:0;z-index:50;background:rgba(2,6,23,0.96);border-bottom:1px solid rgba(148,163,184,0.35);backdrop-filter:blur(14px);}
+    .nav{max-width:1100px;margin:0 auto;padding:0.75rem 1rem;display:flex;justify-content:space-between;align-items:center;gap:1rem;}
+    .logo{font-weight:800;font-size:1rem;text-transform:uppercase;letter-spacing:0.18em;}
+    .logo span{color:#4ade80;}
+    .nav-right{display:flex;align-items:center;gap:0.75rem;flex-wrap:wrap;}
+
+    .nav-link{text-decoration:none;padding:0.35rem 0.8rem;border-radius:999px;color:#e5e7eb;font-size:0.85rem;}
+    .nav-link:hover{background:rgba(148,163,184,0.18);}
+
+    .mega-wrapper{position:relative;}
+    .mega-toggle{border:1px solid rgba(148,163,184,0.6);background:rgba(15,23,42,0.9);color:#e5e7eb;border-radius:999px;padding:0.35rem 0.9rem;cursor:pointer;font-size:0.85rem;}
+    .mega-toggle:hover{background:rgba(30,64,175,0.9);border-color:rgba(129,140,248,0.9);}
+    .mega-menu{position:absolute;right:0;margin-top:0.6rem;background:#020617;padding:1.2rem 1.4rem;border-radius:1rem;border:1px solid rgba(148,163,184,0.6);display:none;box-shadow:0 22px 55px rgba(15,23,42,0.9);}
+    .mega-wrapper:hover .mega-menu{display:grid;}
+    .mega-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem;}
+    .mega-column-title{font-size:0.8rem;color:#9ca3af;text-transform:uppercase;margin-bottom:0.45rem;}
+    .mega-link{text-decoration:none;color:#e5e7eb;font-size:0.82rem;padding:0.22rem 0.3rem;border-radius:0.4rem;}
+    .mega-link:hover{background:rgba(148,163,184,0.16);}
+    .mega-link span{color:#9ca3af;font-size:0.72rem;}
+
+    main{max-width:1100px;margin:0 auto;padding:2.2rem 1rem 3rem;}
+
+    .hero{
+      background:radial-gradient(circle at top left,#22c55e22,transparent),
+      radial-gradient(circle at bottom right,#38bdf822,transparent),
+      #020617;
+      border-radius:1.6rem;
+      border:1px solid rgba(148,163,184,0.5);
+      padding:2.3rem 2rem;
+      display:grid;
+      grid-template-columns:1.6fr 1fr;
+      gap:2.3rem;
     }
 
-    .nav {
-      max-width: 1100px;
-      margin: 0 auto;
-      padding: 0.75rem 1rem;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
+    .hero-title{font-size:2rem;margin-bottom:0.9rem;}
+    .hero-title span{color:#4ade80;}
+    .hero-sub{font-size:0.95rem;color:#e5e7eb;margin-bottom:1.2rem;}
 
-    .logo {
-      font-weight: 700;
-      font-size: 1rem;
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-    }
+    .badge{display:inline-flex;align-items:center;gap:0.35rem;background:rgba(15,23,42,0.95);border:1px solid rgba(148,163,184,0.7);padding:0.3rem 0.7rem;border-radius:999px;font-size:0.78rem;margin:0.2rem;}
+    .badge-dot{width:6px;height:6px;background:#22c55e;border-radius:999px;}
 
-    .logo span { color: #4ade80; }
+    .btn-main{background:linear-gradient(135deg,#22c55e,#16a34a);color:#02120a;padding:0.75rem 1.4rem;text-decoration:none;border-radius:999px;font-weight:600;}
+    .btn-ghost{border:1px solid rgba(148,163,184,0.7);padding:0.7rem 1.1rem;text-decoration:none;border-radius:999px;color:#e5e7eb;}
 
-    .nav-links {
-      display: flex;
-      gap: 0.7rem;
-      font-
+    .mini-grid{display:grid;grid-template-columns:1fr 1fr;gap:0.7rem;margin-top:1rem;}
+    .mini-item{background:rgba(15,23,42,0.9);border:1px solid rgba(51,65,85,0.9);padding:0.6rem;border-radius:0.7rem;font-size:0.8rem;}
+
+    .section-title{margin-top:2rem;font-size:1.1rem;}
+    .section-sub{color:#9ca3af;font-size:0.82rem;margin-bottom:1.2rem;}
+
+    .cards-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;}
+    .card{background:#020617;border:1px solid rgba(51,65,85,0.9);padding:1rem;border-radius:1rem;}
+    .card a{color:#4ade80;text-decoration:none;border-bottom:1px solid #4ade80;}
+
+    footer{text-align:center;border-top:1px solid rgba(31,41,55,0.8);color:#9ca3af;padding:2rem;margin-top:2rem;}
+  </style>
+
+</head>
+
+<body>
+
+  <!-- GTM noscript -->
+  <noscript>
+    <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T7XV8RQQ"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe>
+  </noscript>
+
+  <header>
+    <nav class="nav">
+      <div class="logo">DANY <span>TRAVEL JP</span></div>
+
+      <div class="nav-right">
+        <a href="index.html" class="nav-link">Inicio</a>
+
+        <!-- MEGA MENU -->
+        <div class="mega-wrapper">
+          <button class="mega-toggle">Rutas internacionales ✈️ ▾</button>
+
+          <div class="mega-menu">
+            <div class="mega-grid">
+
+              <!-- AMERICA -->
+              <div>
+                <div class="mega-column-title">América</div>
+                <a class="mega-link" href="japon-argentina.html">Japón ⇄ Argentina<br><span>Buenos Aires</span></a>
+                <a class="mega-link" href="japon-brasil.html">Japón ⇄ Brasil<br><span>São Paulo</span></a>
+                <a class="mega-link" href="japon-peru.html">Japón ⇄ Perú<br><span>Lima</span></a>
+                <a class="mega-link" href="japon-usa.html">Japón ⇄ USA<br><span>LAX / JFK / DFW</span></a>
+                <a class="mega-link" href="japon-mexico.html">Japón ⇄ México<br><span>CDMX</span></a>
+                <a class="mega-link" href="japon-colombia.html">Japón ⇄ Colombia<br><span>Bogotá</span></a>
+                <a class="mega-link" href="japon-paraguay.html">Japón ⇄ Paraguay<br><span>vía São Paulo</span></a>
+              </div>
+
+              <!-- EUROPA -->
+              <div>
+                <div class="mega-column-title">Europa</div>
+                <a class="mega-link" href="japon-espana.html">Japón ⇄ España<br><span>Madrid / Barcelona</span></a>
+              </div>
+
+              <!-- ASIA -->
+              <div>
+                <div class="mega-column-title">Asia</div>
+                <a class="mega-link" href="japon-corea.html">Japón ⇄ Corea del Sur</a>
+                <a class="mega-link" href="japon-filipinas.html">Japón ⇄ Filipinas</a>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- HERO -->
+    <section class="hero">
+      <div>
+        <h1 class="hero-title">
+          Ruta <span>Japón ⇄ USA</span><br>
+          (Tokio / Osaka ⇄ Los Ángeles / Nueva York)
+        </h1>
+
+        <p class="hero-sub">
+          Estados Unidos es una de las rutas más usadas desde Japón, tanto para vuelos directos
+          como para conexiones hacia Latinoamérica. Acá está explicado sin vueltas.
+        </p>
+
+        <div>
+          <div class="badge"><span class="badge-dot"></span> LAX — Los Ángeles</div>
+          <div class="badge"><span class="badge-dot"></span> JFK — Nueva York</div>
+          <div class="badge"><span class="badge-dot"></span> DFW — Dallas</div>
+          <div class="badge"><span class="badge-dot"></span> ORD — Chicago</div>
+          <div class="badge"><span class="badge-dot"></span> SEA — Seattle</div>
+        </div>
+
+        <div style="margin-top:1.2rem;">
+          <a class="btn-main" href="https://aviasales.tpm.lv/XFpIYjQj" target="_blank">Buscar vuelos a USA ✈️</a>
+        </div>
+      </div>
+
+      <div class="hero-right">
+        <div class="hero-right-title">Lo más importante de esta ruta</div>
+
+        <div class="mini-grid">
+          <div class="mini-item">Vuelos directos Tokio → Los Ángeles / Seattle</div>
+          <div class="mini-item">Muy usado para conectar a Sudamérica</div>
+          <div class="mini-item">Requiere VISA americana (excepto tránsito especial)</div>
+          <div class="mini-item">Duración: 9h ~ 13h según destino</div>
+          <div class="mini-item">Mejor precio: marzo, mayo, noviembre</div>
+          <div class="mini-item">Peor precio: diciembre, agosto</div>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- SECCION RUTAS -->
+    <section>
+      <h2 class="section-title">Rutas lógicas Japón ⇄ USA</h2>
+      <p class="section-sub">Estas son las conexiones más usadas por quienes vivimos en Japón.</p>
+
+      <div class="cards-grid">
+
+        <div class="card">
+          <h3>Tokio ⇄ Los Ángeles (LAX)</h3>
+          <p>
+            Es la ruta más popular. Muchísimos vuelos directos desde Narita y Haneda.
+            Ideal para conectar a México, Perú, Chile y Argentina.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>Tokio ⇄ Nueva York (JFK)</h3>
+          <p>
+            Ruta muy demandada. Larga pero directa.  
+            Excelente para turismo o para conexiones a la costa este.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>Tokio ⇄ Dallas / Houston</h3>
+          <p>
+            Estas rutas son oro para conectar a Sudamérica.  
+            Desde Dallas salen vuelos a Lima, São Paulo, Santiago, Buenos Aires.
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- RELACIONADOS -->
+    <section>
+      <h2 class="section-title">Conexiones relacionadas</h2>
+      <p class="section-sub">Si usás USA como puente hacia Sudamérica, esto también te sirve.</p>
+
+      <div class="cards-grid">
+        <div class="card">
+          <h3>Japón ⇄ Perú</h3>
+          <p>Conexión perfecta vía Dallas o Houston.</p>
+          <a href="japon-peru.html">Ver ruta →</a>
+        </div>
+
+        <div class="card">
+          <h3>Japón ⇄ Argentina</h3>
+          <p>Muy usado Tokio → Dallas → Buenos Aires.</p>
+          <a href="japon-argentina.html">Ver ruta →</a>
+        </div>
+
+        <div class="card">
+          <h3>Japón ⇄ México</h3>
+          <p>Muchísimas conexiones buenas vía USA hacia CDMX.</p>
+          <a href="japon-mexico.html">Ver ruta →</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    Dany Travel JP — Japón ⇄ USA explicado fácil para la comunidad latina en Japón.
+  </footer>
+
+</body>
+</html>
