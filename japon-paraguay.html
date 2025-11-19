@@ -4,98 +4,260 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Dany Travel JP | Japón ⇄ Paraguay</title>
+
+  <!-- Google Tag Manager -->
+  <script>
+    (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-T7XV8RQQ');
+  </script>
+
+  <!-- GA4 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-8JDPVLYE38"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-8JDPVLYE38');
+  </script>
+
+  <!-- SEO -->
+  <title>Dany Travel JP | Japón ⇄ Paraguay (Tokio / Osaka ⇄ Asunción vía São Paulo)</title>
   <meta name="description"
-    content="Ruta Japón ⇄ Paraguay pensada para la comunidad latina en Japón. Rutas recomendadas, escalas, tiempos de viaje y acceso directo al buscador de vuelos.">
+    content="Guía completa y actualizada para viajar de Japón a Paraguay. Rutas reales vía Brasil, tiempos, escalas y tips para la comunidad paraguaya en Japón.">
+  <meta name="keywords"
+    content="japon paraguay, tokio asuncion, osaka asuncion, asuncion japon, japon brasil paraguay, dany travel jp">
+  <meta name="author" content="Dany Travel JP">
+
+  <!-- CAMBIAR tunombre por tu usuario -->
+  <link rel="canonical" href="https://tunombre.github.io/danytraveljp/japon-paraguay.html">
+
+  <!-- OG -->
+  <meta property="og:title" content="Japón ⇄ Paraguay | Guía completa Dany Travel JP">
+  <meta property="og:description" content="Ruta Japón ⇄ Paraguay explicada fácil y con escalas reales.">
+  <meta property="og:type" content="article">
+  <meta property="og:image" content="https://tunombre.github.io/danytraveljp/favicon.png">
+
+  <link rel="icon" type="image/png" href="favicon.png">
 
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    *{margin:0;padding:0;box-sizing:border-box;font-family:system-ui,-apple-system,"Segoe UI",sans-serif;}
+    body{background:#020617;color:#f9fafb;line-height:1.6;}
+
+    header{position:sticky;top:0;background:rgba(2,6,23,0.96);border-bottom:1px solid rgba(148,163,184,0.35);backdrop-filter:blur(14px);z-index:50;}
+    .nav{max-width:1100px;margin:auto;padding:0.75rem 1rem;display:flex;justify-content:space-between;align-items:center;}
+    .logo{text-transform:uppercase;font-weight:800;letter-spacing:0.18em;font-size:1rem;}
+    .logo span{color:#4ade80;}
+    .nav-right{display:flex;gap:0.75rem;flex-wrap:wrap;}
+    .nav-link{color:#e5e7eb;text-decoration:none;padding:0.35rem 0.8rem;border-radius:20px;font-size:0.85rem;}
+    .nav-link:hover{background:rgba(148,163,184,0.18);}
+
+    .mega-wrapper{position:relative;}
+    .mega-toggle{border:1px solid rgba(148,163,184,0.6);background:rgba(15,23,42,0.9);color:#e5e7eb;padding:0.35rem 0.9rem;border-radius:20px;font-size:0.85rem;cursor:pointer;}
+    .mega-menu{position:absolute;right:0;display:none;margin-top:0.6rem;background:#020617;border:1px solid rgba(148,163,184,0.6);padding:1.2rem;border-radius:1rem;box-shadow:0 22px 55px rgba(15,23,42,0.9);}
+    .mega-wrapper:hover .mega-menu{display:grid;}
+    .mega-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem;}
+    .mega-column-title{color:#9ca3af;font-size:0.8rem;margin-bottom:0.4rem;text-transform:uppercase;}
+    .mega-link{color:#e5e7eb;text-decoration:none;padding:0.22rem 0.3rem;font-size:0.82rem;border-radius:0.4rem;}
+    .mega-link:hover{background:rgba(148,163,184,0.16);}
+
+    main{max-width:1100px;margin:auto;padding:2.2rem 1rem 3rem;}
+
+    .hero{
+      background:radial-gradient(circle at top left,#22c55e22,transparent),
+                 radial-gradient(circle at bottom right,#38bdf822,transparent),
+                 #020617;
+      padding:2.3rem 2rem;border-radius:1.6rem;border:1px solid rgba(148,163,184,0.5);
+      display:grid;grid-template-columns:1.6fr 1fr;gap:2.3rem;
     }
 
-    body {
-      background: #020617;
-      color: #f9fafb;
-      line-height: 1.6;
+    .hero-title{font-size:2rem;margin-bottom:0.9rem;}
+    .hero-title span{color:#4ade80;}
+    .hero-sub{font-size:0.95rem;color:#e5e7eb;margin-bottom:1.2rem;}
+
+    .badge{background:rgba(15,23,42,0.95);border:1px solid rgba(148,163,184,0.7);padding:0.3rem 0.7rem;border-radius:999px;font-size:0.78rem;display:inline-flex;align-items:center;gap:0.35rem;margin:0.2rem;}
+    .badge-dot{width:6px;height:6px;background:#22c55e;border-radius:50%;}
+
+    .btn-main{background:linear-gradient(135deg,#22c55e,#16a34a);padding:0.75rem 1.4rem;border-radius:999px;color:#02120a;text-decoration:none;font-weight:600;}
+
+    .mini-grid{display:grid;grid-template-columns:1fr 1fr;gap:0.7rem;margin-top:1rem;}
+    .mini-item{background:rgba(15,23,42,0.9);border:1px solid rgba(51,65,85,0.9);padding:0.6rem;border-radius:0.7rem;font-size:0.8rem;}
+
+    .section-title{margin-top:2rem;font-size:1.1rem;}
+    .cards-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;}
+    .card{background:#020617;border:1px solid rgba(51,65,85,0.9);padding:1rem;border-radius:1rem;}
+    .card a{color:#4ade80;text-decoration:none;border-bottom:1px solid #4ade80;}
+
+    footer{text-align:center;color:#9ca3af;border-top:1px solid rgba(31,41,55,0.8);padding:2rem;margin-top:2rem;}
+
+    @media(max-width:900px){
+      .hero{grid-template-columns:1fr;}
+      .cards-grid{grid-template-columns:1fr;}
     }
+  </style>
+</head>
 
-    /* HEADER / NAV (MISMO QUE INDEX) */
+<body>
 
-    header {
-      position: sticky;
-      top: 0;
-      z-index: 50;
-      background: rgba(2, 6, 23, 0.96);
-      border-bottom: 1px solid rgba(148, 163, 184, 0.35);
-      backdrop-filter: blur(14px);
-    }
+  <!-- GTM noscript -->
+  <noscript>
+    <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T7XV8RQQ"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe>
+  </noscript>
 
-    .nav {
-      max-width: 1100px;
-      margin: 0 auto;
-      padding: 0.75rem 1rem;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 1rem;
-    }
+  <header>
+    <nav class="nav">
+      <div class="logo">DANY <span>TRAVEL JP</span></div>
 
-    .logo {
-      font-weight: 800;
-      font-size: 1rem;
-      text-transform: uppercase;
-      letter-spacing: 0.18em;
-    }
+      <div class="nav-right">
+        <a href="index.html" class="nav-link">Inicio</a>
 
-    .logo span {
-      color: #4ade80;
-    }
+        <div class="mega-wrapper">
+          <button class="mega-toggle">Rutas internacionales ✈️ ▾</button>
 
-    .nav-right {
-      display: flex;
-      align-items: center;
-      gap: 0.75rem;
-      flex-wrap: wrap;
-      justify-content: flex-end;
-    }
+          <div class="mega-menu">
+            <div class="mega-grid">
 
-    .nav-link {
-      text-decoration: none;
-      padding: 0.35rem 0.8rem;
-      border-radius: 999px;
-      color: #e5e7eb;
-      font-size: 0.85rem;
-      border: 1px solid transparent;
-      white-space: nowrap;
-    }
+              <!-- AMÉRICA -->
+              <div>
+                <div class="mega-column-title">América</div>
+                <a class="mega-link" href="japon-argentina.html">Japón ⇄ Argentina</a>
+                <a class="mega-link" href="japon-brasil.html">Japón ⇄ Brasil</a>
+                <a class="mega-link" href="japon-peru.html">Japón ⇄ Perú</a>
+                <a class="mega-link" href="japon-usa.html">Japón ⇄ USA</a>
+                <a class="mega-link" href="japon-mexico.html">Japón ⇄ México</a>
+                <a class="mega-link" href="japon-colombia.html">Japón ⇄ Colombia</a>
+                <a class="mega-link" href="japon-paraguay.html">Japón ⇄ Paraguay</a>
+              </div>
 
-    .nav-link:hover {
-      background: rgba(148, 163, 184, 0.18);
-    }
+              <!-- EUROPA -->
+              <div>
+                <div class="mega-column-title">Europa</div>
+                <a class="mega-link" href="japon-espana.html">Japón ⇄ España</a>
+              </div>
 
-    .nav-link.active {
-      background: linear-gradient(135deg, #22c55e, #16a34a);
-      color: #02120a;
-      font-weight: 600;
-      box-shadow: 0 10px 30px rgba(22, 163, 74, 0.45);
-    }
+              <!-- ASIA -->
+              <div>
+                <div class="mega-column-title">Asia</div>
+                <a class="mega-link" href="japon-corea.html">Japón ⇄ Corea</a>
+                <a class="mega-link" href="japon-filipinas.html">Japón ⇄ Filipinas</a>
+              </div>
 
-    .mega-wrapper {
-      position: relative;
-    }
+            </div>
+          </div>
+        </div>
 
-    .mega-toggle {
-      border: 1px solid rgba(148, 163, 184, 0.6);
-      background: rgba(15, 23, 42, 0.9);
-      color: #e5e7eb;
-      border-radius: 999px;
-      font-size: 0.85rem;
-      padding: 0.35rem 0.9rem;
-      display: inline-flex;
-      align-items: center;
-      gap: 0.35rem;
-      cursor: pointer;
-      white-space:
+      </div>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- HERO -->
+    <section class="hero">
+      <div>
+        <h1 class="hero-title">
+          Ruta <span>Japón ⇄ Paraguay</span><br>
+          (Tokio / Osaka ⇄ Asunción vía São Paulo)
+        </h1>
+
+        <p class="hero-sub">
+          La ruta principal para viajar entre Japón y Paraguay siempre pasa por Brasil.
+          Es estable, clara y la más usada por la comunidad paraguaya en Japón.
+        </p>
+
+        <div>
+          <div class="badge"><span class="badge-dot"></span> Tokio ⇄ São Paulo ⇄ Asunción</div>
+          <div class="badge"><span class="badge-dot"></span> Osaka ⇄ São Paulo ⇄ Asunción</div>
+          <div class="badge"><span class="badge-dot"></span> No existe vuelo directo Japón ⇄ Paraguay</div>
+        </div>
+
+        <div style="margin-top:1.2rem;">
+          <a class="btn-main" href="https://aviasales.tpm.lv/XFpIYjQj" target="_blank">Buscar vuelos Japón ⇄ Paraguay</a>
+        </div>
+      </div>
+
+      <div class="hero-right">
+        <div class="hero-right-title">Datos clave de la ruta</div>
+
+        <div class="mini-grid">
+          <div class="mini-item">Duración total: <strong>27h ~ 40h</strong></div>
+          <div class="mini-item">Conexión obligatoria: <strong>São Paulo (GRU)</strong></div>
+          <div class="mini-item">Mejor precio: <strong>marzo - junio</strong></div>
+          <div class="mini-item">Más caro: <strong>diciembre</strong></div>
+          <div class="mini-item">Compañías habituales: <strong>ANA, Qatar, LATAM</strong></div>
+          <div class="mini-item">Famoso en la comunidad: <strong>Tokio → Doha → São Paulo → Asunción</strong></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- RUTAS -->
+    <section>
+      <h2 class="section-title">Rutas reales Japón ⇄ Paraguay</h2>
+
+      <div class="cards-grid">
+
+        <div class="card">
+          <h3>1. Japón ⇄ Doha ⇄ São Paulo ⇄ Asunción</h3>
+          <p>
+            Una de las rutas más usadas por paraguayos en Japón.  
+            Qatar + LATAM ofrece buena conexión.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>2. Japón ⇄ USA ⇄ Brasil ⇄ Paraguay</h3>
+          <p>
+            Requiere VISA USA.  
+            A veces más barata según temporada.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>3. Japón ⇄ Europa ⇄ Brasil ⇄ Paraguay</h3>
+          <p>
+            Escalas vía Madrid o París.  
+            Algo más largo, pero cómodo.
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- RELACIONADOS -->
+    <section>
+      <h2 class="section-title">Rutas relacionadas</h2>
+
+      <div class="cards-grid">
+
+        <div class="card">
+          <h3>Japón ⇄ Brasil</h3>
+          <p>Ruta clave para llegar a Asunción.</p>
+          <a href="japon-brasil.html">Ver ruta →</a>
+        </div>
+
+        <div class="card">
+          <h3>Japón ⇄ Argentina</h3>
+          <p>Útil para comparar precios con Brasil.</p>
+          <a href="japon-argentina.html">Ver ruta →</a>
+        </div>
+
+        <div class="card">
+          <h3>Japón ⇄ Perú</h3>
+          <p>Vecino regional para combinar viajes.</p>
+          <a href="japon-peru.html">Ver ruta →</a>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    Dany Travel JP — Ruta Japón ⇄ Paraguay explicada para la comunidad paraguaya en Japón.
+  </footer>
+
+</body>
+</html>
