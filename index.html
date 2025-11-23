@@ -6,10 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Dany Travel JP – Buscador de pasajes aéreos desde Japón con ofertas para Paraguay, Sudamérica y el resto del mundo.">
 
-  <!-- Estilos externos -->
   <link rel="stylesheet" href="style.css" />
 
-  <!-- Estilos de respaldo por si no carga style.css -->
   <style>
     body {
       margin: 0;
@@ -34,19 +32,68 @@
     .brand span {
       color: #32a8dd;
     }
-    nav a {
-      color: #e5e7eb;
-      margin-left: 1rem;
-      text-decoration: none;
+
+    /* NAV + SUBMENÚ */
+    nav {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
       font-size: 0.95rem;
     }
-    nav a:hover {
+    .nav-list {
+      list-style: none;
+      display: flex;
+      gap: 1rem;
+      padding: 0;
+      margin: 0;
+    }
+    .nav-item > a,
+    .nav-item > span {
+      color: #e5e7eb;
+      text-decoration: none;
+      cursor: pointer;
+      position: relative;
+      padding: 0.2rem 0;
+    }
+    .nav-item > a:hover,
+    .nav-item > span:hover {
       color: #32a8dd;
     }
-    nav a.active {
+    .nav-item > a.active {
       color: #32a8dd;
       font-weight: 600;
     }
+    .has-sub {
+      position: relative;
+    }
+    .sub-menu {
+      position: absolute;
+      top: 130%;
+      left: 0;
+      background: #111827;
+      border-radius: 0.5rem;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+      padding: 0.5rem 0;
+      min-width: 210px;
+      display: none;
+      z-index: 20;
+    }
+    .sub-menu a {
+      display: block;
+      padding: 0.4rem 0.9rem;
+      color: #e5e7eb;
+      text-decoration: none;
+      font-size: 0.9rem;
+      white-space: nowrap;
+    }
+    .sub-menu a:hover {
+      background: #1f2937;
+      color: #32a8dd;
+    }
+    .has-sub:hover .sub-menu {
+      display: block;
+    }
+
     main {
       max-width: 1100px;
       margin: 0 auto;
@@ -124,12 +171,14 @@
       header {
         flex-direction: column;
         align-items: flex-start;
+        gap: 0.5rem;
       }
       nav {
-        margin-top: 0.5rem;
+        width: 100%;
       }
-      .hero h1 {
-        font-size: 1.5rem;
+      .nav-list {
+        flex-wrap: wrap;
+        gap: 0.6rem;
       }
     }
   </style>
@@ -148,9 +197,33 @@
   <header>
     <div class="brand">Dany <span>Travel</span> JP</div>
     <nav>
-      <a href="index.html" class="active">Inicio</a>
-      <a href="paraguay.html">Japón ⇆ Paraguay</a>
-      <a href="javascript:void(0)">Próximos destinos</a>
+      <ul class="nav-list">
+        <li class="nav-item">
+          <a href="index.html" class="active">Inicio</a>
+        </li>
+
+        <li class="nav-item has-sub">
+          <span>Destinos Sudamérica ▾</span>
+          <div class="sub-menu">
+            <a href="paraguay.html">Japón ⇆ Paraguay</a>
+            <a href="brasil.html">Japón ⇆ Brasil</a>
+            <a href="peru.html">Japón ⇆ Perú</a>
+            <a href="argentina.html">Japón ⇆ Argentina</a>
+            <a href="colombia.html">Japón ⇆ Colombia</a>
+          </div>
+        </li>
+
+        <li class="nav-item has-sub">
+          <span>Destinos Mundo ▾</span>
+          <div class="sub-menu">
+            <a href="usa.html">Japón ⇆ USA</a>
+            <a href="mexico.html">Japón ⇆ México</a>
+            <a href="espana.html">Japón ⇆ España</a>
+            <a href="filipinas.html">Japón ⇆ Filipinas</a>
+            <a href="corea.html">Japón ⇆ Corea</a>
+          </div>
+        </li>
+      </ul>
     </nav>
   </header>
 
@@ -181,7 +254,7 @@
       <div class="card">
         <h3>Japón ⇆ Sudamérica</h3>
         <p>Rutas a Brasil, Perú, Argentina, Colombia y más, usando el mismo buscador.</p>
-        <p>En próximos updates agregamos páginas dedicadas por país.</p>
+        <p>Ya hay páginas dedicadas por país en el menú superior.</p>
       </div>
       <div class="card">
         <h3>Japón ⇆ Resto del mundo</h3>
