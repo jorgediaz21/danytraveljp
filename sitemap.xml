@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
   <url>
     <loc>https://danytraveljp.com/</loc>
     <changefreq>daily</changefreq>
@@ -7,53 +8,30 @@
   </url>
 
   <url>
-    <loc>https://danytraveljp.com/paraguay.html</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
+    <loc>https://danytraveljp.com/ofertas.html</loc>
+    <changefreq>daily</changefreq>
+    <priority>0.95</priority>
   </url>
+
   <url>
-    <loc>https://danytraveljp.com/brasil.html</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://danytraveljp.com/peru.html</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://danytraveljp.com/argentina.html</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://danytraveljp.com/colombia.html</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://danytraveljp.com/usa.html</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://danytraveljp.com/mexico.html</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://danytraveljp.com/espana.html</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://danytraveljp.com/filipinas.html</loc>
-    <changefreq>weekly</changefreq>
+    <loc>https://danytraveljp.com/quienes-somos.html</loc>
+    <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-  <url>
-    <loc>https://danytraveljp.com/corea.html</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
+
+  <!-- Sudamérica -->
+  <url><loc>https://danytraveljp.com/paraguay.html</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://danytraveljp.com/argentina.html</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://danytraveljp.com/brasil.html</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://danytraveljp.com/peru.html</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://danytraveljp.com/chile.html</loc><changefreq>weekly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://danytraveljp.com/colombia.html</loc><changefreq>weekly</changefreq><priority>0.85</priority></url>
+
+  <!-- Mundo -->
+  <url><loc>https://danytraveljp.com/usa.html</loc><changefreq>weekly</changefreq><priority>0.95</priority></url>
+  <url><loc>https://danytraveljp.com/mexico.html</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://danytraveljp.com/espana.html</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://danytraveljp.com/corea.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://danytraveljp.com/filipinas.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+
 </urlset>
