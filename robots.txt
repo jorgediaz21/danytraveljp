@@ -2,3 +2,4 @@ User-agent: *
 Allow: /
 
 Sitemap: https://danytraveljp.com/sitemap.xml
+
