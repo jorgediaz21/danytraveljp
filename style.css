@@ -1,83 +1,241 @@
-/* ===== ESTILOS GENERALES ===== */
+/* RESET SUAVE */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
 body {
     margin: 0;
     padding: 0;
-    font-family: "Inter", sans-serif;
-    background: #0a0f1f;
-    color: #e8f6f3;
-    line-height: 1.7;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+        sans-serif;
+    color: #17202a;
+
+    /* Fondo claro con toque sakura */
+    background:
+        radial-gradient(circle at 0 0, #ffe4f2 0, transparent 55%),
+        radial-gradient(circle at 100% 0, #ffe4f2 0, transparent 55%),
+        #fdf7fb;
 }
 
+/* TOP NAV / HEADER */
+
+.top-nav {
+    position: sticky;
+    top: 0;
+    z-index: 20;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 24px;
+    max-width: 1100px;
+    margin: 0 auto;
+    backdrop-filter: blur(10px);
+    background: rgba(253, 247, 251, 0.9);
+}
+
+.brand-title {
+    font-weight: 700;
+    font-size: 1.1rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.brand-subtitle {
+    font-size: 0.8rem;
+    color: #6b7280;
+}
+
+.menu a {
+    margin-left: 12px;
+    font-size: 0.9rem;
+    text-decoration: none;
+    color: #0f766e;
+    font-weight: 500;
+}
+
+.menu a:hover {
+    text-decoration: underline;
+    color: #be185d;
+}
+
+/* TARJETA DE NAVEGACIÓN PRINCIPAL */
+
+.nav-card {
+    max-width: 600px;
+    margin: 20px auto 24px;
+    padding: 18px 22px;
+    background: rgba(255, 255, 255, 0.97);
+    border-radius: 18px;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+    text-align: center;
+}
+
+.nav-card strong {
+    display: block;
+    font-size: 0.95rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #111827;
+    margin-top: 4px;
+    margin-bottom: 6px;
+}
+
+.nav-links {
+    margin-bottom: 8px;
+}
+
+.nav-links a {
+    display: inline-block;
+    margin: 2px 6px;
+    font-size: 0.9rem;
+    text-decoration: none;
+    color: #0f766e;
+}
+
+.nav-links a:hover {
+    text-decoration: underline;
+    color: #be185d;
+}
+
+/* HERO */
+
+.hero {
+    text-align: center;
+    max-width: 900px;
+    margin: 0 auto 18px;
+    padding: 0 16px;
+}
+
+.hero h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #111827;
+    margin-bottom: 10px;
+}
+
+.hero-text {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #4b5563;
+}
+
+/* SECCIONES GENERALES */
+
+main {
+    padding-bottom: 40px;
+}
+
+.widget-section,
+.content-section {
+    max-width: 1100px;
+    margin: 32px auto 0;
+    padding: 0 16px;
+}
+
+h2 {
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: #111827;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.section-intro {
+    text-align: center;
+    color: #4b5563;
+    font-size: 0.96rem;
+    margin-bottom: 14px;
+}
+
+/* WIDGET AVIASALES ENVUELTO EN TARJETA */
+
+.widget-wrapper {
+    background: #ffffff;
+    border-radius: 18px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+    padding: 16px;
+}
+
+/* El widget que inserta el script suele ser iframe dentro de un div */
+/* Estos estilos lo hacen responsivo y más prolijo en pantallas grandes */
+
+.widget-wrapper iframe {
+    width: 100% !important;
+    border: none !important;
+    border-radius: 12px;
+}
+
+/* TEXTO / PÁRRAFOS */
+
+.content-section p {
+    max-width: 900px;
+    margin: 0 auto 8px;
+    line-height: 1.6;
+    font-size: 0.96rem;
+    color: #374151;
+}
+
+/* LINKS DE ACCESOS RÁPIDOS */
+
 a {
-    color: #18e2d5;
+    color: #0f766e;
     text-decoration: none;
 }
 
 a:hover {
+    color: #be185d;
     text-decoration: underline;
 }
 
-/* ===== CONTENEDOR ===== */
-.container {
-    max-width: 900px;
-    margin: 0 auto;
-    padding: 20px;
-}
-
-/* ===== HEADER ===== */
-header {
+.links-line {
     text-align: center;
-    padding: 60px 20px 40px 20px;
+    margin-top: 6px;
 }
 
-header img.logo {
-    width: 110px;
-    margin-bottom: 15px;
-}
+/* FOOTER */
 
-header h1 {
-    font-size: 3rem;
-    font-weight: 700;
-    margin: 0;
-    color: #ffffff;
-}
-
-header p.sub {
-    font-size: 1.2rem;
-    margin-top: 10px;
-    color: #7bdff2;
-}
-
-header p.jp {
-    font-size: 1rem;
-    margin-top: 8px;
-    color: #9fe7ff;
-}
-
-/* ===== SECCIONES ===== */
-h2 {
-    font-size: 2rem;
-    color: #18e2d5;
-    margin-top: 50px;
-    margin-bottom: 15px;
-}
-
-section p, section li {
-    font-size: 1.05rem;
-    color: #d9f3ef;
-}
-
-ul {
-    padding-left: 20px;
-    margin-top: 10px;
-}
-
-/* ===== FOOTER ===== */
-footer {
+.footer {
+    border-top: 1px solid rgba(209, 213, 219, 0.8);
+    padding: 16px 16px 24px;
     text-align: center;
-    padding: 35px 0;
-    margin-top: 50px;
-    color: #7bdff2;
-    font-size: 0.9rem;
-    border-top: 1px solid #18e2d5;
+    font-size: 0.85rem;
+    color: #6b7280;
+    background: rgba(255, 255, 255, 0.8);
+}
+
+.footer-small {
+    font-size: 0.8rem;
+    margin-top: 4px;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 768px) {
+    .top-nav {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 6px;
+    }
+
+    .menu {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 4px;
+    }
+
+    .menu a {
+        margin-left: 0;
+        margin-right: 8px;
+    }
+
+    .nav-card {
+        margin: 12px 12px 20px;
+    }
+
+    .hero h1 {
+        font-size: 1.6rem;
+    }
 }
