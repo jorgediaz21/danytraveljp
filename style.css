@@ -158,9 +158,6 @@ h2 {
     padding: 16px;
 }
 
-/* El widget que inserta el script suele ser iframe dentro de un div */
-/* Estos estilos lo hacen responsivo y más prolijo en pantallas grandes */
-
 .widget-wrapper iframe {
     width: 100% !important;
     border: none !important;
@@ -208,6 +205,51 @@ a:hover {
 .footer-small {
     font-size: 0.8rem;
     margin-top: 4px;
+}
+
+/* SAKURA: CAPA Y PÉTALOS */
+
+.sakura-container {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;      /* no bloquea clics */
+    overflow: hidden;
+    z-index: 5;                /* debajo del header (20), encima del fondo */
+}
+
+.sakura-petal {
+    position: absolute;
+    top: -10%;
+    background: radial-gradient(circle at 30% 30%, #ffe9f2 0, #ffb7d5 40%, #f472b6 100%);
+    border-radius: 70% 40% 70% 40%;
+    opacity: 0.9;
+    box-shadow: 0 0 6px rgba(255, 182, 193, 0.7);
+    animation-name: sakura-fall, sakura-sway;
+    animation-timing-function: linear, ease-in-out;
+    animation-iteration-count: infinite, infinite;
+}
+
+/* Caída vertical */
+@keyframes sakura-fall {
+    0% {
+        transform: translate3d(0, -10vh, 0) rotateZ(0deg);
+    }
+    100% {
+        transform: translate3d(0, 110vh, 0) rotateZ(360deg);
+    }
+}
+
+/* Movimiento lateral suave */
+@keyframes sakura-sway {
+    0% {
+        margin-left: -10px;
+    }
+    50% {
+        margin-left: 10px;
+    }
+    100% {
+        margin-left: -10px;
+    }
 }
 
 /* RESPONSIVE */
