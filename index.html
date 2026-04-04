@@ -1,197 +1,319 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Dany Travel JP</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dany Travel JP | Vuelos baratos desde Japón</title>
+  <meta name="description" content="Encuentra vuelos baratos desde Japón a Paraguay, Perú, Brasil, Argentina, Colombia y más. Compara precios en segundos con Dany Travel JP.">
 
-<style>
-
-/* ============================================
-   FONDO GENERAL
-   ============================================ */
-body {
-    margin: 0;
-    padding: 0;
-    background: #ffe6f2; /* Rosa suave */
-    font-family: Arial, sans-serif;
-}
-
-/* ============================================
-   ENCABEZADO
-   ============================================ */
-.header-title {
-    font-size: 34px;
-    font-weight: 800;
-    text-align: center;
-    margin-top: 25px;
-    color: #111;
-    letter-spacing: 1px;
-}
-
-.header-subtitle {
-    font-size: 18px;
-    text-align: center;
-    margin-top: -5px;
-    margin-bottom: 25px;
-    color: #333;
-}
-
-/* ============================================
-   MENÚ SUPERIOR
-   ============================================ */
-nav {
-    text-align: center;
-    margin-bottom: 30px;
-}
-
-nav a {
-    margin: 0 12px;
-    text-decoration: none;
-    font-weight: bold;
-    color: #444;
-}
-
-nav a:hover {
-    color: #ff4da6;
-}
-
-/* ============================================
-   CAJA DE CATEGORÍAS
-   ============================================ */
-.menu-box {
-    width: 450px;
-    margin: 0 auto;
-    background: white;
-    padding: 18px;
-    border-radius: 14px;
-    text-align: center;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-}
-
-.menu-box a {
-    margin: 6px;
-    display: inline-block;
-    color: #0077aa;
-    font-weight: 600;
-    text-decoration: none;
-}
-
-.menu-box a:hover {
-    color: #ff4da6;
-}
-
-/* ============================================
-   SECCIÓN CENTRAL
-   ============================================ */
-.section-title {
-    text-align: center;
-    font-size: 28px;
-    font-weight: bold;
-    margin-top: 30px;
-}
-
-.section-sub {
-    text-align: center;
-    color: #333;
-    width: 80%;
-    margin: 5px auto 20px;
-}
-
-/* ============================================
-   PÉTALOS DE SAKURA
-   ============================================ */
-
-.sakura {
-    position: fixed;
-    top: -10px;
-    z-index: 9999;
-    pointer-events: none;
-    animation: fall linear infinite;
-}
-
-@keyframes fall {
-    0%   { transform: translateY(0) rotate(0deg); opacity: 1; }
-    100% { transform: translateY(110vh) rotate(360deg); opacity: 0.3; }
-}
-
-/* Generador automático */
-</style>
-
-<script>
-// Crear pétalos automáticamente
-document.addEventListener("DOMContentLoaded", () => {
-    const totalPetalos = 25; // cantidad
-
-    for (let i = 0; i < totalPetalos; i++) {
-        let petalo = document.createElement("div");
-        petalo.classList.add("sakura");
-
-        petalo.innerHTML = "🌸";
-        petalo.style.left = Math.random() * 100 + "vw";
-        petalo.style.fontSize = (20 + Math.random() * 20) + "px";
-        petalo.style.animationDuration = (4 + Math.random() * 5) + "s";
-        petalo.style.opacity = Math.random();
-
-        document.body.appendChild(petalo);
+  <style>
+    * {
+      box-sizing: border-box;
     }
-});
-</script>
 
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: #f6f7fb;
+      color: #1f2937;
+      line-height: 1.5;
+    }
+
+    header {
+      background: linear-gradient(135deg, #0f172a, #1e3a8a);
+      color: white;
+      padding: 50px 20px 40px;
+      text-align: center;
+    }
+
+    .top-badge {
+      display: inline-block;
+      background: rgba(255,255,255,0.12);
+      border: 1px solid rgba(255,255,255,0.18);
+      padding: 8px 14px;
+      border-radius: 999px;
+      font-size: 13px;
+      margin-bottom: 18px;
+    }
+
+    header h1 {
+      margin: 0 0 12px;
+      font-size: 34px;
+      line-height: 1.2;
+    }
+
+    header p {
+      margin: 0 auto 24px;
+      max-width: 760px;
+      font-size: 17px;
+      color: #e5e7eb;
+    }
+
+    .btn-principal {
+      display: inline-block;
+      background: #ff7a00;
+      color: white;
+      text-decoration: none;
+      padding: 15px 26px;
+      border-radius: 12px;
+      font-size: 18px;
+      font-weight: bold;
+      box-shadow: 0 8px 24px rgba(255, 122, 0, 0.28);
+    }
+
+    .btn-principal:hover {
+      opacity: 0.95;
+    }
+
+    .contenedor {
+      max-width: 1150px;
+      margin: 0 auto;
+      padding: 30px 16px 60px;
+    }
+
+    .beneficios {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      margin-top: -24px;
+      margin-bottom: 34px;
+    }
+
+    .beneficio {
+      background: white;
+      border-radius: 16px;
+      padding: 18px;
+      box-shadow: 0 8px 24px rgba(15, 23, 42, 0.08);
+      text-align: center;
+      font-weight: 600;
+    }
+
+    .seccion {
+      margin-top: 30px;
+    }
+
+    .seccion h2 {
+      margin: 0 0 16px;
+      font-size: 28px;
+      text-align: center;
+      color: #111827;
+    }
+
+    .seccion p.sub {
+      margin: 0 auto 24px;
+      max-width: 760px;
+      text-align: center;
+      color: #6b7280;
+      font-size: 16px;
+    }
+
+    .destinos {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 14px;
+    }
+
+    .destino-btn {
+      display: block;
+      background: white;
+      border: 2px solid #e5e7eb;
+      text-decoration: none;
+      color: #111827;
+      padding: 18px 10px;
+      border-radius: 16px;
+      text-align: center;
+      font-weight: 700;
+      transition: 0.2s ease;
+      box-shadow: 0 6px 18px rgba(15, 23, 42, 0.05);
+    }
+
+    .destino-btn:hover {
+      transform: translateY(-2px);
+      border-color: #ff7a00;
+    }
+
+    .buscador-box {
+      background: white;
+      border-radius: 18px;
+      padding: 20px;
+      box-shadow: 0 10px 28px rgba(15, 23, 42, 0.08);
+      margin-top: 20px;
+    }
+
+    .info-box {
+      background: #fff7ed;
+      border: 1px solid #fed7aa;
+      color: #9a3412;
+      border-radius: 14px;
+      padding: 16px;
+      margin-top: 18px;
+      text-align: center;
+      font-size: 15px;
+    }
+
+    .rutas {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      margin-top: 20px;
+    }
+
+    .ruta-card {
+      background: white;
+      border-radius: 16px;
+      padding: 20px;
+      box-shadow: 0 8px 24px rgba(15, 23, 42, 0.06);
+      text-align: center;
+    }
+
+    .ruta-card h3 {
+      margin-top: 0;
+      margin-bottom: 10px;
+      font-size: 20px;
+    }
+
+    .ruta-card p {
+      color: #6b7280;
+      font-size: 15px;
+      margin-bottom: 16px;
+    }
+
+    .ruta-card a {
+      display: inline-block;
+      background: #111827;
+      color: white;
+      text-decoration: none;
+      padding: 12px 18px;
+      border-radius: 10px;
+      font-weight: bold;
+    }
+
+    footer {
+      background: #0f172a;
+      color: #cbd5e1;
+      text-align: center;
+      padding: 26px 16px;
+      font-size: 14px;
+      margin-top: 40px;
+    }
+
+    @media (max-width: 980px) {
+      .beneficios,
+      .destinos,
+      .rutas {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      header h1 {
+        font-size: 28px;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .beneficios,
+      .destinos,
+      .rutas {
+        grid-template-columns: 1fr;
+      }
+
+      header {
+        padding: 38px 16px 34px;
+      }
+
+      header h1 {
+        font-size: 24px;
+      }
+
+      header p {
+        font-size: 15px;
+      }
+
+      .btn-principal {
+        width: 100%;
+        max-width: 320px;
+      }
+
+      .seccion h2 {
+        font-size: 24px;
+      }
+    }
+  </style>
 </head>
 <body>
 
-<!-- TÍTULO PRINCIPAL -->
-<div class="header-title">DANY TRAVEL JP</div>
-<div class="header-subtitle">Pasajes baratos desde Japón 🌸</div>
+  <header>
+    <div class="top-badge">✈️ Compara vuelos desde Japón al mundo</div>
+    <h1>Encuentra vuelos baratos desde Japón en segundos</h1>
+    <p>
+      Busca, compara y descubre mejores precios para Paraguay, Perú, Brasil, Argentina, Colombia y más con Dany Travel JP.
+    </p>
+    <a href="#buscador" class="btn-principal">🔥 Buscar vuelos baratos ahora</a>
+  </header>
 
-<!-- MENÚ SUPERIOR -->
-<nav>
-    <a href="#">Inicio</a>
-    <a href="#">Sudamérica</a>
-    <a href="#">Otros destinos</a>
-    <a href="#">Cómo usar</a>
-</nav>
+  <div class="contenedor">
 
-<!-- CAJA DE DESTINOS -->
-<div class="menu-box">
-    <h3>DESTINOS SUDAMÉRICA</h3>
-    <a href="#">Paraguay</a>
-    <a href="#">Argentina</a>
-    <a href="#">Brasil</a>
-    <a href="#">Perú</a>
-    <a href="#">Colombia</a>
+    <section class="beneficios">
+      <div class="beneficio">✔️ Comparación en tiempo real</div>
+      <div class="beneficio">✔️ Mejores rutas disponibles</div>
+      <div class="beneficio">✔️ Sin cargos ocultos</div>
+    </section>
 
-    <h3>DESTINOS MUNDO</h3>
-    <a href="#">USA</a>
-    <a href="#">México</a>
-    <a href="#">España</a>
-    <a href="#">Filipinas</a>
-    <a href="#">Corea</a>
-</div>
+    <section class="seccion">
+      <h2>🌎 Destinos populares</h2>
+      <p class="sub">Haz clic en un destino y abre una búsqueda directa con opción de compra.</p>
 
-<!-- TÍTULO PRINCIPAL -->
-<div class="section-title">
-    Vuelos desde Japón a Sudamérica y el mundo
-</div>
+      <div class="destinos">
+        <a class="destino-btn" href="https://www.aviasales.com/search/TYOASU?marker=684522" target="_blank">🇵🇾 Paraguay</a>
+        <a class="destino-btn" href="https://www.aviasales.com/search/TYOLIM?marker=684522" target="_blank">🇵🇪 Perú</a>
+        <a class="destino-btn" href="https://www.aviasales.com/search/TYOSA0?marker=684522" target="_blank">🇧🇷 Brasil</a>
+        <a class="destino-btn" href="https://www.aviasales.com/search/TYOEZE?marker=684522" target="_blank">🇦🇷 Argentina</a>
+        <a class="destino-btn" href="https://www.aviasales.com/search/TYOBog?marker=684522" target="_blank">🇨🇴 Colombia</a>
+      </div>
+    </section>
 
-<div class="section-sub">
-    Un solo lugar para comparar rutas y precios si vivís en Japón y querés viajar.  
-</div>
+    <section class="seccion" id="buscador">
+      <h2>🔎 Buscador de vuelos</h2>
+      <p class="sub">Aquí va tu buscador principal de Travelpayouts / Aviasales.</p>
 
-<!-- BUSCADOR AVIASALES -->
-<div style="width: 100%; display: flex; justify-content: center; margin-top: 20px;">
-<script async src="https://tp.media/content?currency=usd&trs=474443&shmarker=684522&show_hotels=false&powered_by=true&locale=en&searchUrl=www.aviasales.com%2Fsearch&primary_override=%23ffffff&color_button=%230077aa&color_icons=%230077aa&dark=%23262626&light=%23ffffff&secondary=%23ffffff&special=%23C4C4C4&color_focused=%230077aa&border_radius=0&plain=false&promo_id=7879&campaign_id=100" charset="utf-8"></script>
-</div>
+      <div class="buscador-box">
+        <!-- PEGA AQUÍ TU SCRIPT DEL BUSCADOR DE TRAVELPAYOUTS / AVIASALES -->
+      </div>
 
-<!-- COMO USAR -->
-<h2 style="text-align:center; margin-top:40px;">Cómo usar Dany Travel JP</h2>
+      <div class="info-box">
+        Pega aquí tu código del buscador. Si no lo pones, la web se ve linda… pero vende como una puerta cerrada 😅
+      </div>
+    </section>
 
-<p style="text-align:center;">
-    💠 Elegí tu origen en Japón (Tokio, Osaka, Nagoya, Fukuoka).<br>
-    💠 Busca tu destino: Sudamérica, USA, México, España, Asia.<br>
-    💠 Compará precios y horarios.<br>
-</p>
+    <section class="seccion">
+      <h2>🚀 Rutas recomendadas</h2>
+      <p class="sub">Atajos rápidos para las rutas que más busca tu gente.</p>
+
+      <div class="rutas">
+        <div class="ruta-card">
+          <h3>Japón → Paraguay</h3>
+          <p>Ideal para comparar opciones hacia Asunción desde Tokio.</p>
+          <a href="https://www.aviasales.com/search/TYOASU?marker=684522" target="_blank">Ver vuelos</a>
+        </div>
+
+        <div class="ruta-card">
+          <h3>Japón → Perú</h3>
+          <p>Consulta precios y conexiones hacia Lima en segundos.</p>
+          <a href="https://www.aviasales.com/search/TYOLIM?marker=684522" target="_blank">Ver vuelos</a>
+        </div>
+
+        <div class="ruta-card">
+          <h3>Japón → Argentina</h3>
+          <p>Revisa rutas disponibles hacia Buenos Aires.</p>
+          <a href="https://www.aviasales.com/search/TYOEZE?marker=684522" target="_blank">Ver vuelos</a>
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+  <footer>
+    © 2026 Dany Travel JP · Vuelos baratos desde Japón
+  </footer>
 
 </body>
 </html>
