@@ -85,3 +85,98 @@ document.getElementById("buscarBtn").addEventListener("click", function () {
     </a>
   `;
 });
+// ==========================
+// ASISTENTE DE COTIZACIÓN WHATSAPP
+// ==========================
+const WHATSAPP_DANY = "818087584964";
+
+function crearAsistenteTravel() {
+  const asistenteHTML = `
+    <button id="assistantBtn" class="assistant-btn">
+      🤖 Asistente
+    </button>
+
+    <div id="assistantBox" class="assistant-box">
+      <div class="assistant-header">
+        <div>
+          <h3>KAI Travel Assistant</h3>
+          <p>Cotiza vuelos a cualquier destino del mundo 🌍</p>
+        </div>
+        <button id="assistantClose">✕</button>
+      </div>
+
+      <div class="assistant-body">
+        <input id="waSalida" placeholder="Salida: ciudad, país o aeropuerto">
+        <input id="waDestino" placeholder="Destino: ciudad, país o aeropuerto">
+        <input id="waFecha" placeholder="Fecha aproximada">
+        
+        <select id="waTipo">
+          <option>Ida</option>
+          <option>Ida y vuelta</option>
+        </select>
+
+        <input id="waPasajeros" placeholder="Cantidad de pasajeros">
+
+        <select id="waEquipaje">
+          <option>Con equipaje</option>
+          <option>Sin equipaje</option>
+          <option>No estoy seguro</option>
+        </select>
+
+        <select id="waVisa">
+          <option>No puede hacer escala en USA/Canadá</option>
+          <option>Sí puede hacer escala en USA/Canadá</option>
+          <option>No estoy seguro</option>
+        </select>
+
+        <input id="waPresupuesto" placeholder="Presupuesto aproximado">
+        <input id="waNombre" placeholder="Nombre del cliente">
+
+        <button id="waEnviar" class="assistant-send">
+          📲 Enviar cotización por WhatsApp
+        </button>
+      </div>
+    </div>
+  `;
+
+  document.body.insertAdjacentHTML("beforeend", asistenteHTML);
+
+  document.getElementById("assistantBtn").addEventListener("click", () => {
+    document.getElementById("assistantBox").style.display = "block";
+  });
+
+  document.getElementById("assistantClose").addEventListener("click", () => {
+    document.getElementById("assistantBox").style.display = "none";
+  });
+
+  document.getElementById("waEnviar").addEventListener("click", () => {
+    const salida = document.getElementById("waSalida").value.trim();
+    const destino = document.getElementById("waDestino").value.trim();
+    const fecha = document.getElementById("waFecha").value.trim();
+    const tipo = document.getElementById("waTipo").value;
+    const pasajeros = document.getElementById("waPasajeros").value.trim();
+    const equipaje = document.getElementById("waEquipaje").value;
+    const visa = document.getElementById("waVisa").value;
+    const presupuesto = document.getElementById("waPresupuesto").value.trim();
+    const nombre = document.getElementById("waNombre").value.trim();
+
+    const mensaje = `
+Hola Dany, quiero cotizar un pasaje.
+
+Salida: ${salida}
+Destino: ${destino}
+Fecha: ${fecha}
+Ida o ida y vuelta: ${tipo}
+Pasajeros: ${pasajeros}
+Equipaje: ${equipaje}
+Escala USA/Canadá: ${visa}
+Presupuesto: ${presupuesto}
+Nombre: ${nombre}
+`;
+
+    const url = `https://wa.me/${WHATSAPP_DANY}?text=${encodeURIComponent(mensaje)}`;
+    window.open(url, "_blank");
+  });
+}
+
+crearAsistenteTravel();

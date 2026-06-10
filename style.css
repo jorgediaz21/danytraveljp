@@ -281,3 +281,112 @@ a:hover {
         font-size: 1.6rem;
     }
 }
+/* ==========================
+   ASISTENTE DE COTIZACIÓN
+========================== */
+
+.assistant-btn {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  z-index: 9999;
+  background: #ffb600;
+  color: #0d1b2a;
+  border: none;
+  border-radius: 999px;
+  padding: 15px 22px;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.25);
+}
+
+.assistant-box {
+  display: none;
+  position: fixed;
+  right: 20px;
+  bottom: 85px;
+  z-index: 9999;
+  width: 360px;
+  max-width: calc(100vw - 40px);
+  background: #0d1b2a;
+  color: white;
+  border: 2px solid #ffb600;
+  border-radius: 18px;
+  box-shadow: 0 12px 35px rgba(0,0,0,0.35);
+  overflow: hidden;
+  text-align: left;
+}
+
+.assistant-header {
+  background: linear-gradient(135deg, #0d1b2a, #1e3a8a);
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.assistant-header h3 {
+  margin: 0;
+  color: #ffb600;
+  font-size: 18px;
+}
+
+.assistant-header p {
+  margin: 5px 0 0;
+  font-size: 12px;
+  color: #dbeafe;
+}
+
+#assistantClose {
+  background: rgba(255,255,255,0.15);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}
+
+.assistant-body {
+  padding: 15px;
+  display: grid;
+  gap: 10px;
+}
+
+.assistant-body input,
+.assistant-body select {
+  width: 100%;
+  padding: 11px;
+  border-radius: 10px;
+  border: none;
+  font-size: 14px;
+}
+
+.assistant-send {
+  width: 100%;
+  background: #22c55e;
+  color: white;
+  border: none;
+  border-radius: 12px;
+  padding: 13px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.assistant-send:hover {
+  background: #16a34a;
+}
+
+@media (max-width: 480px) {
+  .assistant-box {
+    right: 10px;
+    left: 10px;
+    width: auto;
+    bottom: 80px;
+  }
+
+  .assistant-btn {
+    right: 15px;
+    bottom: 15px;
+  }
+}
