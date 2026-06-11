@@ -139,7 +139,7 @@ function crearAsistenteTravel() {
         <input id="waResidencia" placeholder="País de residencia actual">
         <input id="waNacionalidad" placeholder="Nacionalidad / Pasaporte">
         <input id="waNombre" placeholder="Nombre del cliente">
-
+<input id="waContacto" placeholder="WhatsApp o teléfono">
         <button id="waEnviar" class="assistant-send">
           📲 Enviar cotización por WhatsApp
         </button>
@@ -169,6 +169,7 @@ function crearAsistenteTravel() {
     const residencia = document.getElementById("waResidencia").value.trim();
     const nacionalidad = document.getElementById("waNacionalidad").value.trim();
     const nombre = document.getElementById("waNombre").value.trim();
+    const contacto = document.getElementById("waContacto").value.trim();
 
     const mensaje = `
 Hola Dany, quiero cotizar un pasaje.
@@ -184,6 +185,7 @@ Presupuesto: ${presupuesto}
 País de residencia actual: ${residencia}
 Nacionalidad / Pasaporte: ${nacionalidad}
 Nombre: ${nombre}
+Contacto: ${contacto}
 `;
 
     const url = `https://wa.me/${WHATSAPP_DANY}?text=${encodeURIComponent(mensaje)}`;
