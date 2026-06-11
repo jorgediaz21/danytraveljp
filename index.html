@@ -275,6 +275,7 @@
     </select>
 
     <input id="waPresupuesto" placeholder="Presupuesto aproximado">
+    <input id="waResidencia" placeholder="País de residencia actual">
     <input id="waNombre" placeholder="Nombre del cliente">
 
     <button id="waEnviar" class="assistant-send">
@@ -302,8 +303,9 @@
     const pasajeros = document.getElementById("waPasajeros").value.trim();
     const equipaje = document.getElementById("waEquipaje").value;
     const visa = document.getElementById("waVisa").value;
-    const presupuesto = document.getElementById("waPresupuesto").value.trim();
-    const nombre = document.getElementById("waNombre").value.trim();
+  const presupuesto = document.getElementById("waPresupuesto").value.trim();
+const residencia = document.getElementById("waResidencia").value.trim();
+const nombre = document.getElementById("waNombre").value.trim();  
 
     const mensaje = `
 Hola Dany, quiero cotizar un pasaje.
@@ -316,6 +318,7 @@ Pasajeros: ${pasajeros}
 Equipaje: ${equipaje}
 Escala USA/Canadá: ${visa}
 Presupuesto: ${presupuesto}
+País de residencia actual: ${residencia}
 Nombre: ${nombre}
 `;
 
