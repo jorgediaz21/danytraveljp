@@ -20,6 +20,8 @@ const aeropuertos = [
 
 function activarAutocompletado(idInput) {
   const input = document.getElementById(idInput);
+  if (!input) return;
+
   const lista = document.createElement("div");
   lista.classList.add("sugerencias");
   input.parentNode.appendChild(lista);
@@ -53,38 +55,42 @@ activarAutocompletado("destino");
 // ==========================
 // BUSCADOR CLICK
 // ==========================
-document.getElementById("buscarBtn").addEventListener("click", function () {
-  
-  const origenTxt = document.getElementById("origen").value.trim();
-  const destinoTxt = document.getElementById("destino").value.trim();
-  const fechaTxt = document.getElementById("fecha").value;
+const buscarBtn = document.getElementById("buscarBtn");
 
-  if (!origenTxt || !destinoTxt || !fechaTxt) {
-    document.getElementById("resultado").innerHTML =
-      `<p style="color:red">⚠️ Completa todos los campos</p>`;
-    return;
-  }
+if (buscarBtn) {
+  buscarBtn.addEventListener("click", function () {
+    const origenTxt = document.getElementById("origen").value.trim();
+    const destinoTxt = document.getElementById("destino").value.trim();
+    const fechaTxt = document.getElementById("fecha").value;
 
-  const ORIGEN_IATA = origenTxt.split("–")[0].trim().toUpperCase();
-  const DESTINO_IATA = destinoTxt.split("–")[0].trim().toUpperCase();
+    if (!origenTxt || !destinoTxt || !fechaTxt) {
+      document.getElementById("resultado").innerHTML =
+        `<p style="color:red">⚠️ Completa todos los campos</p>`;
+      return;
+    }
 
-  const fechaParts = fechaTxt.split("/");
-  const fechaCompact = `${fechaParts[2]}${fechaParts[1]}${fechaParts[0]}`;
+    const ORIGEN_IATA = origenTxt.split("–")[0].trim().toUpperCase();
+    const DESTINO_IATA = destinoTxt.split("–")[0].trim().toUpperCase();
 
-  const url = `https://search.aviasales.com/search/${ORIGEN_IATA}${fechaCompact}${DESTINO_IATA}1?marker=${MARKER}&refhost=search.aviasales.com`;
+    const fechaParts = fechaTxt.split("/");
+    const fechaCompact = `${fechaParts[2]}${fechaParts[1]}${fechaParts[0]}`;
 
-  document.getElementById("resultado").innerHTML = `
-    <h2>Resultado</h2>
-    <p><b>Origen:</b> ${origenTxt}</p>
-    <p><b>Destino:</b> ${destinoTxt}</p>
-    <p><b>Fecha:</b> ${fechaTxt}</p>
-    <a href="${url}" 
-       target="_blank" 
-       style="padding:12px 20px; background:#4f46e5; color:white; border-radius:6px; text-decoration:none; display:inline-block; margin-top:10px;">
-      🔎 Ver precios reales y comprar
-    </a>
-  `;
-});
+    const url = `https://search.aviasales.com/search/${ORIGEN_IATA}${fechaCompact}${DESTINO_IATA}1?marker=${MARKER}&refhost=search.aviasales.com`;
+
+    document.getElementById("resultado").innerHTML = `
+      <h2>Resultado</h2>
+      <p><b>Origen:</b> ${origenTxt}</p>
+      <p><b>Destino:</b> ${destinoTxt}</p>
+      <p><b>Fecha:</b> ${fechaTxt}</p>
+      <a href="${url}" 
+         target="_blank" 
+         style="padding:12px 20px; background:#4f46e5; color:white; border-radius:6px; text-decoration:none; display:inline-block; margin-top:10px;">
+        🔎 Ver precios reales y comprar
+      </a>
+    `;
+  });
+}
+
 // ==========================
 // ASISTENTE DE COTIZACIÓN WHATSAPP
 // ==========================
@@ -130,6 +136,8 @@ function crearAsistenteTravel() {
         </select>
 
         <input id="waPresupuesto" placeholder="Presupuesto aproximado">
+        <input id="waResidencia" placeholder="País de residencia actual">
+        <input id="waNacionalidad" placeholder="Nacionalidad / Pasaporte">
         <input id="waNombre" placeholder="Nombre del cliente">
 
         <button id="waEnviar" class="assistant-send">
@@ -158,6 +166,8 @@ function crearAsistenteTravel() {
     const equipaje = document.getElementById("waEquipaje").value;
     const visa = document.getElementById("waVisa").value;
     const presupuesto = document.getElementById("waPresupuesto").value.trim();
+    const residencia = document.getElementById("waResidencia").value.trim();
+    const nacionalidad = document.getElementById("waNacionalidad").value.trim();
     const nombre = document.getElementById("waNombre").value.trim();
 
     const mensaje = `
@@ -171,6 +181,8 @@ Pasajeros: ${pasajeros}
 Equipaje: ${equipaje}
 Escala USA/Canadá: ${visa}
 Presupuesto: ${presupuesto}
+País de residencia actual: ${residencia}
+Nacionalidad / Pasaporte: ${nacionalidad}
 Nombre: ${nombre}
 `;
 
