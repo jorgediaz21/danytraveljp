@@ -306,8 +306,10 @@
     const equipaje = document.getElementById("waEquipaje").value;
     const visa = document.getElementById("waVisa").value;
   const presupuesto = document.getElementById("waPresupuesto").value.trim();
-const residencia = document.getElementById("waResidencia").value.trim();
-const nombre = document.getElementById("waNombre").value.trim();  
+ const residencia = document.getElementById("waResidencia").value.trim();
+const nacionalidad = document.getElementById("waNacionalidad").value.trim();
+const nombre = document.getElementById("waNombre").value.trim();
+const contacto = document.getElementById("waContacto").value.trim();
 
     const mensaje = `
 Hola Dany, quiero cotizar un pasaje.
@@ -322,6 +324,7 @@ Escala USA/Canadá: ${visa}
 Presupuesto: ${presupuesto}
 País de residencia actual: ${residencia}
 Nombre: ${nombre}
+Contacto: ${contacto}
 `;
 
     const url = `https://wa.me/${WHATSAPP_DANY}?text=${encodeURIComponent(mensaje)}`;
