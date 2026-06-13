@@ -301,7 +301,6 @@ a:hover {
 }
 
 .assistant-box {
- max-height: 85vh;
   display: none;
   position: fixed;
   right: 20px;
@@ -309,14 +308,15 @@ a:hover {
   z-index: 9999;
   width: 360px;
   max-width: calc(100vw - 40px);
+  max-height: 85vh;
   background: #0d1b2a;
   color: white;
   border: 2px solid #ffb600;
   border-radius: 18px;
   box-shadow: 0 12px 35px rgba(0,0,0,0.35);
-  overflow-y: auto;
-  overflow-x: hidden;
+  overflow: hidden;
   text-align: left;
+}
  
 }
 
@@ -354,6 +354,9 @@ a:hover {
   padding: 15px;
   display: grid;
   gap: 10px;
+  max-height: 65vh;
+  overflow-y: auto;
+  padding-bottom: 20px;
 }
 
 .assistant-body input,

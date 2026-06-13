@@ -188,6 +188,38 @@
       font-weight: bold;
       cursor: pointer;
     }
+    .kai-face {
+  font-size: 24px;
+  display: block;
+}
+
+.assistant-btn {
+  animation: kaiFloat 2.8s ease-in-out infinite;
+}
+
+@keyframes kaiFloat {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+}
+
+.kai-option {
+  width: 100%;
+  background: #111827;
+  color: white;
+  border: 1px solid #ffb600;
+  border-radius: 12px;
+  padding: 12px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.kai-option:hover {
+  background: #1e3a8a;
+}
   </style>
 </head>
 
@@ -239,18 +271,36 @@
   © 2026 Dany Travel JP
 </footer>
 
-<button id="assistantBtn" class="assistant-btn">🤖 Asistente</button>
+<button id="assistantBtn" class="assistant-btn">
+  <span class="kai-face">🤖</span>
+  <span>KAI</span>
+</button>
 
 <div id="assistantBox" class="assistant-box">
-  <div class="assistant-header">
-    <div>
-  <h3>KAI Travel Assistant</h3>
-<p>Solicita cotizaciones desde cualquier país hacia cualquier destino 🌍</p>    
-    </div>
-    <button id="assistantClose">✕</button>
+ <div class="assistant-header">
+  <div>
+    <h3>🤖 KAI</h3>
+    <p>Asistente Oficial de Dany Travel JP</p>
   </div>
+  <button id="assistantClose">✕</button>
+
 
   <div class="assistant-body">
+    <button type="button" class="kai-option" onclick="document.getElementById('buscador').scrollIntoView({behavior:'smooth'})">
+  ✈️ Buscar vuelo
+</button>
+
+<button type="button" class="kai-option" onclick="document.getElementById('waSalida').focus()">
+  💬 Cotización personalizada
+</button>
+
+<button type="button" class="kai-option" onclick="window.open('https://wa.me/818087584964?text=Hola%20Dany%20Travel%20JP.%20Quiero%20ayuda%20con%20mi%20viaje.', '_blank')">
+  📱 Hablar por WhatsApp
+</button>
+
+<button type="button" class="kai-option" onclick="alert('KAI recomienda evitar escalas en USA o Canadá si no tienes visa válida.')">
+  🌎 Requisitos de visa
+</button>
     <input id="waSalida" placeholder="Salida: ciudad, país o aeropuerto">
     <input id="waDestino" placeholder="Destino: ciudad, país o aeropuerto">
     <input id="waFecha" placeholder="Fecha aproximada">
